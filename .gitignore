@@ -1,6 +1,23 @@
-# LaTeX Documentation
+# <!--- NetBeans --->
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/nbactions.xml
+/nb-configuration.xml
+
+# <!--- Classes --->
+*.class
+
+# <!--- Packages  --->
+*.jar
+*.war
+*.ear
+
+# <!--- Debugging --->
+*.log
+
+# <!--- LaTeX --->
 *.aux
 *.pdf
-
-# Log Files
-*.log
