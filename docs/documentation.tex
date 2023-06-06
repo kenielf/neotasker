@@ -1,0 +1,90 @@
+% !TeX program = LuaLateX
+% <!--- Preamble: Libraries & Configurations -->
+% Document Styling
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=3cm,top=3cm,bottom=2cm,right=2cm]{geometry}
+
+% Encoding, Languages and Formatting
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{indentfirst}
+
+% Margins, Columns, Indentation & Spacing
+\usepackage[left=3cm,top=3cm,bottom=2cm,right=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{indentfirst}
+\usepackage{ragged2e}  % For extendability
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\columnsep}{1cm}
+
+% Headers Titles and Footnotes
+\usepackage{sectsty}
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+\usepackage{footmisc}
+
+% Graphics Support
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fancyhdr}
+
+% <!--- Preamble: Commands --->
+\begin{document}
+% <!--- Document: Start --->
+% Title Page
+\begin{titlingpage}
+\begin{center}
+    {\large
+        % Institution
+        \vspace{3cm}
+        ANÁLISE E DESENVOLVIMENTO DE SISTEMAS \\
+        FATEC -- FACULDADE DE TECNOLOGIA
+
+        % Author
+        \vspace{3cm}
+        CHRYSTIAN M. F.
+
+        % Title
+        \vspace{4cm}
+        {\Huge \textbf{NeoTasker}} \\
+        AGENDA PESSOAL
+
+        % Date
+        \vspace{8cm}
+        2023
+    }
+\end{center}
+\end{titlingpage}
+% Index
+\section{Índice}
+\pagebreak
+% Introduction
+\section{Introdução}
+\subsection{Temas}
+\subsection{Objetivos}
+\subsection{Métodos}
+\subsection{Organização}
+\pagebreak
+% Description
+\section{Descrição Geral}
+\subsection{Problemas}
+\subsection{Informações Técnicas}
+\pagebreak
+% Requirements / DFD / Prototyping / Test Cases
+\section{Requisitos}
+\pagebreak
+% Análise & Design
+\section{Análise \& Design}
+\pagebreak
+% Planning
+\section{Planejamento}
+\subsection{Versionamento}
+\subsection{Cronograma}
+\pagebreak
+% Conclusion
+\section{Considerações Finais}
+% <!--- Document: End --->
+\end{document}
+

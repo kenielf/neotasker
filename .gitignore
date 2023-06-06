@@ -1,0 +1,6 @@
+# LaTeX Documentation
+*.aux
+*.pdf
+
+# Log Files
+*.log
