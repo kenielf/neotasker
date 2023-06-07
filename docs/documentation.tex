@@ -8,6 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage{indentfirst}
+\usepackage[T1]{fontenc}
 
 % Margins, Columns, Indentation & Spacing
 \usepackage[left=3cm,top=3cm,bottom=2cm,right=2cm]{geometry}
@@ -31,8 +32,14 @@
 \usepackage{fancyhdr}
 
 % <!--- Preamble: Commands --->
-\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+
 % <!--- Document: Start --->
+\begin{document}
 % Title Page
 \begin{titlingpage}
 \begin{center}
@@ -58,30 +65,49 @@
 \end{center}
 \end{titlingpage}
 % Index
-\section{Índice}
+\addto\captionsportuguese{
+    \renewcommand*\contentsname{Índice}
+}
+\tableofcontents
+\thispagestyle{empty}
 \pagebreak
 % Introduction
 \section{Introdução}
 \subsection{Temas}
 \subsection{Objetivos}
-\subsection{Métodos}
-\subsection{Organização}
+\subsection{Justificativa da Escolha do Tema}
+\subsection{Métodos e Organização do Trabalho}
 \pagebreak
 % Description
-\section{Descrição Geral}
-\subsection{Problemas}
-\subsection{Informações Técnicas}
+\section{Descrição Geral do Sistema}
+\subsection{Descrição do Problema}
+\subsection{Informações Técnicas do Sistema}
+\subsubsection{Ferramentas de Desenvolvimento}
+\subsubsection{Tecnologias Implementadas}
+\subsubsection{Ferramentas de Design}
+\subsection{Planejamento}
+\subsubsection{Versionamento}
+\subsubsection{Cronograma}
+\subsection{Principais Envolvidos e suas Características}
+\subsubsection{Usuários do Sistema}
+\subsubsection{Desenvolvedores do Sistema}
 \pagebreak
-% Requirements / DFD / Prototyping / Test Cases
+% Requirements
 \section{Requisitos}
+\subsection{Requisitos Funcionais}
+\subsection{Requisitos Não Funcionais}
+\subsection{Requisitos de Domínio}
+\pagebreak
+% Data Dictionary
+\section{Dicionário de Dados}
 \pagebreak
 % Análise & Design
 \section{Análise \& Design}
+\subsection{Paleta de Cores}
+\subsection{Blueprints}
 \pagebreak
-% Planning
-\section{Planejamento}
-\subsection{Versionamento}
-\subsection{Cronograma}
+% Individual Areas (DFD / Prototyping / Test Cases)
+\section{Seções}
 \pagebreak
 % Conclusion
 \section{Considerações Finais}

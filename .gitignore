@@ -20,4 +20,8 @@
 
 # <!--- LaTeX --->
 *.aux
+*.ixd
+*.ilg
+*.ind 
+*.toc
 *.pdf
