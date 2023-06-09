@@ -20,7 +20,7 @@
 
 # <!--- LaTeX --->
 *.aux
-*.ixd
+*.idx
 *.ilg
 *.ind 
 *.toc
