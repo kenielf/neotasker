@@ -1,0 +1,12 @@
+# Maven Build Files
+/target/
+
+# LaTeX Auxiliary Files
+/docs/*.aux
+/docs/*.loc
+/docs/*.lof
+/docs/*.log
+/docs/*.toc
+
+# LaTeX Output Files
+/docs/*.pdf
