@@ -26,6 +26,7 @@ make run
 ### Manual - Maven
 Então, builde o projeto e o execute com o `mvn`:
 ```bash
+mvn dependency:resolve
 mvn package
 mvn -q exec:java
 ```
