@@ -8,18 +8,9 @@ import java.sql.SQLException;
 
 
 public class Database {
-    public static void createDatabase(String file) {
-        // Get user's home (maybe linux only?)
-        String stringified_data_root = System.getProperty("user.home") + 
-            "/.local/share/neotasker/";
-
-        File data_root = new File(stringified_data_root);
-        if (!data_root.exists()) {
-            data_root.mkdir();
-        }
-
+    public static void createDatabase(File file) {
         // Get url
-        String url = "jdbc:sqlite:" + stringified_data_root + file;
+        String url = "jdbc:sqlite:" + file.toString() + "data.sqlite3";
 
         // Try connection
         try (Connection con = DriverManager.getConnection(url)) {

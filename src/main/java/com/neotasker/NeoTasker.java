@@ -19,6 +19,6 @@ public class NeoTasker {
         OperatingSystem os = new OperatingSystem();
 
         // Create Database
-        Database.createDatabase("neotasker.sqlite3");
+        Database.createDatabase(os.getDataRoot());
     }
 }
