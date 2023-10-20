@@ -19,7 +19,7 @@ public class OperatingSystem {
 
         if (this.platform.contains("windows")) {
             this.data_root = new File(
-                System.getProperty("APPDATA") + "neotasker"
+                System.getenv("LOCALAPPDATA") + "\\neotasker"
             );
             this.database_file = new File(
                 this.data_root.toString() + "\\data.sqlite3"
