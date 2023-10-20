@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class Database {
     public static void createDatabase(File file) {
         // Get url
-        String url = "jdbc:sqlite:" + file.toString() + "data.sqlite3";
+        String url = "jdbc:sqlite:" + file.toString();
 
         // Try connection
         try (Connection con = DriverManager.getConnection(url)) {
