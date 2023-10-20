@@ -8,6 +8,7 @@ all: build build-docs
 
 build $(TARGET_DIR): pom.xml
 	@printf "\e[33m%s\e[00m\n" "Building project..."
+	@$(RUN) dependency:resolve
 	@$(RUN) package
 
 clean:
