@@ -1,4 +1,4 @@
-package com.neotasker.model;
+package com.neotasker.util;
 
 import java.io.File;
 

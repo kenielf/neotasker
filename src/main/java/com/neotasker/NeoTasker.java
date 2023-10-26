@@ -3,7 +3,7 @@
  */
 
 package com.neotasker;
-import com.neotasker.model.OperatingSystem;
+import com.neotasker.util.OperatingSystem;
 import com.neotasker.model.Database;
 
 /**
