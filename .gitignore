@@ -8,5 +8,8 @@
 /docs/*.log
 /docs/*.toc
 
+# TeXworks Sync Files
+/docs/*.synctex.gz
+
 # LaTeX Output Files
 /docs/*.pdf
