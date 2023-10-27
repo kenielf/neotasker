@@ -5,6 +5,7 @@
 package com.neotasker;
 import com.neotasker.util.OperatingSystem;
 import com.neotasker.model.Database;
+import com.neotasker.view.ActivitiesList;
 
 /**
  *
@@ -20,5 +21,8 @@ public class NeoTasker {
 
         // Create Database
         Database.createDatabase(os.getDatabaseFile());
+
+        // Start Front End
+        ActivitiesList main = new ActivitiesList();
     }
 }
