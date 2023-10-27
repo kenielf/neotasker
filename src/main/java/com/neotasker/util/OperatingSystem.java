@@ -18,19 +18,9 @@ public class OperatingSystem {
         this.user_dir = new File(stringified_user_dir);
 
         if (this.platform.contains("windows")) {
-            this.data_root = new File(
-                System.getenv("LOCALAPPDATA") + "\\neotasker"
-            );
-            this.database_file = new File(
-                this.data_root.toString() + "\\data.sqlite3"
-            );
+            setWindowsPreferences();
         } else {
-            this.data_root = new File(
-                stringified_user_dir + "/.local/share/neotasker/"
-            );
-            this.database_file = new File(
-                this.data_root.toString() + "/data.sqlite3"
-            );
+            setUnixPreferences();
         }
 
         // Create if it does not exist
@@ -45,6 +35,30 @@ public class OperatingSystem {
         System.out.format("\u001b[33mHome Directory:\u001b[00m %s\n", this.user_dir);
         System.out.format("\u001b[33mData Directory:\u001b[00m %s\n", this.data_root);
         System.out.format("\u001b[33mDatabase File:\u001b[00m %s\n", this.database_file);
+    }
+
+    private void setWindowsPreferences() {
+        // Data Directory
+        this.data_root = new File(
+            System.getenv("LOCALAPPDATA") + "\\neotasker"
+        );
+
+        // Database File
+        this.database_file = new File(
+            this.data_root.toString() + "\\data.sqlite3"
+        );
+    }
+
+    private void setUnixPreferences() {
+        // Data Directory
+        this.data_root = new File(
+            this.user_dir.toString() + "/.local/share/neotasker/"
+        );
+
+        // Database File
+        this.database_file = new File(
+            this.data_root.toString() + "/data.sqlite3"
+        );
     }
 
     public String getPlatform() {
