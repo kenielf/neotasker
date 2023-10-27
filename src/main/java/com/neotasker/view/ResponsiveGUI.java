@@ -41,6 +41,8 @@ public class ResponsiveGUI extends JFrame {
             this.screenDimension.height / 5)
         );
 
+        System.out.println("Hello, world");
+
         add(button);
     }
 }
