@@ -5,7 +5,7 @@
 package com.neotasker;
 import com.neotasker.util.OperatingSystem;
 import com.neotasker.model.Database;
-import com.neotasker.view.ActivitiesList;
+import com.neotasker.view.ActivityList;
 
 /**
  *
@@ -22,7 +22,10 @@ public class NeoTasker {
         // Create Database
         Database.createDatabase(os.getDatabaseFile());
 
+        // Set important flags
+        System.setProperty("awt.useSystemAAFontSettings", "on");  // Fixes Anti Aliasing on Unix-Like Platforms
+
         // Start Front End
-        ActivitiesList main = new ActivitiesList();
+        ActivityList main = new ActivityList();
     }
 }
