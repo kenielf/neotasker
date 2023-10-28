@@ -22,6 +22,9 @@ public class NeoTasker {
         // Create Database
         Database.createDatabase(os.getDatabaseFile());
 
+        // Set important flags
+        System.setProperty("awt.useSystemAAFontSettings", "on");  // Fixes Anti Aliasing on Unix-Like Platforms
+
         // Start Front End
         ActivitiesList main = new ActivitiesList();
     }
