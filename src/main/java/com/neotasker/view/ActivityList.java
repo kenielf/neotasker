@@ -34,7 +34,7 @@ public class ActivityList extends ResponsiveGUI {
     public void setResolutionText(String content) {
         this.resolutionText = new JLabel(content);
         this.resolutionText.addComponentListener(new ResizeListener() {
-            //Dimension frameDimension = e.getComponent().getBounds().getSize();          
+            //Dimension frameDimension = e.getComponent().getBounds().getSize();
             @Override
             public void componentResized(ComponentEvent e) {
                 super.componentResized(e);
