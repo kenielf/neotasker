@@ -10,7 +10,7 @@ import java.util.List;
 import org.hibernate.SessionFactory;
 
 import com.neotasker.database.HibernateUtil;
-import com.neotasker.database.TaskDAO;
+import com.neotasker.controller.TaskController;
 import com.neotasker.model.Task;
 import com.neotasker.view.ActivityList;
 
@@ -27,8 +27,8 @@ public class NeoTasker {
         OperatingSystem os = new OperatingSystem();
 
         // Testing Hibernate
-        SessionFactory util = new HibernateUtil().getSessionFactory();
-        TaskDAO taskDAO = new TaskDAO();
+        SessionFactory util = HibernateUtil.getSessionFactory();
+        TaskController taskDAO = new TaskController();
         Task task = new Task("Create Something", "Actually Tries to Create Something");
         taskDAO.registerTask(task);
         System.out.println("Created Task.");
