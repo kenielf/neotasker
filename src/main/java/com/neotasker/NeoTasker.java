@@ -4,7 +4,14 @@
 
 package com.neotasker;
 import com.neotasker.util.OperatingSystem;
-import com.neotasker.model.Database;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+
+import com.neotasker.database.HibernateUtil;
+import com.neotasker.database.TaskDAO;
+import com.neotasker.model.Task;
 import com.neotasker.view.ActivityList;
 
 /**
@@ -19,13 +26,21 @@ public class NeoTasker {
         // OS Handling
         OperatingSystem os = new OperatingSystem();
 
-        // Create Database
-        Database.createDatabase(os.getDatabaseFile());
+        // Testing Hibernate
+        SessionFactory util = new HibernateUtil().getSessionFactory();
+        TaskDAO taskDAO = new TaskDAO();
+        Task task = new Task("Create Something", "Actually Tries to Create Something");
+        taskDAO.registerTask(task);
+        System.out.println("Created Task.");
+
+        // Querying Tasks
+        //List<Task> tasks = taskDAO.getAllTasks();
+        //for (int i=0; i<tasks.size(); i++) {
+        //    System.out.println(tasks.get(i));
+        //};
 
         // Set important flags
         System.setProperty("awt.useSystemAAFontSettings", "on");  // Fixes Anti Aliasing on Unix-Like Platforms
 
-        // Start Front End
-        ActivityList main = new ActivityList();
     }
 }
