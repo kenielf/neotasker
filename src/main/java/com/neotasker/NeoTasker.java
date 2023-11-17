@@ -12,7 +12,6 @@ import org.hibernate.SessionFactory;
 import com.neotasker.database.HibernateUtil;
 import com.neotasker.controller.TaskController;
 import com.neotasker.model.Task;
-import com.neotasker.view.ActivityList;
 
 /**
  *
