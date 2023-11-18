@@ -13,6 +13,9 @@ import com.neotasker.database.HibernateUtil;
 import com.neotasker.controller.TaskController;
 import com.neotasker.model.Task;
 
+import com.formdev.flatlaf.*;
+import com.formdev.flatlaf.intellijthemes.*;
+import com.neotasker.view.*;
 /**
  *
  * @author kenielf
@@ -41,5 +44,29 @@ public class NeoTasker {
         // Set important flags
         System.setProperty("awt.useSystemAAFontSettings", "on");  // Fixes Anti Aliasing on Unix-Like Platforms
 
+        // Prepare Visual Components
+        //System.setProperty(
+        //        "awt.useSystemAAFontSettings", "on"); // Fixes Aliasing on Unix-Like Platforms
+
+        // Built-In Themes
+        // FlatDarculaLaf.setup();
+        // FlatIntelliJLaf.setup();
+        // FlatDarkLaf.setup();
+        // FlatLightLaf.setup();
+
+        // Custom Themes
+        FlatDraculaIJTheme.setup();
+        // FlatArcDarkOrangeIJTheme.setup();
+        // FlatCobalt2IJTheme.setup();
+
+        // Start Graphical Window
+        // new ActivityList();
+
+        // Create and show the GUI
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ActivityList().setVisible(true);
+            }
+        });
     }
 }
