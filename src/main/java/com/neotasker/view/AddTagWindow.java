@@ -6,31 +6,30 @@ import javax.swing.*;
 import com.formdev.flatlaf.*;
 import com.formdev.flatlaf.intellijthemes.*;
 
-import com.neotasker.view.NavigationBar;
 import com.neotasker.view.Theme;
 
 public class AddTagWindow extends CustomFrame{
-    
-    NavigationBar navbar;
+
+    private JLabel txtTitle;
+    private JTextField txtCreateTag;
+    private JButton btnCreateTag;
+    private JButton btnCancel;
 
     public AddTagWindow() {
         super();
         setVisible(true);
-        setTitle("Calendário");
+        setTitle("Tela de Criação de Tags");
+        setSize(600, 300);
+        setLocationRelativeTo(null);
+        setLayout(new CardLayout());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
+        // setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
         // pack();
 
         // Set theme
         Theme theme = new Theme();
         theme.getTheme();
 
-        // Navigation Bar
-        this.navbar = new NavigationBar();
-
-        // Add components
-        add(this.navbar);
-    }
 
     @Override
     public void setDefaultCloseOperation(int mode) {
@@ -63,7 +62,7 @@ public class AddTagWindow extends CustomFrame{
         // Create and show the GUI
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ConfigWindow().setVisible(true);
+                new AddTagWindow().setVisible(true);
             }
         });
     }

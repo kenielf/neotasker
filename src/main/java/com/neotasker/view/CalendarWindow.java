@@ -63,7 +63,7 @@ public class CalendarWindow extends CustomFrame{
         // Create and show the GUI
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ConfigWindow().setVisible(true);
+                new CalendarWindow().setVisible(true);
             }
         });
     }

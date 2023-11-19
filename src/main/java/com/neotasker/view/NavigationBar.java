@@ -77,6 +77,13 @@ public class NavigationBar extends JPanel {
         // Add Button
         this.btnAdd = new JButton();
         this.btnAdd.setIcon(new ImageIcon(getClass().getResource("/icons/" + Theme.getTheme() + "/plus-square-light.png")));
+        this.btnAdd.setVisible(true);
+        this.btnAdd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddTagWindow addTagWindow = new AddTagWindow();
+            }
+        });
 
         // Config Button
         this.btnConfig = new JButton();
