@@ -1,87 +1,101 @@
 package com.neotasker.view;
 
 import com.neotasker.view.components.JPromptField;
+import com.neotasker.view.*;
 
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class NavigationBar extends JPanel {
+
     public String theme;
 
-    JButton listButton;
-    JButton calendarButton;
-    JButton statisticsButton;
-    JPromptField searchBar;
-    JButton searchButton;
-    JButton addButton;
-    JButton configurationButton;
+    JButton btnList;
+    JButton btnCalendar;
+    JButton btnStats;
+    JPromptField txtSearch;
+    JButton btnSearch;
+    JButton btnAdd;
+    JButton btnConfig;
 
     public NavigationBar() {
         super();
 
+        // Set Theme
+        Theme theme = new Theme();
+        theme.getTheme();
+
+
         // Set Layout
         setLayout(new MigLayout("fillx", "25[left]50[center]50[right]25"));
 
-        // Add Buttons
-        this.listButton = new JButton();
-        this.listButton.setIcon(
-                new ImageIcon(
-                        getClass().getResource("/icons/" + Theme.getTheme() + "/list-light.png")));
+        // --------------- buttons  and  textField----------------
 
-        this.calendarButton = new JButton();
-        this.calendarButton.setIcon(
-                new ImageIcon(
-                        getClass()
-                                .getResource(
-                                        "/icons/"
-                                                + Theme.getTheme()
-                                                + "/calendar-blank-light.png")));
+        // List Button
+        this.btnList = new JButton();
+        this.btnList.setIcon(new ImageIcon(getClass().getResource("/icons/" + Theme.getTheme() + "/list-light.png")));
+        this.btnList.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ActivityList activityList = new ActivityList();
+            }
+        });
 
-        this.statisticsButton = new JButton();
-        this.statisticsButton.setIcon(
-                new ImageIcon(
-                        getClass()
-                                .getResource(
-                                        "/icons/"
-                                                + Theme.getTheme()
-                                                + "/chart-pie-slice-light.png")));
+        // Calendar Button
+        this.btnCalendar = new JButton();
+        this.btnCalendar.setIcon(new ImageIcon(getClass().getResource("/icons/" + Theme.getTheme() + "/calendar-blank-light.png")));
+        this.btnCalendar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CalendarWindow calendarWindow = new CalendarWindow();
+            }
+        });
 
-        this.searchBar = new JPromptField("Pesquisar Tasks");
-        this.searchBar.setFont(searchBar.getFont().deriveFont(22f));
-        this.searchBar.setColumns(48);
+        // Stats Button
+        this.btnStats = new JButton();
+        this.btnStats.setIcon(new ImageIcon(getClass().getResource("/icons/" + Theme.getTheme() + "/chart-pie-slice-light.png")));
+        this.btnStats.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                StatsWindow statsWindow = new StatsWindow();
+            }
+        });
 
-        this.searchButton = new JButton();
-        this.searchButton.setIcon(
-                new ImageIcon(
-                        getClass()
-                                .getResource(
-                                        "/icons/"
-                                                + Theme.getTheme()
-                                                + "/magnifying-glass-light.png")));
+        // Search Bar
+        this.txtSearch = new JPromptField("Procure por uma atividade, evento ou data marcada...");
+        this.txtSearch.setFont(txtSearch.getFont().deriveFont(22f));
+        this.txtSearch.setColumns(48);
 
-        this.addButton = new JButton();
-        this.addButton.setIcon(
-                new ImageIcon(
-                        getClass()
-                                .getResource(
-                                        "/icons/" + Theme.getTheme() + "/plus-square-light.png")));
+        // Search Button
+        this.btnSearch = new JButton();
+        this.btnSearch.setIcon(new ImageIcon(getClass().getResource("/icons/" + Theme.getTheme() + "/magnifying-glass-light.png")));
 
-        this.configurationButton = new JButton();
-        this.configurationButton.setIcon(
-                new ImageIcon(
-                        getClass()
-                                .getResource(
-                                        "/icons/" + Theme.getTheme() + "/gear-six-light.png")));
-        this.configurationButton.setVisible(true);
+        // Add Button
+        this.btnAdd = new JButton();
+        this.btnAdd.setIcon(new ImageIcon(getClass().getResource("/icons/" + Theme.getTheme() + "/plus-square-light.png")));
+
+        // Config Button
+        this.btnConfig = new JButton();
+        this.btnConfig.setIcon(new ImageIcon(getClass().getResource("/icons/" + Theme.getTheme() + "/gear-six-light.png")));
+        this.btnConfig.setVisible(true);
+        this.btnConfig.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConfigWindow configWindow = new ConfigWindow();
+            }
+        });
 
         // Add Components to Bar
-        add(listButton, "split 3");
-        add(calendarButton, "");
-        add(statisticsButton, "");
-        add(this.searchBar, "split 2, grow");
-        add(this.searchButton, "");
-        add(this.addButton, "split 2");
-        add(this.configurationButton, "");
+        add(btnList, "split 3");
+        add(btnCalendar, "");
+        add(btnStats, "");
+        add(this.txtSearch, "split 2, grow");
+        add(this.btnSearch, "");
+        add(this.btnAdd, "split 2");
+        add(this.btnConfig, "");
     }
 }

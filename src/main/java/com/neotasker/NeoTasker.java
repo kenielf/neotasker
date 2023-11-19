@@ -52,10 +52,10 @@ public class NeoTasker {
         // FlatDarculaLaf.setup();
         // FlatIntelliJLaf.setup();
         // FlatDarkLaf.setup();
-        // FlatLightLaf.setup();
+        FlatLightLaf.setup();
 
         // Custom Themes
-        FlatDraculaIJTheme.setup();
+        //FlatDraculaIJTheme.setup();
         // FlatArcDarkOrangeIJTheme.setup();
         // FlatCobalt2IJTheme.setup();
 
