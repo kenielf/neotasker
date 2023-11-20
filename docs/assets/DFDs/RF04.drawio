@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-11-20T01:40:00.852Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="X5JQXjJimz6Bysf7D-qV" version="21.6.8" type="device">
+<mxfile host="Electron" modified="2023-11-20T21:17:26.886Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="zW7Qsc_jkCUv8LwtrSNR" version="21.6.8" type="device">
   <diagram name="Página-1" id="ZOs2dmh3QNxUm6-tBIb0">
-    <mxGraphModel dx="1022" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1036" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,7 +10,7 @@
         <mxCell id="r59xEY66x3O-hmm3xWtb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="r59xEY66x3O-hmm3xWtb-2" target="r59xEY66x3O-hmm3xWtb-21">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r59xEY66x3O-hmm3xWtb-23" value="Título + Data Entrega&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;e Dados Opcionais&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="r59xEY66x3O-hmm3xWtb-22">
+        <mxCell id="r59xEY66x3O-hmm3xWtb-23" value="codTask + Título + Data Entrega&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;e Dados Opcionais&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="r59xEY66x3O-hmm3xWtb-22">
           <mxGeometry x="0.214" y="-3" relative="1" as="geometry">
             <mxPoint x="-16" y="-3" as="offset" />
           </mxGeometry>
@@ -79,7 +79,7 @@
         <mxCell id="r59xEY66x3O-hmm3xWtb-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="r59xEY66x3O-hmm3xWtb-21" target="r59xEY66x3O-hmm3xWtb-24">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r59xEY66x3O-hmm3xWtb-26" value="Título + Data Entrega&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;e Dados Opcionais&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="r59xEY66x3O-hmm3xWtb-25">
+        <mxCell id="r59xEY66x3O-hmm3xWtb-26" value="codTask + Título + Data Entrega&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;e Dados Opcionais&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="r59xEY66x3O-hmm3xWtb-25">
           <mxGeometry x="0.0489" y="-4" relative="1" as="geometry">
             <mxPoint x="-4" y="-4" as="offset" />
           </mxGeometry>
