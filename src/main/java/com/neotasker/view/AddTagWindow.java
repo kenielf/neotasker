@@ -8,7 +8,7 @@ import com.formdev.flatlaf.intellijthemes.*;
 
 import com.neotasker.view.Theme;
 
-public class AddTagWindow extends CustomFrame{
+public class AddTagWindow extends CustomFrame {
 
     private JLabel txtTitle;
     private JTextField txtCreateTag;
@@ -29,7 +29,8 @@ public class AddTagWindow extends CustomFrame{
         // Set theme
         Theme theme = new Theme();
         theme.getTheme();
-
+    
+    }
 
     @Override
     public void setDefaultCloseOperation(int mode) {
@@ -37,13 +38,14 @@ public class AddTagWindow extends CustomFrame{
     }
 
     public static void main(String[] args) {
-        
+
         // Set important flags
-        System.setProperty("awt.useSystemAAFontSettings", "on");  // Fixes Anti Aliasing on Unix-Like Platforms
+        System.setProperty("awt.useSystemAAFontSettings", "on"); // Fixes Anti Aliasing on Unix-Like Platforms
 
         // Prepare Visual Components
-        //System.setProperty(
-        //        "awt.useSystemAAFontSettings", "on"); // Fixes Aliasing on Unix-Like Platforms
+        // System.setProperty(
+        // "awt.useSystemAAFontSettings", "on"); // Fixes Aliasing on Unix-Like
+        // Platforms
 
         // Built-In Themes
         // FlatDarculaLaf.setup();
@@ -52,7 +54,7 @@ public class AddTagWindow extends CustomFrame{
         FlatLightLaf.setup();
 
         // Custom Themes
-        //FlatDraculaIJTheme.setup();
+        // FlatDraculaIJTheme.setup();
         // FlatArcDarkOrangeIJTheme.setup();
         // FlatCobalt2IJTheme.setup();
 
@@ -67,4 +69,3 @@ public class AddTagWindow extends CustomFrame{
         });
     }
 }
-
