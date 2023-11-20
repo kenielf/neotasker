@@ -1,0 +1,83 @@
+<mxfile host="Electron" modified="2023-11-20T01:48:37.876Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="y_miZn1YA-jB2Nk9ktHP" version="21.6.8" type="device">
+  <diagram name="Página-1" id="VJn5dL--qaKLG-Ou2B9u">
+    <mxGraphModel dx="1036" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-1" value="Usuário" style="html=1;dashed=0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="80" y="70" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-2" value="" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;verticalAlign=top;horizontal=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="120" width="500" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8mnP1F_r9e8hZtbXD_vT-31" target="8mnP1F_r9e8hZtbXD_vT-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-36" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Título + Data Entrega &lt;br&gt;e Dados Opcionais&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8mnP1F_r9e8hZtbXD_vT-35" vertex="1" connectable="0">
+          <mxGeometry x="-0.1516" y="3" relative="1" as="geometry">
+            <mxPoint x="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-31" value="Identificar &lt;br&gt;Dados Inseridos" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;perimeter=ellipsePerimeter;" parent="1" vertex="1">
+          <mxGeometry x="210" y="230" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="8mnP1F_r9e8hZtbXD_vT-1" target="8mnP1F_r9e8hZtbXD_vT-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="120" />
+              <mxPoint x="130" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-33" value="Título + Data Entrega&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;e Dados Opcionais&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8mnP1F_r9e8hZtbXD_vT-32" vertex="1" connectable="0">
+          <mxGeometry x="-0.3344" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="8mnP1F_r9e8hZtbXD_vT-34" target="8mnP1F_r9e8hZtbXD_vT-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-39" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Título + Data Entrega&lt;br&gt;e Dados Opcionais&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8mnP1F_r9e8hZtbXD_vT-38" vertex="1" connectable="0">
+          <mxGeometry x="0.0427" y="1" relative="1" as="geometry">
+            <mxPoint x="-3" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-34" value="Identificar Campos Inseridos" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;perimeter=ellipsePerimeter;" parent="1" vertex="1">
+          <mxGeometry x="180" y="450" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="8mnP1F_r9e8hZtbXD_vT-37" target="8mnP1F_r9e8hZtbXD_vT-46" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-42" value="Título + Data Entrega&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;e Dados Opcionais&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8mnP1F_r9e8hZtbXD_vT-41" vertex="1" connectable="0">
+          <mxGeometry x="-0.2639" y="-1" relative="1" as="geometry">
+            <mxPoint x="-8" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-37" value="Padronizar e &lt;br&gt;Validar Informações" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;perimeter=ellipsePerimeter;" parent="1" vertex="1">
+          <mxGeometry x="451.25" y="410" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-43" value="1.Criação de Tasks" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="288.75" y="160" width="162.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-44" value="Tasks" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;" parent="1" vertex="1">
+          <mxGeometry x="670" y="80" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="8mnP1F_r9e8hZtbXD_vT-46" target="8mnP1F_r9e8hZtbXD_vT-44" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="495" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-51" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Task&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8mnP1F_r9e8hZtbXD_vT-48" vertex="1" connectable="0">
+          <mxGeometry x="0.2" y="2" relative="1" as="geometry">
+            <mxPoint x="1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8mnP1F_r9e8hZtbXD_vT-46" value="Gerar Task" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;perimeter=ellipsePerimeter;" parent="1" vertex="1">
+          <mxGeometry x="430" y="240" width="130" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
