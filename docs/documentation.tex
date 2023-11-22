@@ -192,12 +192,45 @@ Os \textbf{Requisitos Funcionais} são aqueles que indicam quais as funcionalida
 	\item Capacidade de exportar os dados em arquivos.
 \end{itemize}
 
+\subsection{Requisitos Não-Funcionais}
+Os \textbf{Requisitos Não-Funcionais} são aqueles que quais as obrigações ou regras que devem ser aplicadas para que as funcionalidades descritas nos Requisitos Funcionais estejam em conformidade com a necessidade do cliente.
+Outra aplicação dos \textbf{Requisitos Não-Funcionais} é quanto a limitação do sistema, ou seja, o que ele não deve fazer em hipótese alguma. Exemplos são:
+\begin{itemize}
+	\item Tempo execução de ações do sistema menor do que 2 segundos; e
+	\item Compatibilidade do sistema com sistemas operacionais (caso uma aplicação desktop) ou com versões de navegadores (caso uma aplicação web).
+\end{itemize}
+
+
+\subsection{Requisitos de Domínio}
+Os \textbf{Requisitos de Domínio} são aqueles que buscam alinhar o domínio do cliente, ou seja, o ambiente/segmeto de mercado que está inserido e ao qual o \textit{software} desenvolvido será inserido. Exemplos são:
+\begin{itemize}
+	\item A geração de relatórios deve ser feita sempre filtrando pelo dados mais recentes e com maiores índices; e
+	\item O sistema somente ficará disponível para emissões de notas em horário comercial.
+\end{itemize}
+
+% --- Segment: Data Flow Diagrams ---
+\section{Diagrama de Fluxo de Dados}
+Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como os dados percorrem por entre os processos e por quais processos. Cada Requisito Funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo.
+
+\section{Dicionário de Dados}
+O \textbf{Dicionário de Dados} é o documento ao qual é representado os tipos de dados, quais são eles e como serão representados dentro do sistema.
+
 % --- Segment: Design ---
 \section{Design}
 % --- Segment: Prototypes ---
 \subsection{Protótipos}
-\subsubsection{Telas Principais}
-\paragraph{Lista de Tasks}
+Prototipar é o processo ao qual uma versão básica do sistema, a fim de vizualizar qual seria o funcionamento do sistema ou que ele de fato poderia oferecer ao usuário final quanto a sua usabilidade do sistema, quanto as ferramentas e funcionalidade alinhadas na etapa de \textbf{Engenharia de Sistemas}, além de apresentar, o mais fielmente possível, os aspectos do front-end do sistema ou \textit{desing} das telas e relacionados.
+
+Quanto ao funcionamento pensado, nossos sistema apresentaria todas as telas por meio de JPanels\footnote{
+	Ferramenta de Organização de Painéis disponível no uso do Java Swing
+}, a não ser a tela principal, que seria aplicado o uso de JFrames\footnote{
+	Ferramenta de Organização de Telas (Frames) disponível no uso do Java Swing
+}. A troca entre telas seria aplicada dinamicamente, de modo que a cada ação do usuário - ao clicar em um botão por exemplo - a tela correspondente seria aplicada sobre a tela atual, substituindo. Tal uso forneceria uma melhor usabilidade para o usuário, sem precisar se preocupar com a organização das telas no momento de inicialzação a cada evento.
+
+\subsection{Tela Principal}
+A \textbf{Tela Principal} seria o JFrame ao qual sempre seria atualizado os JPanels para cada ação correspondente do usuário, logo, os únicos componentes ou o único grupo de elementos seria a barra superior de navegação e pesquisa, presente em todo momento e em qualquer ação do sistema.
+
+\paragraph{}
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.20]{prototypes/task_list-light.png}
