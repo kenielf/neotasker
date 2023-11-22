@@ -212,6 +212,71 @@ Os \textbf{Requisitos de Domínio} são aqueles que buscam alinhar o domínio do
 \section{Diagrama de Fluxo de Dados}
 Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como os dados percorrem por entre os processos e por quais processos. Cada Requisito Funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo.
 
+\section{Requisitos e DFDs}
+\subsection{Requisitos Funcionais do Sistema}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{requirements/requirements.png}
+	\caption{DFD do RF00}
+\end{figure}
+
+\subsection{RF01 - Criar Tasks}
+O sistema deve permitir que o usuário crie uma nova \textbf{Task}, onde o usuário deve informar o título da \textbf{Task}, a data de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a data de início da \textbf{Task}, descrição da \textbf{Task}, repetição entre períodos e as tags da \textbf{Task}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{dfd/RF01.png}
+	\caption{DFD do RF01}
+\end{figure}
+
+\subsection{RF02 - Visualizar Tasks}
+O sistema deve permitir que o usuário visualize todas as \textbf{Tasks} já existentes, onde o usuário deve informar o título da \textbf{Task} a ser visualizada.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{dfd/RF02.png}
+	\caption{DFD do RF04}
+\end{figure}
+
+\subsection{RF03 - Editar Tasks}
+O sistema deve permitir que o usuário edite uma \textbf{Task} já existente, onde o usuário deve informar o título da \textbf{Task}, a data de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a data de início da \textbf{Task}, descrição da \textbf{Task}, repetição entre períodos e as tags da \textbf{Task}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{dfd/RF02.png}
+	\caption{DFD do RF02}
+\end{figure}
+
+\subsection{RF04 - Excluir Tasks}
+O sistema deve permitir que o usuário exclua uma \textbf{Task} já existente, onde o usuário deve informar o título da \textbf{Task} a ser excluída.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{dfd/RF03.png}
+	\caption{DFD do RF03}
+\end{figure}
+
+\subsection{RF05 - Listar Tags}
+O sistema deve listar todas as \textbf{Tags} já existentes, em ordem de mais recentes para mais antigas.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{dfd/RF05.png}
+	\caption{DFD do RF05}
+\end{figure}
+
+\subsection{RF06 - Obter Infor do Sistema Operacional}
+O sistema deve obter informações do sistema operacional, com qual é por exemplo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{dfd/RF06.png}
+	\caption{DFD do RF06}
+\end{figure}
+
+\subsection{RF07 - Mostra Dados de Estatísticas}
+O sistema deve mostrar dados de estatísticas, sendo o número de task criadas, concluídas, programadas e atrasadas.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{dfd/RF07.png}
+	\caption{DFD do RF07}
+\end{figure}
+
+
 \section{Dicionário de Dados}
 O \textbf{Dicionário de Dados} é o documento ao qual é representado os tipos de dados, quais são eles e como serão representados dentro do sistema.
 
