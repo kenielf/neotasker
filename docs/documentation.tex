@@ -173,7 +173,9 @@ O projeto consta com dois membros, portanto, as atividades estão substituídas 
 
 % --- Segment: Requirements ---
 \section{Levantamento de Requisitos}
-\textbf{Levantamente de Requisitos} é a prática onde se estuda e debate as funcionalidades que deverão ser contempladas no sistema, além das regras para tais funcionalidades e os cenários de implantação. Todo esse estudo, compreende na \textbf{Engenharia de Sistemas} que oferece suporte e abrange todas as atividades relacionadas à investigação, definição e delimitação de novos sistemas ou modificações. Essa etapa é crucial no processo de desenvolvimento de software, no qual o engenheiro de requisitos, o analista de negócios, e o engenheiro de sistemas ou desenvolvedor de software trabalham juntos para identificar as necessidades e requisitos do cliente. Uma vez que os requisitos do sistema são identificados, os projetistas de sistemas estão prontos para criar a solução.
+\textbf{Levantamente de Requisitos} é a prática onde se estuda e debate as funcionalidades que deverão ser contempladas no sistema, além das regras para tais funcionalidades e os cenários de implantação. Todo esse estudo, compreende na \textbf{Engenharia de Sistemas} que oferece suporte e abrange todas as atividades relacionadas à investigação, definição e delimitação de novos sistemas ou modificações.
+
+Essa etapa é crucial no processo de desenvolvimento de software, no qual o engenheiro de requisitos, o analista de negócios, e o engenheiro de sistemas ou desenvolvedor de software trabalham juntos para identificar as necessidades e requisitos do cliente. Uma vez que os requisitos do sistema são identificados, os projetistas de sistemas estão prontos para criar a solução.
 
 Na etapa de \textbf{Levantamento de Requisitos} temos a deinfição de três tipos de requisitos, onde cada um deles possuem suas características próprias. Os requisitos são:
 \begin{itemize}
@@ -201,7 +203,7 @@ Outros aspecto importante sobre os requisitos de domínio são:
 \subsection{Requisitos Não-Funcionais}
 Os \textbf{Requisitos Não-Funcionais} são aqueles que quais as obrigações ou regras que devem ser aplicadas para que as funcionalidades descritas nos Requisitos Funcionais estejam em conformidade com a necessidade do cliente.
 Outra aplicação dos \textbf{Requisitos Não-Funcionais} é quanto a limitação do sistema, ou seja, o que ele não deve fazer em hipótese alguma. Exemplos são:
-\begin{itemize}
+\begin{itemize}o
 	\item Tempo execução de ações do sistema menor do que 2 segundos; e
 	\item Compatibilidade do sistema com sistemas operacionais (caso uma aplicação desktop) ou com versões de navegadores (caso uma aplicação web).
 \end{itemize}
@@ -353,7 +355,41 @@ O sistema deve ser capaz de sincronizar a localidade física do usuário com o s
 \section{Dicionário de Dados}
 O \textbf{Dicionário de Dados} é o documento ao qual é representado os tipos de dados, quais são eles e como serão representados dentro do sistema.
 
-% --- Segment: Design ---
+% --- Segment: Design & Colors---
+% --- Segment: Color Palette ---
+\section{Paleta de Cores do Sistema}
+A paleta de cores do sistema é o conjunto de cores que serão utilizadas no sistema, tanto para o tema claro quanto para o tema escuro. É importante destacar que as cores do sistema foram escolhidas usando como base seu possíveis significados e o que elas poderiam significar para o usuário final, em diferentes situações e processos dentro do sistema.
+
+\subsection{Sistema de Cores}
+Cada cor pode representar um emoção e expressar um significado quando se diz respeito a experiência do usuário. Expressar uma mensagem de forma adequada através das cores pode ser o elemento crucial que distingue o êxito do fracasso em um projeto.
+
+Logo, com objetivo de aplicar nossa identidade, além de passar uma boa experiência ao usuário, foram escolhidas as seguintes cores:
+
+\subsection{Cores do Tema Claro}
+\begin{itemize}
+	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} do JFrame principal. Além de fundo para os campos de \textit{input} e \textit{textarea} situados nos JPanels com fundo cinza;
+	\item \textbf{Cinza:} \#E4DEDE. AplicaçãO: \textit{Background} dos campos de \textit{input} e \textit{textarea} situados na barra de navegação;
+	\item \textbf{Preto:} \#000000. Aplicação: Cores para textos e ícones;
+	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para destaque e detalhes mínimos de números no calendário;
+	\item \textbf{Azul:} \#4646B9; Aplicação: \textit{Background} das Tags;
+	\item \textbf{Azul 2:} \#0500FF; Aplicação: Linhas de destaque para seções, além de bordas para JPanels e detalhes mínimos;
+	\item \textbf{Vermelho:} \#FF0000; Aplicação: Linhas do ícone de lixeira para exclusão de Tasks; e
+	\item \textbf{Verde:} \#00FF00; Aplicação: Linhas do ícone de conclusão de Tasks.
+\end{itemize}
+
+\subsection{Cores do Tema Escuro}
+\begin{itemize}
+	\item \textbf{Preto:} \#000000. Aplicação: \textit{Background} do JFrame principal e para textos e ícones;
+	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} dos JPanels, além de fundo para os campos de \textit{input} e \textit{textarea} situados na barra de navegação;
+	\item \textbf{Cinza:} \#E4DEDE. AplicaçãO: \textit{Background} dos campos de \textit{input} e \textit{textarea} situados nos JPanels com fundo branco;
+	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para destaque e detalhes mínimos de números no calendário;
+	\item \textbf{Azul:} \#4646B9; Aplicação: \textit{Background} das Tags e cor de seleção para \textit{Radio Buttons};
+	\item \textbf{Azul 2:} \#0500FF; Aplicação: Linhas de destaque para seções, além de bordas para JPanels e detalhes mínimos;
+	\item \textbf{Vermelho:} \#FF0000; Aplicação: Linhas do ícone de lixeira para exclusão de Tasks; e
+	\item \textbf{Verde:} \#00FF00; Aplicação: Linhas do ícone de conclusão de Tasks.
+	
+\end{itemize}
+
 \section{Design}
 % --- Segment: Prototypes ---
 \subsection{Protótipos}
@@ -484,12 +520,5 @@ A seguir, temos outros JFrames que servirão como modais, ou pequenas telas info
 	\end{figure}
 \end{itemize}
 
-% --- Segment: Color Palette ---
-\section{Paleta de Cores do Sistema}
-A paleta de cores do sistema é o conjunto de cores que serão utilizadas no sistema, tanto para o tema claro quanto para o tema escuro. É importante destacar que as cores do sistema foram escolhidas usando como base seu possíveis significados e o que elas poderiam significar para o usuário final, em diferentes situações e processos dentro do sistema.
-
-\subsection{Sistema de Cores}
-Cada cor pode representar um emoção e expressar um significado quando se diz respeito a experiência do usuário. "transmitir de maneira correta uma mensagem por meio da cor pode ser a diferença entre o sucesso e o fracasso de um projeto.", 
-
-% --- Document: End ---
+% --- Document: End ---  
 \end{document}
