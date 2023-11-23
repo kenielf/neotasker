@@ -203,7 +203,7 @@ Outros aspecto importante sobre os requisitos de domínio são:
 \subsection{Requisitos Não-Funcionais}
 Os \textbf{Requisitos Não-Funcionais} são aqueles que quais as obrigações ou regras que devem ser aplicadas para que as funcionalidades descritas nos Requisitos Funcionais estejam em conformidade com a necessidade do cliente.
 Outra aplicação dos \textbf{Requisitos Não-Funcionais} é quanto a limitação do sistema, ou seja, o que ele não deve fazer em hipótese alguma. Exemplos são:
-\begin{itemize}o
+\begin{itemize}
 	\item Tempo execução de ações do sistema menor do que 2 segundos; e
 	\item Compatibilidade do sistema com sistemas operacionais (caso uma aplicação desktop) ou com versões de navegadores (caso uma aplicação web).
 \end{itemize}
@@ -260,7 +260,7 @@ Descrição de cada Requisito de Domínio:
 	\caption{Descrição dos Requisitos de Domínio do Sistema}
 \end{figure}
 
-
+\pagebreak
 \subsection{RF01 - Criar Tasks}
 O sistema deve permitir que o usuário crie uma nova \textbf{Task}, onde o usuário deve informar o título da \textbf{Task}, a data de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a data de início da \textbf{Task}, descrição da \textbf{Task}, repetição entre períodos e as tags da \textbf{Task}.
 \begin{figure}[H]
@@ -269,6 +269,7 @@ O sistema deve permitir que o usuário crie uma nova \textbf{Task}, onde o usuá
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 01}
 \end{figure}
 
+\pagebreak
 \subsection{RF02 - Exibir Tasks}
 O sistema deve permitir que o usuário visualize todas as \textbf{Tasks} já existentes, onde o usuário pode vizualizar título, data de início, data de término, descrição, repetição entre períodos e as tags da \textbf{Task}. Além disso, o sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou seja, dois \textit{stakesholders}\footnote{
 \textit{Stakeholders} são aqueles para quem a funcionalidade está sendo desenvolvida ou quem está relacionado a ela. 
@@ -279,6 +280,7 @@ O sistema deve permitir que o usuário visualize todas as \textbf{Tasks} já exi
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 02}
 \end{figure}
 
+\pagebreak
 \subsection{RF03 - Editar Tasks}
 O sistema deve permitir que o usuário edite uma \textbf{Task} já existente, onde o usuário deve informar o título da \textbf{Task}, a data de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a data de início da \textbf{Task}, descrição da \textbf{Task}, repetição entre períodos e as tags da \textbf{Task}.
 \begin{figure}[H]
@@ -287,6 +289,7 @@ O sistema deve permitir que o usuário edite uma \textbf{Task} já existente, on
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 03}
 \end{figure}
 
+\pagebreak
 \subsection{RF04 - Excluir Tasks}
 O sistema deve permitir que o usuário exclua uma \textbf{Task} já existente, onde o usuário deve informar o título da \textbf{Task} a ser excluída.
 \begin{figure}[H]
@@ -295,6 +298,7 @@ O sistema deve permitir que o usuário exclua uma \textbf{Task} já existente, o
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 04}
 \end{figure}
 
+\pagebreak
 \subsection{RF05 - Listar Tags}
 O sistema deve listar todas as \textbf{Tags} já existentes, em ordem de mais recentes para mais antigas.
 \begin{figure}[H]
@@ -303,6 +307,7 @@ O sistema deve listar todas as \textbf{Tags} já existentes, em ordem de mais re
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 05}
 \end{figure}
 
+\pagebreak
 \subsection{RF06 - Obter Infor do Sistema Operacional}
 O sistema deve obter informações do sistema operacional, com qual é por exemplo.
 \begin{figure}[H]
@@ -311,6 +316,7 @@ O sistema deve obter informações do sistema operacional, com qual é por exemp
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 06}
 \end{figure}
 
+\pagebreak
 \subsection{RF07 - Mostra Dados de Estatísticas}
 O sistema deve mostrar dados de estatísticas, sendo o número de task criadas, concluídas, programadas e atrasadas.
 \begin{figure}[H]
@@ -319,6 +325,7 @@ O sistema deve mostrar dados de estatísticas, sendo o número de task criadas, 
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 07}
 \end{figure}
 
+\pagebreak
 \subsection{RF08 - Importar Dados}
 O sistema deve ser capaz de importar dados externos, sendo eles por arquivos nos formatos \textbf{.xml} e \textbf{.json}.
 \begin{figure}[H]
@@ -327,6 +334,7 @@ O sistema deve ser capaz de importar dados externos, sendo eles por arquivos nos
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 08}
 \end{figure}
 
+\pagebreak
 \subsection{RF09 - Exportar Dados}
 O sistema decve ser capaz de exportar os dados internos, ou seja, as Tasks cadastradas no banco. A exportação deve possibilitar em arquivo de formato \textbf{.json} e \textbf{.xml}.
 \begin{figure}[H]
@@ -335,6 +343,7 @@ O sistema decve ser capaz de exportar os dados internos, ou seja, as Tasks cadas
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 09}
 \end{figure}
 
+\pagebreak
 \subsection{RF10 - Trocar Tema}
 O sistema deve ser capaz de trocar o tema, sendo eles o tema claro e o tema escuro.
 \begin{figure}[H]
@@ -343,6 +352,7 @@ O sistema deve ser capaz de trocar o tema, sendo eles o tema claro e o tema escu
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 10}
 \end{figure}
 
+\pagebreak
 \subsection{RF11 - Sincronizar Localidade}
 O sistema deve ser capaz de sincronizar a localidade física do usuário com o sistema, ou seja, sincronizar cidade e estado.
 \begin{figure}[H]
@@ -351,12 +361,13 @@ O sistema deve ser capaz de sincronizar a localidade física do usuário com o s
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 11}
 \end{figure}
 
-
+\pagebreak
 \section{Dicionário de Dados}
 O \textbf{Dicionário de Dados} é o documento ao qual é representado os tipos de dados, quais são eles e como serão representados dentro do sistema.
 
 % --- Segment: Design & Colors---
 % --- Segment: Color Palette ---
+\pagebreak
 \section{Paleta de Cores do Sistema}
 A paleta de cores do sistema é o conjunto de cores que serão utilizadas no sistema, tanto para o tema claro quanto para o tema escuro. É importante destacar que as cores do sistema foram escolhidas usando como base seu possíveis significados e o que elas poderiam significar para o usuário final, em diferentes situações e processos dentro do sistema.
 
@@ -390,6 +401,7 @@ Logo, com objetivo de aplicar nossa identidade, além de passar uma boa experiê
 	
 \end{itemize}
 
+\pagebreak
 \section{Design}
 % --- Segment: Prototypes ---
 \subsection{Protótipos}
