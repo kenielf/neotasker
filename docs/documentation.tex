@@ -191,6 +191,12 @@ Os \textbf{Requisitos Funcionais} são aqueles que indicam quais as funcionalida
 	\item Capacidade de geração de relatório mensal de vendas; e
 	\item Capacidade de exportar os dados em arquivos.
 \end{itemize}
+Outros aspecto importante sobre os requisitos de domínio são: 
+\begin{itemize}
+	\item\textbf{Rastreabilidade:} entre os requisitos, ou seja, a capacidade de identificar quais requisitos estão relacionados entre si, e quais requisitos são dependentes de outros requisitos; Os 
+	\item\textbf{Stakeholders:} aquele quem está diretamente ligado pu relacionado a funcionalidade em questão.
+\end{itemize}
+
 
 \subsection{Requisitos Não-Funcionais}
 Os \textbf{Requisitos Não-Funcionais} são aqueles que quais as obrigações ou regras que devem ser aplicadas para que as funcionalidades descritas nos Requisitos Funcionais estejam em conformidade com a necessidade do cliente.
@@ -319,6 +325,29 @@ O sistema deve ser capaz de importar dados externos, sendo eles por arquivos nos
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 08}
 \end{figure}
 
+\subsection{RF09 - Exportar Dados}
+O sistema decve ser capaz de exportar os dados internos, ou seja, as Tasks cadastradas no banco. A exportação deve possibilitar em arquivo de formato \textbf{.json} e \textbf{.xml}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{DFDs/RF09.drawio.png}
+	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 09}
+\end{figure}
+
+\subsection{RF10 - Trocar Tema}
+O sistema deve ser capaz de trocar o tema, sendo eles o tema claro e o tema escuro.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{DFDs/RF10.drawio.png}
+	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 10}
+\end{figure}
+
+\subsection{RF11 - Sincronizar Localidade}
+O sistema deve ser capaz de sincronizar a localidade física do usuário com o sistema, ou seja, sincronizar cidade e estado.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{DFDs/RF11.drawio.png}
+	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 11}
+\end{figure}
 
 
 \section{Dicionário de Dados}
