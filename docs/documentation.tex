@@ -8,6 +8,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[portuguese]{babel}
+\usepackage{hyperref}
+
 \addto\extrasportuguese{\renewcommand{\contentsname}{Índice}}
 
 % Margins, Columns, Indentation & Spacing
@@ -175,11 +177,11 @@ O projeto consta com dois membros, portanto, as atividades estão substituídas 
 
 \paragraph{Wellington E. Rodrigues}
 \begin{itemize}
-	\item Planejamento e Estrturação do Projeto;
+		\item Planejamento e Estrturação do Projeto;
     	\item Design e Padrões de Cores;
     	\item Organização e Distribuição de Atividades e Responsabilidades;
     	\item Construção de Documentação e Manuais;
-   	\item Levantamento de Requisitos e Features Adicionais;
+   		\item Levantamento de Requisitos e Features Adicionais;
     	\item Controle do Versionamento; e
     	\item Construção de Diagramas e Protótipos Gráficos.
 
@@ -243,7 +245,8 @@ mercado que está inserido e ao qual o \textit{software} desenvolvido será inse
 
 % --- Segment: Data Flow Diagrams ---
 \section{Diagrama de Fluxo de Dados}
-Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como os dados percorrem por entre os processos e por quais processos. Cada Requisito Funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo.
+Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como os dados percorrem por entre os processos e por quais processos. 
+Cada Requisito Funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo.
 
 \section{Requisitos e DFDs}
 \subsection{Requisitos Funcionais do Sistema}
@@ -287,9 +290,9 @@ Descrição de cada Requisito de Domínio:
 
 \pagebreak
 \subsection{RF01 - Criar Tasks}
-O sistema deve permitir que o usuário crie uma nova \textbf{Task}, onde o usuário deve informar o título da \textbf{Task}, a data 
-de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a 
-data de início da \textbf{Task}, descrição da \textbf{Task}, repetição entre períodos e as tags da \textbf{Task}.
+O sistema deve permitir que o usuário crie uma nova {Task}, onde o usuário deve informar o título da {Task}, a data 
+de término da {Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a 
+data de início da {Task}, descrição da {Task}, repetição entre períodos e as tags da {Task}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF01.drawio.png}
@@ -298,8 +301,8 @@ data de início da \textbf{Task}, descrição da \textbf{Task}, repetição entr
 
 \pagebreak
 \subsection{RF02 - Exibir Tasks}
-O sistema deve permitir que o usuário visualize todas as \textbf{Tasks} já existentes, onde o usuário pode vizualizar 
-título, data de início, data de término, descrição, repetição entre períodos e as tags da \textbf{Task}. Além disso, o 
+O sistema deve permitir que o usuário visualize todas as {Tasks} já existentes, onde o usuário pode vizualizar 
+título, data de início, data de término, descrição, repetição entre períodos e as tags da {Task}. Além disso, o 
 sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou seja, dois \textit{stakesholders}\footnote{
 \textit{Stakeholders} são aqueles para quem a funcionalidade está sendo desenvolvida ou quem está relacionado a ela. 
 } podem ser identificados: usuário e o sistema.
@@ -311,10 +314,10 @@ sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou s
 
 \pagebreak
 \subsection{RF03 - Editar Tasks}
-O sistema deve permitir que o usuário edite uma \textbf{Task} já existente, onde o usuário deve informar o 
-título da \textbf{Task}, a data de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios 
-para sua criação. Como dados opcionais, temos a data de início da \textbf{Task}, descrição da \textbf{Task}, 
-repetição entre períodos e as tags da \textbf{Task}.
+O sistema deve permitir que o usuário edite uma {Task} já existente, onde o usuário deve informar o 
+título da {Task}, a data de término da {Task}, sendo estes dois primeiros os dados obrigatórios 
+para sua criação. Como dados opcionais, temos a data de início da {Task}, descrição da {Task}, 
+repetição entre períodos e as tags da {Task}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF02.drawio.png}
@@ -323,8 +326,8 @@ repetição entre períodos e as tags da \textbf{Task}.
 
 \pagebreak
 \subsection{RF04 - Excluir Tasks}
-O sistema deve permitir que o usuário exclua uma \textbf{Task} já existente, onde o usuário deve informar o título 
-da \textbf{Task} a ser excluída.
+O sistema deve permitir que o usuário exclua uma {Task} já existente, onde o usuário deve informar o título 
+da {Task} a ser excluída.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF03.drawio.png}
@@ -333,7 +336,7 @@ da \textbf{Task} a ser excluída.
 
 \pagebreak
 \subsection{RF05 - Listar Tags}
-O sistema deve listar todas as \textbf{Tags} já existentes, em ordem de mais recentes para mais antigas.
+O sistema deve listar todas as {Tags} já existentes, em ordem de mais recentes para mais antigas.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF05.drawio.png}
@@ -416,10 +419,12 @@ Logo, com objetivo de aplicar nossa identidade, além de passar uma boa experiê
 
 \subsection{Cores do Tema Claro}
 \begin{itemize}
-	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} do JFrame principal. Além de fundo para os campos de \textit{input} e \textit{textarea} situados nos JPanels com fundo cinza;
+	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} do JFrame principal. Além de fundo para os campos de \textit{input} e \textit{textarea} 
+	situados nos JPanels com fundo cinza;
 	\item \textbf{Cinza:} \#E4DEDE. AplicaçãO: \textit{Background} dos campos de \textit{input} e \textit{textarea} situados na barra de navegação;
 	\item \textbf{Preto:} \#000000. Aplicação: Cores para textos e ícones;
-	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para destaque e detalhes mínimos de números no calendário;
+	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels 
+	para destaque e detalhes mínimos de números no calendário;
 	\item \textbf{Azul:} \#4646B9; Aplicação: \textit{Background} das Tags;
 	\item \textbf{Azul 2:} \#0500FF; Aplicação: Linhas de destaque para seções, além de bordas para JPanels e detalhes mínimos;
 	\item \textbf{Vermelho:} \#FF0000; Aplicação: Linhas do ícone de lixeira para exclusão de Tasks; e
@@ -429,9 +434,11 @@ Logo, com objetivo de aplicar nossa identidade, além de passar uma boa experiê
 \subsection{Cores do Tema Escuro}
 \begin{itemize}
 	\item \textbf{Preto:} \#000000. Aplicação: \textit{Background} do JFrame principal e para textos e ícones;
-	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} dos JPanels, além de fundo para os campos de \textit{input} e \textit{textarea} situados na barra de navegação;
+	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} dos JPanels, além de fundo para os campos de \textit{input} e \textit{textarea} 
+	situados na barra de navegação;
 	\item \textbf{Cinza:} \#E4DEDE. AplicaçãO: \textit{Background} dos campos de \textit{input} e \textit{textarea} situados nos JPanels com fundo branco;
-	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para destaque e detalhes mínimos de números no calendário;
+	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para 
+	destaque e detalhes mínimos de números no calendário;
 	\item \textbf{Azul:} \#4646B9; Aplicação: \textit{Background} das Tags e cor de seleção para \textit{Radio Buttons};
 	\item \textbf{Azul 2:} \#0500FF; Aplicação: Linhas de destaque para seções, além de bordas para JPanels e detalhes mínimos;
 	\item \textbf{Vermelho:} \#FF0000; Aplicação: Linhas do ícone de lixeira para exclusão de Tasks; e
@@ -510,7 +517,8 @@ externos, por exemplo.
 \end{itemize}	
 
 \subsubsection{Tema Escuro}
-Telas com tema escuro são aquelas que apresentam cores mais escuras, como o preto, o cinza escuro, o azul escuro, entre outros. A ideia de um tema escuro é a de que o usuário possa utilizar o sistema em ambientes com iluminação mais fraca, como em ambientes internos, por exemplo.
+Telas com tema escuro são aquelas que apresentam cores mais escuras, como o preto, o cinza escuro, o azul escuro, entre outros. A ideia de um tema escuro 
+é a de que o usuário possa utilizar o sistema em ambientes com iluminação mais fraca, como em ambientes internos, por exemplo.
 \begin{itemize}
 	\item Tema Principal
 	\begin{figure}[H]
@@ -555,7 +563,8 @@ Telas com tema escuro são aquelas que apresentam cores mais escuras, como o pre
 	\end{figure}
 \end{itemize}
 
-A seguir, temos outros JFrames que servirão como modais, ou pequenas telas informativas e de confirmação de ações, que serão apresentadas sobre a tela principal, e que serão apresentadas em ambos os temas, claro e escuro.
+A seguir, temos outros JFrames que servirão como modais, ou pequenas telas informativas e de confirmação de ações, que serão apresentadas sobre a 
+tela principal, e que serão apresentadas em ambos os temas, claro e escuro.
 \begin{itemize}
 	\item Tela de Confirmação de Exclusão de Tasks
 	\begin{figure}[H]
@@ -616,15 +625,22 @@ algo do mundo real que possui existência independente. Já os atributos, també
 dados correspondentes as entidades nas linhas não ordenadas. (TONSIG, 2006; MACÁRIO; BALDO, 2005). 
 
 \subsubsection{Relacionamentos}
-O envio de chaves primárias como chaves estrangeiras para outras tabelas é o que estabelece a relação entre tabelas. O relacionamento existente entre cada par de tabelas pode ser classificado em diferentes tipos, são eles:
+O envio de chaves primárias como chaves estrangeiras para outras tabelas é o que estabelece a relação entre tabelas. O relacionamento 
+existente entre cada par de tabelas pode ser classificado em diferentes tipos, são eles:
 \begin{itemize}
-	\item\textbf{um para muitos (1:N):} quando a tabela A, pode possuir e estar uma ou mais vezes presentes em um cenário, já a tabela B está presente somente uma única vez no cenário a cada momento. Neste caso, necessita-se que o atributo que identifica o registro da tabela B vá como atributo estrangeiro para a tabela A; (RANGEL, 2004; TONSIG, 2006).
-	\item\textbf{um para um (1:1):} neste caso, as duas tabelas se relacionam uma com a outra somente uma vez a cada momento no cenário da relação; (RANGEL, 2004; TONSIG, 2006).
-	\item\textbf{muitos para muitos (N:M):} neste exemplo, as tabelas A e B estão presentes uma ou mais vezes em um cenário. A particularidade dessa relação é que as chaves primárias das tabelas A e B vão para uma terceira tabela, a tabela C de relacionamento, onde também haverá o atributo identificador. (RANGEL, 2004; TONSIG, 2006).
+	\item\textbf{um para muitos (1:N):} quando a tabela A, pode possuir e estar uma ou mais vezes presentes em um cenário, já a tabela B está presente somente uma 
+	única vez no cenário a cada momento. Neste caso, necessita-se que o atributo que identifica o registro da tabela B vá como atributo estrangeiro para 
+	a tabela A; (RANGEL, 2004; TONSIG, 2006).
+	\item\textbf{um para um (1:1):} neste caso, as duas tabelas se relacionam uma com a outra somente uma vez a cada momento 
+	no cenário da relação; (RANGEL, 2004; TONSIG, 2006).
+	\item\textbf{muitos para muitos (N:M):} neste exemplo, as tabelas A e B estão presentes uma ou mais vezes em um cenário. 
+	A particularidade dessa relação é que as chaves primárias das tabelas A e B vão para uma terceira tabela, a tabela C de relacionamento, 
+	onde também haverá o atributo identificador. (RANGEL, 2004; TONSIG, 2006).
 \end{itemize}
 
 \subsubsection{Sistema de Gerenciamento de Banco de Dados}
-O conjunto de ferramentas e programas que dá suporte a realização das ações, citadas anteriormente, em uma Base de Dados, é conhecido como Sistema Gerenciador de Banco de Dados (SGBD). Um SGBD é destinado à definição, construção e manipulação do Banco. (TONSIG, 2006; FILHO; IOCHPE, 2001). 
+O conjunto de ferramentas e programas que dá suporte a realização das ações, citadas anteriormente, em uma Base de Dados, é conhecido como 
+Sistema Gerenciador de Banco de Dados (SGBD). Um SGBD é destinado à definição, construção e manipulação do banco. (TONSIG, 2006; FILHO; IOCHPE, 2001). 
 
 Os vocábulos Sistema de Banco de Dados (SBD) e Sistema Gerenciador de Banco de Dados (SGBD) são expressos no mesmo sentido, dando mesmo 
 significado, no entanto cada um representa definições distintas. Portanto, quando um SGBD é integrado ao Bando de Dados (BD), junto aos 
@@ -635,6 +651,7 @@ como \textit{Structured English Query Language} (SEQUEL). Entretanto, outros sof
 consulta para sua Base de Dados. Os SGBDs mais usados e 
 conhecidos atualmente são Interbase, SQL Server, Oracle, que é a líder no mercado de banco de dados relacionais, 
 MySQL e SQlite3, sendo este último o escolhido para o desenvolvimento deste projeto. (TONSIG, 2006; DATE, 2004; MACÁRIO; BALDO, 2005). 
+
 Para auxiliar no desenvolvimento das tabelas do banco de dados, ainda foi utilizado o suporte de um ORM\footnote{
 	\textit{Object-Relational Mapping} (ORM), em português, Mapeamento Objeto-Relacional, é uma técnica para aproximar o paradigma de desenvolvimento de aplicações orientadas a objetos ao paradigma do banco de dados relacional. O uso da técnica de ORMs é realizado através de um ORM que geralmente é a biblioteca ou \textit{framework} que ajuda no mapeamento e uso do banco de dados.
 }, através da biblioteca Hibernate ORM, que permite a criação de tabelas e relacionamentos entre elas, além de facilitar a manipulação dos dados. Abaixo, segue o diagrama de entidade e relacionamento do banco de dados do sistema:
@@ -649,35 +666,49 @@ Para auxiliar no desenvolvimento das tabelas do banco de dados, ainda foi utiliz
 \subsection{Java}
 Java é uma linguagem de programação desenvolvida pela empresa Sun Microsystems, em 1995. Atualmente, quem possui os direitos da 
 linguagem é a Oracle Corporation. A linguagem Java é uma linguagem de programação de propósito geral, ou seja, pode ser utilizada 
-para desenvolver qualquer tipo de aplicação, desde aplicações desktop até aplicações web, includindo aplicações robustas e comerciais.
+para desenvolver qualquer tipo de aplicação, desde aplicações desktop até aplicações web, includindo aplicações robustas e comerciais. (CLARO; BOSCO; SOBRAL, [s.d.])
 
 As possibilidades com Java são diversas, o que a configura atualmente, de acordo com o rankings da TIOBE de novembro de 2023, como a 4ª linguagem de programação
 mais utilizada no mundo. No entanto, de acordo com dados do próprio TIOBE, Java ja esteve na lidenrança do ranking, sendo a linguagem mais utilizada do mundo
-por um período de aproximadamente entre 15 e 20 anos.
+por um período de aproximadamente entre 15 e 20 anos. 
 
 \subsubsection{Breve Histórico}
 Java começou a surgir com o Projeto Green, em 1991, na Sun Microsystems, com James Gosling, sendo ele o nome mais relacionado a Java dentre as pesquisas 
 sobre o tema. O Projeto Green consistia no desenvolvimento de tecnologias modernas de software para dispositivos eletrônicos. Além disso, a ferramenta
-em desevolvimento precisava ser compatível com a necesssidade de quem a fosse usar, de modo que seu código fosse compacto e com arquitetura neutra.
+em desevolvimento precisava ser compatível com a necesssidade de quem a fosse usar, de modo que seu código fosse compacto e com arquitetura neutra. (JAVA; SOARES INDRUSIAK, 1996)
+
 
 O objetivo incial foi comprido, no entanto, Java começou com uma participação de mercado pequena. 
 
 Coincidentimente, no mesmo período o início da Wolrd Wide Web (WWW) começava a surgir. Como uma oportunidade de negócio a vista, os desevoldores da Sun
 Microsystems, optaram por adaptar a tecnologia que possíam no momento para o ambiente da web, permitindo o desenvolvimento de aplicações e programas para web.
-Logo, Java se torou um sucesso, principalmente no momento de lançamento do HotJava, o primeiro navegador web com suporte para a linguagem recém criada.
+Logo, Java se torou um sucesso, principalmente no momento de lançamento do HotJava, o primeiro navegador web com suporte para a linguagem recém criada. (JAVA; SOARES INDRUSIAK, 1996)
 
 Abaixo segue características fundamentais no entendimento da linguagem Java:
 \begin{itemize}
-	\item \textbf{Orientação a Objetos:} Java é uma linguagem de programação orientada a objetos, o que permite seu fácil uso e abstração do mundo real em diferentes necessidades;
-	\item \textbf{Multiplataforma:} Java é uma linguagem de programação multiplataforma, ou seja, pode ser executada em qualquer sistema operacional, desde que possua uma máquina virtual Java (JVM) instalada;
+	\item \textbf{Orientação a Objetos:} Java é uma linguagem de programação orientada a objetos, o que permite seu fácil uso e abstração do mundo real em diferentes necessidades; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{Multiplataforma:} Java é uma linguagem de programação multiplataforma, ou seja, pode ser executada em qualquer sistema operacional, desde que possua uma máquina virtual Java (JVM) instalada; (CLARO; BOSCO; SOBRAL, 2008)
 	\item \textbf{Gestão de Processos} Java é uma linguagem de programação segura, ou seja, possui uma série de mecanismos que garantem a segurança de suas aplicações, como por exemplo, o uso de um \textit{Garbage Collector}, 
-	que é um coletor de lixo que gerencia a memória da aplicação, evitando o uso de memória desnecessária e vazamentos de memória;
+	que é um coletor de lixo que gerencia a memória da aplicação, evitando o uso de memória desnecessária e vazamentos de memória; (CLARO; BOSCO; SOBRAL, 2008)
 	\item \textbf{Portável:} O código desenvolvido em Java, após o seu estado de interpretação de código, o chamado \textit{bytecode}\footnote{
 		Código intermediáio gerado após a intepretação da IDE. Este não é o código final executável no sistema.
-	}, com auxílio da JVM, é capaz de ser compilado em qualquer sistema operacional.
+	}, com auxílio da JVM, é capaz de ser compilado em qualquer sistema operacional. (CLARO; BOSCO; SOBRAL, 2008)
 \end{itemize}
 
 \subsubsection{Java Development Kit}
+O Java Development Kit, ou JDK (Kit de Desenvolvimento Java, em português), é um conjunto de ferramentas para desenvolvimento de aplicações em Java. Este pacote oferece ferramentas 
+de compilação de código e interpretação, além de utilitários como biblitecas nativas da linguagem para auxiliar na implementação do código-fonte em Java. Dentre as principais ferramentas do JDK, temos:
+\begin{itemize}
+	\item \textbf{javac:} Compilador Java, responsável por transformar o código-fonte em Java em \textit{bytecode}, ou seja, o código intermediário que será interpretado pela JVM; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{java:} Interpretador Java, responsável por interpretar o \textit{bytecode} gerado pelo compilador Java, transformando-o em código de máquina, ou seja, o código final executável no sistema; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{javadoc:} Gerador de documentação Java, responsável por gerar a documentação do código-fonte em Java, através de comentários especiais no código; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{appletviewer:} Visualizador de Applets Java, responsável por executar applets Java, que são pequenas aplicações desenvolvidas em Java, que são executadas em navegadores web; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{javafxpackager:} Ferramenta para empacotamento de aplicações JavaFX, responsável por empacotar aplicações desenvolvidas em JavaFX, que é uma biblioteca gráfica para desenvolvimento de interfaces gráficas em Java; e(CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{jar:} Ferramenta para empacotamento de aplicações Java, responsável por empacotar aplicações desenvolvidas em Java, que são executadas em linha de comando; (CLARO; BOSCO; SOBRAL, 2008)
+\end{itemize}
+
+Atualmente o JDK está sendo implementado utilizando das versões 17 ou 21 do pacote, isto é, pois há uma transição entre versões. As informações entre versões e demais opções de donwloads 
+podem ser encontradas no site oficial da Oracle, no link \url{https://www.oracle.com/java/technologies/downloads/} .
 
 
 
@@ -688,13 +719,13 @@ o que é a Orientação a Objetos de fato.
 Em um contexto geral da década de 1980 e 1990, onde a manipulação de dados complexos e entidades/personagens do mundo real cresceu de forma exponente,
 a dificuldade em reutilizar e implantar sistemas que possuíam uma grande quantidade de dados e informações, se tornou um problema. Logo, o paradigma do momento 
 da programação estruturada, não era mais suficiente para atender a demanda de sistemas que necessitavam de uma maior organização e reutilização de código 
-para replicar em diferentes realidades e ambientes. 
+para replicar em diferentes realidades e ambientes. (CLARO; BOSCO; SOBRAL, [s.d.])
 
 Como solução, um conceito de programação onde a abstração de dados permite a proximidade com o mundo real, de forma quase 100\% fidedignas a realidade foi desenvolvido.
 A Orientação a Objetos, ou \textit{Object Oriented Programming} OOP, em inglês, é um paradigma de programação - desenvolvido na década de 1960, no entanto aplicado somente
 porteriormente nos anos 1990 - que permite a criação de estruturas de dados de forma tais dados possam ser reaproveitados em diferentes 
 ambiente, ocasiões, fluxos de negócios e domínio de mercado. A ideia é justamente a compatibilidade e reutilização de código,
-através de técnicas como uso de classes, métodos, objetos, herança, polimorfismo, encapsulamento, entre outros.
+através de técnicas como uso de classes, métodos, objetos, herança, polimorfismo, encapsulamento, entre outros. (CLARO; BOSCO; SOBRAL, [s.d.])
 
 \subsubsection{EXPLICAR COMO APLICOU}
 % COMO USOU A FERRAMENTA JAVA PARA DESENVOLVER O BACK-END DO SISTEMA
@@ -735,9 +766,32 @@ Visual Studio Code é uma IDE de desenvolvimento e codifição de código fonte,
 \raggedright
 \noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
 
-\noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
+\noindent DATE, C. J. et al. Introdução a Sistemas de Bancos de Dados. Tradução: Daniel Vieira. Tradução da 8a Edição Americana ed. [s.l.] 
+ELSEVIER EDITORA, Rio de Janeiro: Campus 2004. Acesso em: 23 nov. 2023. \linebreak
 
-\noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
+\noindent ELMASRI, Ramez et al. Sistemas de banco de dados. 2005. Acesso em: 23 set. 2022. \linebreak
+
+\noindent LISBOA FILHO, Jugurta; IOCHPE, Cirano. Modelagem de Bancos de Dados Geográficos. In: Anais do XX Congresso Brasileiro de Cartografia. 2001. Acesso em: 23 nov. 2023. \linebreak
+
+\noindent MACÁRIO, Carla Geovana do N.; BALDO, Stefano Monteiro. O modelo relacional. Instituto de Computação Unicamp. Campinas, p. 1-15, 2005. 
+Disponível em: <https://www.studocu.com/pt-br/document/instituto-federal-de-educacao-ciencia-e-tecnologia-sao-paulo/banco-de-dados/ch03-rm-resumo-anotacoes-bando-de-dados/15426577> 
+Acesso em: 23 nov. 2023. \linebreak
+
+\noindent JAVA, L.; SOARES INDRUSIAK, L. Grupo JavaRS JUG Rio Grande do Sul. [s.l: s.n.]. 
+Disponível em: <https://www.cin.ufpe.br/~arfs/introjava.pdf>. Acesso em: 23 nov. 2023. \linebreak
+
+\noindent CLARO, D.; BOSCO, J.; SOBRAL, M. Programação em JAVA. [s.l: s.n.]. 
+Disponível em: <http://www.lasid.ufba.br/teste/pessoal/danielaclaro/download/Programando\%20em\%20Java.pdf>. 
+Acesso em: 23 nov. 2023. \linebreak
+
+\noindent Download the Latest Java LTS Free. Disponível em: <https://www.oracle.com/br/java/technologies/downloads/>. 
+Acesso em: 23 nov. 2023. \linebreak
+
+\noindent 
+
+\noindent 
+
+\noindent
 
 % --- Document: End --- 
 \end{document}
