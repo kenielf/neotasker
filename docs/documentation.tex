@@ -8,8 +8,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[portuguese]{babel}
-\usepackage{hyperref}
-
 \addto\extrasportuguese{\renewcommand{\contentsname}{Índice}}
 
 % Margins, Columns, Indentation & Spacing
@@ -206,7 +204,6 @@ características próprias. Os requisitos são:
 \end{itemize}
 
 
-
 \subsection{Requisitos Funcionais}
 Os \textbf{Requisitos Funcionais} são aqueles que indicam quais as funcionalidades o sistema possuirá, ou seja, o que o sistema 
 é capaz de executar e processar com as informações. Exemplos são:
@@ -303,9 +300,8 @@ data de início da {Task}, descrição da {Task}, repetição entre períodos e 
 \subsection{RF02 - Exibir Tasks}
 O sistema deve permitir que o usuário visualize todas as {Tasks} já existentes, onde o usuário pode vizualizar 
 título, data de início, data de término, descrição, repetição entre períodos e as tags da {Task}. Além disso, o 
-sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou seja, dois \textit{stakesholders}\footnote{
-\textit{Stakeholders} são aqueles para quem a funcionalidade está sendo desenvolvida ou quem está relacionado a ela. 
-} podem ser identificados: usuário e o sistema.
+sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou seja, dois \textit{stakesholders} 
+podem ser identificados: usuário e o sistema.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF02.drawio.png}
@@ -409,11 +405,11 @@ representados dentro do sistema.
 \section{Paleta de Cores do Sistema}
 A paleta de cores do sistema é o conjunto de cores que serão utilizadas no sistema, tanto para o tema claro quanto 
 para o tema escuro. É importante destacar que as cores do sistema foram escolhidas usando como base seu possíveis 
-significados e o que elas poderiam significar para o usuário final, em diferentes situações e processos dentro do sistema.
+significados e o que elas poderiam significar para o usuário final, em diferentes situações e processos dentro do sistema. 
 
 \subsection{Sistema de Cores}
 Cada cor pode representar um emoção e expressar um significado quando se diz respeito a experiência do usuário. Expressar uma 
-mensagem de forma adequada através das cores pode ser o elemento crucial que distingue o êxito do fracasso em um projeto.
+mensagem de forma adequada através das cores pode ser o elemento crucial que distingue o êxito do fracasso em um projeto. (“Medium”, [s.d.])
 
 Logo, com objetivo de aplicar nossa identidade, além de passar uma boa experiência ao usuário, foram escolhidas as seguintes cores:
 
@@ -666,11 +662,11 @@ Para auxiliar no desenvolvimento das tabelas do banco de dados, ainda foi utiliz
 \subsection{Java}
 Java é uma linguagem de programação desenvolvida pela empresa Sun Microsystems, em 1995. Atualmente, quem possui os direitos da 
 linguagem é a Oracle Corporation. A linguagem Java é uma linguagem de programação de propósito geral, ou seja, pode ser utilizada 
-para desenvolver qualquer tipo de aplicação, desde aplicações desktop até aplicações web, includindo aplicações robustas e comerciais. (CLARO; BOSCO; SOBRAL, [s.d.])
+para desenvolver qualquer tipo de aplicação, desde aplicações desktop até aplicações web, includindo aplicações robustas e comerciais. (ARNOLD et al., 2005)
 
 As possibilidades com Java são diversas, o que a configura atualmente, de acordo com o rankings da TIOBE de novembro de 2023, como a 4ª linguagem de programação
 mais utilizada no mundo. No entanto, de acordo com dados do próprio TIOBE, Java ja esteve na lidenrança do ranking, sendo a linguagem mais utilizada do mundo
-por um período de aproximadamente entre 15 e 20 anos. 
+por um período de aproximadamente entre 15 e 20 anos. (TIOBE, 2023)
 
 \subsubsection{Breve Histórico}
 Java começou a surgir com o Projeto Green, em 1991, na Sun Microsystems, com James Gosling, sendo ele o nome mais relacionado a Java dentre as pesquisas 
@@ -708,7 +704,7 @@ de compilação de código e interpretação, além de utilitários como biblite
 \end{itemize}
 
 Atualmente o JDK está sendo implementado utilizando das versões 17 ou 21 do pacote, isto é, pois há uma transição entre versões. As informações entre versões e demais opções de donwloads 
-podem ser encontradas no site oficial da Oracle, no link \url{https://www.oracle.com/java/technologies/downloads/} .
+podem ser encontradas no site oficial da Oracle, no link https://www.oracle.com/java/technologies/downloads/ .
 
 
 
@@ -751,11 +747,42 @@ O desenvolvimento do sistema foi feito em dois sistemas operacionais diferentes,
 de codificação foram utilizadas em ambos os sistemas, mas pela diferença de plataformas, uma gama maior de softwares foi necessário. Abaixo, segue 
 as informações de cada ferramenta utilizada no desenvolvimento do sistema, além de qual plataforma foi executado.
 
+Dentre as ferramentas de desenvolvimento do código, temos:
 \subsubsection{Visual Studio Code}
-Visual Studio Code é uma IDE de desenvolvimento e codifição de código fonte, desenvolvida pela Microsoft
+O Visual Studio Code é um editor de código-fonte, sua execução acontece a partir do acesso em seu atalho na área de trabalho do computador. 
+Ele é executado em Windows, Linux e macOS. Além de forma nativa ele dispor de opções de tipo de arquivos, como arquivos .html, .php, .css etc, 
+você pode baixar extensões que melhoram a gama de linguagens suportadas, a partir da biblioteca inserida no software. Outras extensões tratam da 
+usabilidade do sistema, a partir de conexões com outras aplicações e atalhos na interface. Em resumo, as extensões buscam melhorar seu fluxo de 
+trabalho, agilizando processos e oferecendo mais suporte a outras tecnologias. São exemplos de extensões do VS Code: C++, C\#, Python, GitLens, 
+Visual Studio IntelliCode, BookMarks etc. O Visual Studio também oferece pacotes de personalização da interface, alterando cores no código nas 
+expressões usadas e os ícones da linguagem (quando os arquivos estão abertos na raiz). (VISUAL STUDIO CODE, 2023).
 
-\subsubsection{Git}
 \subsubsection{NetBeans IDE}
+Origianlmente feito pela Sun Microsystems e atualmente com Oracle possuindo seus direitos o (após a aquisição da Sun pela Oracle), o NetBeans é uma 
+IDE (\textit{Integrated Development Environment}, em português, Ambiente de Desenvolvimento Integrado) para desenvolvimento de aplicações em 
+diversas linguagens, dentre algumas das suportadas, temos Java, C, C++, PHP, entre outras. O NetBeans é uma IDe de código aberto, executável 
+em diferentes sistemas operacionais, como Windows, Linux, Mac e Solaris. O NetBeans também oferece suporte ao desenvolvimento de aplicações Web, 
+pois é compatível com o uso de HTML5 e semelhantes na ferramenta. Outro destaque do NetBeans é o suporte a diferentes bibliotecas e APIs 
+em seu ambiente. (“About Apache NetBeans”, [s.d.])
+
+\subsubsection{NeoVim}
+O Neovim é um editor de texto, baseado no editor Vim\footnote{
+	Vim (Vi IMproved, em português Vi Melhorado) é um programa editor de textos vi para Unix de Bill Joy. Foi escrito por Bram Moolenaar baseado na fonte para um porte do editor 
+	Stevie para o Amiga[1] com a primeiro lançamento público em 1991. O Vim é destinado para uso a partir tanto de uma interface de linha de comando como uma aplicação isolada em uma interface gráfica de usuário.
+	Possui código-aberto e licensa GNU GPL. (“Vim”, 2023)
+}, que possui como objetivo ser um editor de texto mais moderno e atualizado, com suporte a diferentes linguagens de programação, além de ser mais leve e rápido que o Vim.
+Seu maior objetivo é aproveitar das ferremanetas e funcionalidades úteis do Vim, em um novo ambiente melhorado e 
+compatível com diversos Plug-ins. (“Home - Neovim”, [s.d])
+
+
+\subsection{Sistema de Versionamento de Código}
+Versionar um código nada mais é do que atribuir versões de desenvolvimento de novas ferramentas para o \textit{software}, correções de \textit{bugs}, 
+melhorias em funcionalidades já eistentes, entre outros. Todas essas alterações devem ser controladas para fins de registros e informações a respeito do que mudou 
+no sistema e quem fez determinada alteração. Logo, o versionamento de código é fundamental para este controle e registro de atividades em um sistema/projeto.
+
+O sistema de versionamento escolhido para este projeto foi o Git, sendo ele o mais utilizado no mundo, além de ser um dos mais completos e robustos.
+\subsubsection{Git}
+\subsubsection{GitHub}
 
 
 % --- Segment: References ---
@@ -764,12 +791,30 @@ Visual Studio Code é uma IDE de desenvolvimento e codifição de código fonte,
 \vspace{1cm}
 
 \raggedright
+\noindent ABOUT APACHE NETBEANS. Disponível em: <https://netbeans.apache.org/about/index.html>. Acesso em: 24 nov. 2023. \linebreak
+
 \noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
+
+\noindent ARNOLD, K. et al. THE JavaTM Programming Language, Fourth Edition. [s.l: s.n.]. 
+Disponível em: <https://www.acs.ase.ro/Media/Default/documents/java/ClaudiuVinte/books/ArnoldGoslingHolmes06.pdf>. 
+Acesso em: 24 nov. 2023. \linebreak
+
+\noindent CLARO, D.; BOSCO, J.; SOBRAL, M. Programação em JAVA. [s.l: s.n.]. 
+Disponível em: <http://www.lasid.ufba.br/teste/pessoal/danielaclaro/download/Programando\%20em\%20Java.pdf>. 
+Acesso em: 23 nov. 2023. \linebreak
 
 \noindent DATE, C. J. et al. Introdução a Sistemas de Bancos de Dados. Tradução: Daniel Vieira. Tradução da 8a Edição Americana ed. [s.l.] 
 ELSEVIER EDITORA, Rio de Janeiro: Campus 2004. Acesso em: 23 nov. 2023. \linebreak
 
+\noindent Download the Latest Java LTS Free. Disponível em: <https://www.oracle.com/br/java/technologies/downloads/>. 
+Acesso em: 23 nov. 2023. \linebreak
+
 \noindent ELMASRI, Ramez et al. Sistemas de banco de dados. 2005. Acesso em: 23 set. 2022. \linebreak
+
+\noindent Home - Neovim. Disponível em: <https://neovim.io/>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent JAVA, L.; SOARES INDRUSIAK, L. Grupo JavaRS JUG Rio Grande do Sul. [s.l: s.n.]. 
+Disponível em: <https://www.cin.ufpe.br/~arfs/introjava.pdf>. Acesso em: 23 nov. 2023. \linebreak
 
 \noindent LISBOA FILHO, Jugurta; IOCHPE, Cirano. Modelagem de Bancos de Dados Geográficos. In: Anais do XX Congresso Brasileiro de Cartografia. 2001. Acesso em: 23 nov. 2023. \linebreak
 
@@ -777,17 +822,19 @@ ELSEVIER EDITORA, Rio de Janeiro: Campus 2004. Acesso em: 23 nov. 2023. \linebre
 Disponível em: <https://www.studocu.com/pt-br/document/instituto-federal-de-educacao-ciencia-e-tecnologia-sao-paulo/banco-de-dados/ch03-rm-resumo-anotacoes-bando-de-dados/15426577> 
 Acesso em: 23 nov. 2023. \linebreak
 
-\noindent JAVA, L.; SOARES INDRUSIAK, L. Grupo JavaRS JUG Rio Grande do Sul. [s.l: s.n.]. 
-Disponível em: <https://www.cin.ufpe.br/~arfs/introjava.pdf>. Acesso em: 23 nov. 2023. \linebreak
+\noindent Medium. Disponível em: <https://brasil.uxdesign.cc/as-cores-na-experi>. Acesso em: 24 nov. 2023. \linebreak
 
-\noindent CLARO, D.; BOSCO, J.; SOBRAL, M. Programação em JAVA. [s.l: s.n.]. 
-Disponível em: <http://www.lasid.ufba.br/teste/pessoal/danielaclaro/download/Programando\%20em\%20Java.pdf>. 
-Acesso em: 23 nov. 2023. \linebreak
+\noindent NetBeans IDE | Oracle Brasil. Disponível em: <https://www.oracle.com/br/tools/technologies/netbeans-ide.html>. Acesso em: 24 nov. 2023 \linebreak
 
-\noindent Download the Latest Java LTS Free. Disponível em: <https://www.oracle.com/br/java/technologies/downloads/>. 
-Acesso em: 23 nov. 2023. \linebreak
+\noindent Psicologia das cores: veja como isso é essencial para o sucesso do designer. 
+Disponível em: <https://www.alura.com.br/artigos/psicologia-das-cores-veja-como-isso-e-essencial-para-o-sucesso-do-designer>.
+Acesso em: 24 nov. 2023. \linebreak 
 
-\noindent 
+\noindent TIOBE. TIOBE Index | TIOBE - The Software Quality Company. Disponível em: <https://www.tiobe.com/tiobe-index/>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent Vim. Disponível em: <https://pt.wikipedia.org/wiki/Vim>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent VISUAL STUDIO CODE. Documentation for Visual Studio Code. Disponível em: <https://code.visualstudio.com/docs>. Acesso em: 24 nov. 2023. \linebreak
 
 \noindent 
 
