@@ -13,6 +13,7 @@ public class Calendar extends JPanel {
     public static final String IDENTIFIER = "Calendário";
     /** The font size for the identifier. */
     public static final float IDENTIFIER_SIZE = 22f;
+    /** The text label for the identifier. */
     JLabel identifierLabel;
 
     /**
