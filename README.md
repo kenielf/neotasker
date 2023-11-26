@@ -47,7 +47,7 @@ Esse software é versionado a partir do esquema de [Versionamento Numérico-Sema
    - Configuração do Maven;
    - Configuração do Repositório.
 
- - **0.2**: Gerenciametno do Sistema Operacional:
+ - **0.2**: Gerenciamento do Sistema Operacional:
    - Caminho de Arquivos e Pastas;
    - Uso de Cores em Saídas de Texto.
 
