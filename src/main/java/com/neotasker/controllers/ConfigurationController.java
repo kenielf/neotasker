@@ -15,12 +15,17 @@ import com.neotasker.model.Configuration;
 import com.neotasker.model.Theme;
 import com.neotasker.utils.OperatingSystem;
 
-// Environment Based Configuration
+/**
+ * Environment based configuration.
+ */
 public class ConfigurationController {
     private Gson gson;
     private HashMap<String, String> json;
     private Configuration config;
 
+    /**
+     * Instantiates the configuration for the entire application.
+     */
     public ConfigurationController() {
         this.gson = new GsonBuilder().setPrettyPrinting().create();
         this.json = new HashMap<String, String>();
@@ -66,6 +71,12 @@ public class ConfigurationController {
         );
     }
 
+    /**
+     * Statically creates a configuration for cases where it is invalid or 
+     * does not exist.
+     *
+     * @return the configuration with default options.
+     */
     public static Configuration createDefault() {
         Configuration config = new Configuration();
         config.setScalingPercentage(Theme.SCALING_DEFAULT);
@@ -75,6 +86,10 @@ public class ConfigurationController {
         return config;
     }
 
+    /**
+     * Overwrites the configuration file - works both if the file 
+     * exists or not.
+     */
     public static void updateConfiguration() {
         Configuration config = new Configuration();
         config.setScalingPercentage(Theme.getScalingPercentage());
@@ -84,6 +99,9 @@ public class ConfigurationController {
         writeConfig(config);
     }
 
+    /**
+     * Writes the configuration to the file, can be used anywhere.
+     */
     public static void writeConfig(Configuration config) {
         try {
             BufferedWriter writer = new BufferedWriter(
@@ -97,6 +115,4 @@ public class ConfigurationController {
             e.printStackTrace();
         }
     }
-
-
 }
