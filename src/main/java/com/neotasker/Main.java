@@ -2,6 +2,10 @@ package com.neotasker;
 
 import com.neotasker.database.HibernateUtil;
 import com.neotasker.utils.OperatingSystem;
+import com.neotasker.view.landing.Landing;
+import com.neotasker.controllers.ConfigurationController;
+import com.neotasker.database.HibernateUtil;
+import com.neotasker.model.Theme;
 
 /**
  * This is the application's main class.
@@ -18,10 +22,19 @@ public class Main {
         // Operating System Handler
         new OperatingSystem();
 
-        // Database Handler
+        // Handle System Configuration
+        new ConfigurationController();
+        System.out.println("\u001b[33mUi Theme:\u001b[00m " + Theme.getUiTheme());
+        System.out.println("\u001b[33mIcon Theme:\u001b[00m " + Theme.getIconTheme());
+
+        // Initialize Database
         HibernateUtil.Initialize();
 
-        // Safe Exit
-        System.exit(1);
+        // Initialize Graphical Environment
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Landing();
+            }
+        });
     }
 }
