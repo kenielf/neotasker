@@ -101,6 +101,8 @@ public class ConfigurationController {
 
     /**
      * Writes the configuration to the file, can be used anywhere.
+     * 
+     * @param config the configuration that will be saved.
      */
     public static void writeConfig(Configuration config) {
         try {
