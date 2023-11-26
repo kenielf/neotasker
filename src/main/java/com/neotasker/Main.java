@@ -1,5 +1,7 @@
 package com.neotasker;
 
+import com.neotasker.utils.OperatingSystem;
+
 /**
  * This is the application's main class.
  */
@@ -11,5 +13,8 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+
+        // Operating System Handler
+        new OperatingSystem();
     }
 }
