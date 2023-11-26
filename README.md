@@ -55,17 +55,17 @@ Esse software é versionado a partir do esquema de [Versionamento Numérico-Sema
    - Configuração do Hibernate;
    - Modelos de Dados Iniciais.
 
- - **0.4**: Gerenciamento de Configuração:
+ - **0.4**: Tela Inicial:
+   - Barra de Navegação;
+   - Painel de Conteúdo Vazio.
+
+ - **0.5**: Gerenciamento de Configuração:
    - Criação, Leitura e Atualização de Configuração;
    - Opções:
      - Escala da Interface;
      - Tema da Interface;
      - Tema dos Ícones;
      - Modo de Antiserrilhamento.
-
- - **0.5**: Tela Inicial:
-   - Barra de Navegação;
-   - Painel de Conteúdo Vazio.
 
  - **0.6**: Tela de Configuração:
    - Modificação Interativa de Configurações.
