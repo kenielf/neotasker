@@ -10,10 +10,19 @@ import com.neotasker.utils.Constants;
 
 import net.miginfocom.swing.MigLayout;
 
+/**
+ * This class is responsible for drawing the main frame of the application on 
+ * the screen.
+ */
 public class Landing extends JFrame {
+    /** The navigation bar. */
     public NavigationBar navBar;
+    /** The content panel. */
     public ContentPanel content;
 
+    /**
+     * Instantiates the landing frame.
+     */
     public Landing() {
         // Instantiate JFrame Properties
         super();

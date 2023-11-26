@@ -9,13 +9,24 @@ import com.neotasker.view.calendar.Calendar;
 import com.neotasker.view.statistics.Statistics;
 import com.neotasker.view.configuration.Configuration;
 
+/**
+ * This class is responsible for switching the content panels.
+ */
 public class ContentPanel extends JPanel {
+    /** The layout used to manage panels. */
     private CardLayout cardLayout;
+    /** The task panel. */
     private Tasks tasksView;
+    /** The calendar panel */
     private Calendar calendarView;
+    /** The statistics panel */
     private Statistics statisticsView;
+    /** The configuration panel */
     private Configuration configurationView;
 
+    /**
+     * Instantiates the content panel
+     */
     public ContentPanel() {
         // Instantiate JPanel Properties
         super();
@@ -40,21 +51,39 @@ public class ContentPanel extends JPanel {
         add(this.configurationView, Configuration.IDENTIFIER);
     }
 
+    /**
+     * Switches the view to the specified panel.
+     *
+     * @param label the identifier of the panel.
+     */
     private void switchView(String label) {
         cardLayout.show(this, label);
     }
 
+    /**
+     * Switches the view to the tasks panel.
+     */
     public void switchToTasks() {
         switchView(Tasks.IDENTIFIER);
     }
 
+    /**
+     * Switches the view to the calendar panel.
+     */
     public void switchToCalendar() {
         switchView(Calendar.IDENTIFIER);
     }
 
+    /**
+     * Switches the view to the statistics panel.
+     */
     public void switchToStatistics() {
         switchView(Statistics.IDENTIFIER);
     }
+
+    /**
+     * Switches the view to the configuration panel.
+     */
     public void switchToConfiguration() {
         switchView(Configuration.IDENTIFIER);
     }

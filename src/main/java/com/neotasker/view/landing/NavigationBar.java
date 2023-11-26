@@ -11,19 +11,35 @@ import com.neotasker.view.basecomponents.JPromptField;
 
 import net.miginfocom.swing.MigLayout;
 
+/**
+ * This class is responsible for managing the navigation between panels.
+ */
 public class NavigationBar extends JPanel {
+    /** The font size for the search prompt. */
     public static final float searchPromptFontSize = 22f;
+    /** The amount of columns the searchBar must have. */
     public static final int searchBarColumns = 48;
 
+    /** The button to navigate to the tasks panel. */
     JButton listButton;
+    /** The button to navigate to the calendar panel. */
     JButton calendarButton;
+    /** The button to navigate to the statistics panel. */
     JButton statisticsButton;
+    /** The search bar for the tasks. */
     JPromptField searchBar;
+    /** The button to search for the tasks. */
     JButton searchButton;
+    /** The button to add new tasks or tags. */
     JButton addButton;
+    /** The button to navigate to the configuration panel. */
     JButton configurationButton;
+    /** The separator between the bar and the remaining content. */
     JSeparator separator;
 
+    /**
+     * Instantiates the navigation bar.
+     */
     public NavigationBar() {
         super();
 
@@ -91,6 +107,7 @@ public class NavigationBar extends JPanel {
         add(this.separator, "growx, span");
     }
 
+    /** Refreshes all icons for all buttons. */
     public void UpdateIcons() {
         this.listButton.setIcon(
             new ImageIcon(getClass().getResource(
