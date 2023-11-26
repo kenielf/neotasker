@@ -1,5 +1,6 @@
 package com.neotasker;
 
+import com.neotasker.database.HibernateUtil;
 import com.neotasker.utils.OperatingSystem;
 
 /**
@@ -16,5 +17,11 @@ public class Main {
 
         // Operating System Handler
         new OperatingSystem();
+
+        // Database Handler
+        HibernateUtil.Initialize();
+
+        // Safe Exit
+        System.exit(1);
     }
 }
