@@ -54,13 +54,15 @@
         {\large
             % Institution
             {\Huge
-                FATEC -- Prof. Waldomiro May
+                FATEC -- Prof. Waldomiro May	
             }\\
+
+			\vspace{1cm}
             ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 
             % Project Presentation
             \vspace{1cm}
-            SEMANA DE TECNOLOGIA
+            PROJETO INTEGRADOR I
 
             % Project Logo
             \vspace{6cm}
@@ -175,11 +177,11 @@ O projeto consta com dois membros, portanto, as atividades estão substituídas 
 
 \paragraph{Wellington E. Rodrigues}
 \begin{itemize}
-	\item Planejamento e Estrturação do Projeto;
+		\item Planejamento e Estrturação do Projeto;
     	\item Design e Padrões de Cores;
     	\item Organização e Distribuição de Atividades e Responsabilidades;
     	\item Construção de Documentação e Manuais;
-   	\item Levantamento de Requisitos e Features Adicionais;
+   		\item Levantamento de Requisitos e Features Adicionais;
     	\item Controle do Versionamento; e
     	\item Construção de Diagramas e Protótipos Gráficos.
 
@@ -190,10 +192,11 @@ O projeto consta com dois membros, portanto, as atividades estão substituídas 
 \textbf{Levantamente de Requisitos} é a prática onde se estuda e debate as funcionalidades que deverão ser contempladas no sistema, 
 além das regras para tais funcionalidades e os cenários de implantação. Todo esse estudo, compreende na \textbf{Engenharia de Sistemas} 
 que oferece suporte e abrange todas as atividades relacionadas à investigação, definição e delimitação de novos sistemas ou modificações.
+(PRESSMAN; MAXIM, 2020)
 
 Essa etapa é crucial no processo de desenvolvimento de software, no qual o engenheiro de requisitos, o analista de negócios, e 
 o engenheiro de sistemas ou desenvolvedor de software trabalham juntos para identificar as necessidades e requisitos do cliente. Uma 
-vez que os requisitos do sistema são identificados, os projetistas de sistemas estão prontos para criar a solução.
+vez que os requisitos do sistema são identificados, os projetistas de sistemas estão prontos para criar a solução. (PRESSMAN; MAXIM, 2020)
 
 Na etapa de \textbf{Levantamento de Requisitos} temos a deinfição de três tipos de requisitos, onde cada um deles possuem suas 
 características próprias. Os requisitos são:
@@ -202,7 +205,6 @@ características próprias. Os requisitos são:
 	\item Requisitos Não-Funcionais; e
 	\item Requisitos de Domínio.
 \end{itemize}
-
 
 
 \subsection{Requisitos Funcionais}
@@ -243,7 +245,8 @@ mercado que está inserido e ao qual o \textit{software} desenvolvido será inse
 
 % --- Segment: Data Flow Diagrams ---
 \section{Diagrama de Fluxo de Dados}
-Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como os dados percorrem por entre os processos e por quais processos. Cada Requisito Funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo.
+Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como os dados percorrem por entre os processos e por quais processos. 
+Cada Requisito Funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo.
 
 \section{Requisitos e DFDs}
 \subsection{Requisitos Funcionais do Sistema}
@@ -252,12 +255,17 @@ Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como o
 	\includegraphics[scale=0.80]{requirements/functionals/requirements.png}
 	\caption{Requisitos Funcionais do Sistema}
 \end{figure}
+\noindent Fonte: Os Autores.
+
+
 Descrição de cada Requisito Funcional:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.80]{requirements/functionals/description.png}
 	\caption{Descrição dos Requisitos Funcionais do Sistema}
 \end{figure}
+\noindent Fonte: Os Autores.
+
 
 \subsection{Requisitos Não-Funcionais do Sistema}
 \begin{figure}[H]
@@ -265,12 +273,17 @@ Descrição de cada Requisito Funcional:
 	\includegraphics[scale=0.80]{requirements/not-functionals/not-functionals.png}
 	\caption{Requisitos Não-Funcionais do Sistema}
 \end{figure}
+\noindent Fonte: Os Autores.
+
+
 Descrição de cada Requisito Não-Funcional:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.80]{requirements/not-functionals/description.png}
 	\caption{Descrição dos Requisitos Não-Funcionais do Sistema}
 \end{figure}
+\noindent Fonte: Os Autores.
+
 
 \subsection{Requisitos de Domínio do Sistema}
 \begin{figure}[H]
@@ -278,67 +291,75 @@ Descrição de cada Requisito Não-Funcional:
 	\includegraphics[scale=0.80]{requirements/domain/domain.png}
 	\caption{Requisitos de Domínio do Sistema}
 \end{figure}
+\noindent Fonte: Os Autores.
+
+
 Descrição de cada Requisito de Domínio:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.80]{requirements/domain/description.png}
 	\caption{Descrição dos Requisitos de Domínio do Sistema}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF01 - Criar Tasks}
-O sistema deve permitir que o usuário crie uma nova \textbf{Task}, onde o usuário deve informar o título da \textbf{Task}, a data 
-de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a 
-data de início da \textbf{Task}, descrição da \textbf{Task}, repetição entre períodos e as tags da \textbf{Task}.
+O sistema deve permitir que o usuário crie uma nova {Task}, onde o usuário deve informar o título da {Task}, a data 
+de término da {Task}, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a 
+data de início da {Task}, descrição da {Task}, repetição entre períodos e as tags da {Task}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF01.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 01}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF02 - Exibir Tasks}
-O sistema deve permitir que o usuário visualize todas as \textbf{Tasks} já existentes, onde o usuário pode vizualizar 
-título, data de início, data de término, descrição, repetição entre períodos e as tags da \textbf{Task}. Além disso, o 
-sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou seja, dois \textit{stakesholders}\footnote{
-\textit{Stakeholders} são aqueles para quem a funcionalidade está sendo desenvolvida ou quem está relacionado a ela. 
-} podem ser identificados: usuário e o sistema.
+O sistema deve permitir que o usuário visualize todas as {Tasks} já existentes, onde o usuário pode vizualizar 
+título, data de início, data de término, descrição, repetição entre períodos e as tags da {Task}. Além disso, o 
+sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou seja, dois \textit{stakesholders} 
+podem ser identificados: usuário e o sistema.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF02.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 02}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF03 - Editar Tasks}
-O sistema deve permitir que o usuário edite uma \textbf{Task} já existente, onde o usuário deve informar o 
-título da \textbf{Task}, a data de término da \textbf{Task}, sendo estes dois primeiros os dados obrigatórios 
-para sua criação. Como dados opcionais, temos a data de início da \textbf{Task}, descrição da \textbf{Task}, 
-repetição entre períodos e as tags da \textbf{Task}.
+O sistema deve permitir que o usuário edite uma {Task} já existente, onde o usuário deve informar o 
+título da {Task}, a data de término da {Task}, sendo estes dois primeiros os dados obrigatórios 
+para sua criação. Como dados opcionais, temos a data de início da {Task}, descrição da {Task}, 
+repetição entre períodos e as tags da {Task}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF02.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 03}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF04 - Excluir Tasks}
-O sistema deve permitir que o usuário exclua uma \textbf{Task} já existente, onde o usuário deve informar o título 
-da \textbf{Task} a ser excluída.
+O sistema deve permitir que o usuário exclua uma {Task} já existente, onde o usuário deve informar o título 
+da {Task} a ser excluída.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF03.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 04}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF05 - Listar Tags}
-O sistema deve listar todas as \textbf{Tags} já existentes, em ordem de mais recentes para mais antigas.
+O sistema deve listar todas as {Tags} já existentes, em ordem de mais recentes para mais antigas.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.45]{DFDs/RF05.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 05}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF06 - Obter Infor do Sistema Operacional}
@@ -348,6 +369,7 @@ O sistema deve obter informações do sistema operacional, com qual é por exemp
 	\includegraphics[scale=0.45]{DFDs/RF06.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 06}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF07 - Mostra Dados de Estatísticas}
@@ -357,6 +379,7 @@ O sistema deve mostrar dados de estatísticas, sendo o número de task criadas, 
 	\includegraphics[scale=0.45]{DFDs/RF07.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 07}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF08 - Importar Dados}
@@ -366,6 +389,7 @@ O sistema deve ser capaz de importar dados externos, sendo eles por arquivos nos
 	\includegraphics[scale=0.45]{DFDs/RF08.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 08}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF09 - Exportar Dados}
@@ -376,6 +400,7 @@ em arquivo de formato \textbf{.json} e \textbf{.xml}.
 	\includegraphics[scale=0.45]{DFDs/RF09.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 09}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF10 - Trocar Tema}
@@ -385,6 +410,7 @@ O sistema deve ser capaz de trocar o tema, sendo eles o tema claro e o tema escu
 	\includegraphics[scale=0.45]{DFDs/RF10.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 10}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \subsection{RF11 - Sincronizar Localidade}
@@ -394,11 +420,27 @@ O sistema deve ser capaz de sincronizar a localidade física do usuário com o s
 	\includegraphics[scale=0.45]{DFDs/RF11.drawio.png}
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 11}
 \end{figure}
+\noindent Fonte: Os Autores.
 
 \pagebreak
 \section{Dicionário de Dados}
 O \textbf{Dicionário de Dados} é o documento ao qual é representado os tipos de dados, quais são eles e como serão 
-representados dentro do sistema.
+representados dentro do sistema. Abaixo, segue uma tabela que demonstra os tipos de dados e suas representações:
+
+\begin{table}[H]
+	\noindent
+	\begin{tabular}{|l|}
+		\hline
+			\textbf{task =} @ID + Título + Data de Entrega + (Descrição) + (Data de início) + (\{Tag\})\\ \hline
+			\textbf{título =} 100\{texto\} \\ \hline
+			\textbf{descrição =} 1000\{texto\} \\ \hline
+			\textbf{data de Vencimento =} 10[0-9|/] \\ \hline
+			\textbf{data de Inicio =} 10[0-9|/] \\ \hline
+			\textbf{tag =} 16[A-Z|a-z|À-Ù|à-ù|Á-Ú|á-ú|0-9| ] \\ \hline
+			\textbf{texto =} [A-Z|a-z|À-Ù|à-ù|Á-Ú|á-ú|0-9|'|,|-|.|/|\textbackslash|\_| ] \\ \hline
+	\end{tabular}
+	\caption{Tipos de Dados e suas Representações}
+\end{table}
 
 % --- Segment: Design & Colors---
 % --- Segment: Color Palette ---
@@ -406,20 +448,22 @@ representados dentro do sistema.
 \section{Paleta de Cores do Sistema}
 A paleta de cores do sistema é o conjunto de cores que serão utilizadas no sistema, tanto para o tema claro quanto 
 para o tema escuro. É importante destacar que as cores do sistema foram escolhidas usando como base seu possíveis 
-significados e o que elas poderiam significar para o usuário final, em diferentes situações e processos dentro do sistema.
+significados e o que elas poderiam significar para o usuário final, em diferentes situações e processos dentro do sistema. 
 
 \subsection{Sistema de Cores}
 Cada cor pode representar um emoção e expressar um significado quando se diz respeito a experiência do usuário. Expressar uma 
-mensagem de forma adequada através das cores pode ser o elemento crucial que distingue o êxito do fracasso em um projeto.
+mensagem de forma adequada através das cores pode ser o elemento crucial que distingue o êxito do fracasso em um projeto. (“Medium”, [s.d.])
 
 Logo, com objetivo de aplicar nossa identidade, além de passar uma boa experiência ao usuário, foram escolhidas as seguintes cores:
 
 \subsection{Cores do Tema Claro}
 \begin{itemize}
-	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} do JFrame principal. Além de fundo para os campos de \textit{input} e \textit{textarea} situados nos JPanels com fundo cinza;
+	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} do JFrame principal. Além de fundo para os campos de \textit{input} e \textit{textarea} 
+	situados nos JPanels com fundo cinza;
 	\item \textbf{Cinza:} \#E4DEDE. AplicaçãO: \textit{Background} dos campos de \textit{input} e \textit{textarea} situados na barra de navegação;
 	\item \textbf{Preto:} \#000000. Aplicação: Cores para textos e ícones;
-	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para destaque e detalhes mínimos de números no calendário;
+	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels 
+	para destaque e detalhes mínimos de números no calendário;
 	\item \textbf{Azul:} \#4646B9; Aplicação: \textit{Background} das Tags;
 	\item \textbf{Azul 2:} \#0500FF; Aplicação: Linhas de destaque para seções, além de bordas para JPanels e detalhes mínimos;
 	\item \textbf{Vermelho:} \#FF0000; Aplicação: Linhas do ícone de lixeira para exclusão de Tasks; e
@@ -429,9 +473,11 @@ Logo, com objetivo de aplicar nossa identidade, além de passar uma boa experiê
 \subsection{Cores do Tema Escuro}
 \begin{itemize}
 	\item \textbf{Preto:} \#000000. Aplicação: \textit{Background} do JFrame principal e para textos e ícones;
-	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} dos JPanels, além de fundo para os campos de \textit{input} e \textit{textarea} situados na barra de navegação;
+	\item \textbf{Branco} \#FFFFFF. Aplicação: \textit{Background} dos JPanels, além de fundo para os campos de \textit{input} e \textit{textarea} 
+	situados na barra de navegação;
 	\item \textbf{Cinza:} \#E4DEDE. AplicaçãO: \textit{Background} dos campos de \textit{input} e \textit{textarea} situados nos JPanels com fundo branco;
-	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para destaque e detalhes mínimos de números no calendário;
+	\item \textbf{Laranja:} \#FF3D00; Aplicação: \textit{Background} dos botões de salvar e linhas para voltar e cancelar, borda de JPanels para 
+	destaque e detalhes mínimos de números no calendário;
 	\item \textbf{Azul:} \#4646B9; Aplicação: \textit{Background} das Tags e cor de seleção para \textit{Radio Buttons};
 	\item \textbf{Azul 2:} \#0500FF; Aplicação: Linhas de destaque para seções, além de bordas para JPanels e detalhes mínimos;
 	\item \textbf{Vermelho:} \#FF0000; Aplicação: Linhas do ícone de lixeira para exclusão de Tasks; e
@@ -461,130 +507,147 @@ A \textbf{Tela Principal} seria o JFrame ao qual sempre seria atualizado os JPan
 os únicos componentes ou o único grupo de elementos seria a barra superior de navegação e pesquisa, presente em todo momento e em 
 qualquer ação do sistema.
 
+\pagebreak
 \subsubsection{Tema Claro}
 Telas com tema claro são aquelas que apresentam cores mais claras, como o branco, o cinza claro, o azul claro, entre outros. 
 A ideia de um tema claro é a de que o usuário possa utilizar o sistema em ambientes com iluminação mais forte, como em ambientes 
 externos, por exemplo.
+
 \begin{itemize}
 	\item Tela Principal
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Main Window.png}
+		\includegraphics[scale=0.19]{prototypes/white/Main Window.png}
 		\caption{JFrame principal - Modo Claro}
 	\end{figure}
+	\noindent Fonte: Os Autores.
 
 	\item Calendário de Tasks
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Calendar Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/white/Calendar Panel Window.png}
 		\caption{JPanel Calendário - Modo Claro}
 	\end{figure}	
+	\noindent Fonte: Os Autores.
 
+	\pagebreak
 	\item Estatísticas Gerais
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Stats Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/white/Stats Panel Window.png}
 		\caption{JPanel de Informações e Estatísticas - Modo Claro}
 	\end{figure}
+	\noindent Fonte: Os Autores.
 
 	\item Tela de Configuração
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Config Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/white/Config Panel Window.png}
 		\caption{JPanel de Configurações - Modo Claro}
 	\end{figure}
+	\noindent Fonte: Os Autores.
 
+	\pagebreak
 	\item Tela de Adição de Tasks
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Add Task Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/white/Add Task Panel Window.png}
 		\caption{JPanel de Adição de Tasks - Modo Claro}
 	\end{figure}
+	\noindent Fonte: Os Autores.
 
 	\item Tela de Edição de Tasks
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Edit Task Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/white/Edit Task Panel Window.png}
 		\caption{JPanel de Edição de Tasks - Modo Claro}
 	\end{figure}
+	\noindent Fonte: Os Autores.
 \end{itemize}	
 
+\pagebreak
 \subsubsection{Tema Escuro}
-Telas com tema escuro são aquelas que apresentam cores mais escuras, como o preto, o cinza escuro, o azul escuro, entre outros. A ideia de um tema escuro é a de que o usuário possa utilizar o sistema em ambientes com iluminação mais fraca, como em ambientes internos, por exemplo.
+Telas com tema escuro são aquelas que apresentam cores mais escuras, como o preto, o cinza escuro, o azul escuro, entre outros. A ideia de um tema escuro 
+é a de que o usuário possa utilizar o sistema em ambientes com iluminação mais fraca, como em ambientes internos, por exemplo.
+
 \begin{itemize}
 	\item Tema Principal
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/dark/Main Window.png}
+		\includegraphics[scale=0.19]{prototypes/dark/Main Window.png}
 		\caption{JFrame principal - Modo Escuro}
 	\end{figure}
-
+	\noindent Fonte: Os Autores.
 	\item Calendário de Tasks
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/dark/Calendar Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/dark/Calendar Panel Window.png}
 		\caption{JPanel Calendário - Modo Escuro}
 	\end{figure}	
-
+	\noindent Fonte: Os Autores.
+	\pagebreak
 	\item Estatísticas Gerais
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/dark/Stats Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/dark/Stats Panel Window.png}
 		\caption{JPanel de Informações e Estatísticas - Modo Escuro}
 	\end{figure}
-
+	\noindent Fonte: Os Autores.
 	\item Tela de Configuração
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/dark/Config Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/dark/Config Panel Window.png}
 		\caption{JPanel de Configurações - Modo Escuro}
 	\end{figure}
-
+	\noindent Fonte: Os Autores.
+	\pagebreak
 	\item Tela de Adição de Tasks
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/dark/Add Task Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/dark/Add Task Panel Window.png}
 		\caption{JPanel de Adição de Tasks - Modo Escuro}
 	\end{figure}
-
+	\noindent Fonte: Os Autores.
 	\item Tela de Edição de Tasks
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/dark/Edit Task Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/dark/Edit Task Panel Window.png}
 		\caption{JPanel de Edição de Tasks - Modo Escuro}
 	\end{figure}
+	\noindent Fonte: Os Autores.
 \end{itemize}
 
-A seguir, temos outros JFrames que servirão como modais, ou pequenas telas informativas e de confirmação de ações, que serão apresentadas sobre a tela principal, e que serão apresentadas em ambos os temas, claro e escuro.
+\pagebreak
+A seguir, temos outros JFrames que servirão como modais, ou pequenas telas informativas e de confirmação de ações, que serão apresentadas sobre a 
+tela principal, e que serão apresentadas em ambos os temas, claro e escuro.
 \begin{itemize}
 	\item Tela de Confirmação de Exclusão de Tasks
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Modal Confirmation.png}
+		\includegraphics[scale=0.19]{prototypes/white/Modal Confirmation.png}
 		\caption{JFrame de Confirmação de Exclusão de Tasks}
 	\end{figure}
-
+	\noindent Fonte: Os Autores.
 	\item Tela de Criação de Tags
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/Add Tag.png}
+		\includegraphics[scale=0.19]{prototypes/white/Add Tag.png}
 		\caption{JFrame de Criação de Tags}
 	\end{figure}
-
+	\noindent Fonte: Os Autores.
 	\item Tela de Sobre (Equipe e Sistema)
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.20]{prototypes/white/About Us Panel Window.png}
+		\includegraphics[scale=0.19]{prototypes/white/About Us Panel Window.png}
 		\caption{JFrame de Sobre (Equipe e Sistema)}
 	\end{figure}
+	\noindent Fonte: Os Autores.
 \end{itemize}
 
 
 % --- Segment: Development ---
 \pagebreak
 \section{Desenvolvimento}
-
-
 % --- Segment: Database ---
 \subsection{Banco de Dados}
 Banco de Dados é um sistema capaz de adicionar uma coleção de registros em um repositório computacional. Basicamente, o arquivamento de 
@@ -616,15 +679,22 @@ algo do mundo real que possui existência independente. Já os atributos, també
 dados correspondentes as entidades nas linhas não ordenadas. (TONSIG, 2006; MACÁRIO; BALDO, 2005). 
 
 \subsubsection{Relacionamentos}
-O envio de chaves primárias como chaves estrangeiras para outras tabelas é o que estabelece a relação entre tabelas. O relacionamento existente entre cada par de tabelas pode ser classificado em diferentes tipos, são eles:
+O envio de chaves primárias como chaves estrangeiras para outras tabelas é o que estabelece a relação entre tabelas. O relacionamento 
+existente entre cada par de tabelas pode ser classificado em diferentes tipos, são eles:
 \begin{itemize}
-	\item\textbf{um para muitos (1:N):} quando a tabela A, pode possuir e estar uma ou mais vezes presentes em um cenário, já a tabela B está presente somente uma única vez no cenário a cada momento. Neste caso, necessita-se que o atributo que identifica o registro da tabela B vá como atributo estrangeiro para a tabela A; (RANGEL, 2004; TONSIG, 2006).
-	\item\textbf{um para um (1:1):} neste caso, as duas tabelas se relacionam uma com a outra somente uma vez a cada momento no cenário da relação; (RANGEL, 2004; TONSIG, 2006).
-	\item\textbf{muitos para muitos (N:M):} neste exemplo, as tabelas A e B estão presentes uma ou mais vezes em um cenário. A particularidade dessa relação é que as chaves primárias das tabelas A e B vão para uma terceira tabela, a tabela C de relacionamento, onde também haverá o atributo identificador. (RANGEL, 2004; TONSIG, 2006).
+	\item\textbf{um para muitos (1:N):} quando a tabela A, pode possuir e estar uma ou mais vezes presentes em um cenário, já a tabela B está presente somente uma 
+	única vez no cenário a cada momento. Neste caso, necessita-se que o atributo que identifica o registro da tabela B vá como atributo estrangeiro para 
+	a tabela A; (RANGEL, 2004; TONSIG, 2006).
+	\item\textbf{um para um (1:1):} neste caso, as duas tabelas se relacionam uma com a outra somente uma vez a cada momento 
+	no cenário da relação; (RANGEL, 2004; TONSIG, 2006).
+	\item\textbf{muitos para muitos (N:M):} neste exemplo, as tabelas A e B estão presentes uma ou mais vezes em um cenário. 
+	A particularidade dessa relação é que as chaves primárias das tabelas A e B vão para uma terceira tabela, a tabela C de relacionamento, 
+	onde também haverá o atributo identificador. (RANGEL, 2004; TONSIG, 2006).
 \end{itemize}
 
 \subsubsection{Sistema de Gerenciamento de Banco de Dados}
-O conjunto de ferramentas e programas que dá suporte a realização das ações, citadas anteriormente, em uma Base de Dados, é conhecido como Sistema Gerenciador de Banco de Dados (SGBD). Um SGBD é destinado à definição, construção e manipulação do Banco. (TONSIG, 2006; FILHO; IOCHPE, 2001). 
+O conjunto de ferramentas e programas que dá suporte a realização das ações, citadas anteriormente, em uma Base de Dados, é conhecido como 
+Sistema Gerenciador de Banco de Dados (SGBD). Um SGBD é destinado à definição, construção e manipulação do banco. (TONSIG, 2006; FILHO; IOCHPE, 2001). 
 
 Os vocábulos Sistema de Banco de Dados (SBD) e Sistema Gerenciador de Banco de Dados (SGBD) são expressos no mesmo sentido, dando mesmo 
 significado, no entanto cada um representa definições distintas. Portanto, quando um SGBD é integrado ao Bando de Dados (BD), junto aos 
@@ -635,6 +705,7 @@ como \textit{Structured English Query Language} (SEQUEL). Entretanto, outros sof
 consulta para sua Base de Dados. Os SGBDs mais usados e 
 conhecidos atualmente são Interbase, SQL Server, Oracle, que é a líder no mercado de banco de dados relacionais, 
 MySQL e SQlite3, sendo este último o escolhido para o desenvolvimento deste projeto. (TONSIG, 2006; DATE, 2004; MACÁRIO; BALDO, 2005). 
+
 Para auxiliar no desenvolvimento das tabelas do banco de dados, ainda foi utilizado o suporte de um ORM\footnote{
 	\textit{Object-Relational Mapping} (ORM), em português, Mapeamento Objeto-Relacional, é uma técnica para aproximar o paradigma de desenvolvimento de aplicações orientadas a objetos ao paradigma do banco de dados relacional. O uso da técnica de ORMs é realizado através de um ORM que geralmente é a biblioteca ou \textit{framework} que ajuda no mapeamento e uso do banco de dados.
 }, através da biblioteca Hibernate ORM, que permite a criação de tabelas e relacionamentos entre elas, além de facilitar a manipulação dos dados. Abaixo, segue o diagrama de entidade e relacionamento do banco de dados do sistema:
@@ -643,41 +714,54 @@ Para auxiliar no desenvolvimento das tabelas do banco de dados, ainda foi utiliz
 	\includegraphics[scale=0.80]{database/database-diagram.png}
 	\caption{Diagrama de Entidade e Relacionamento do Banco de Dados}
 \end{figure}
-
+\noindent Fonte: Os Autores.
 
 % --- Segment: Back-End ---
 \subsection{Java}
 Java é uma linguagem de programação desenvolvida pela empresa Sun Microsystems, em 1995. Atualmente, quem possui os direitos da 
 linguagem é a Oracle Corporation. A linguagem Java é uma linguagem de programação de propósito geral, ou seja, pode ser utilizada 
-para desenvolver qualquer tipo de aplicação, desde aplicações desktop até aplicações web, includindo aplicações robustas e comerciais.
+para desenvolver qualquer tipo de aplicação, desde aplicações desktop até aplicações web, includindo aplicações robustas e comerciais. (ARNOLD et al., 2005)
 
 As possibilidades com Java são diversas, o que a configura atualmente, de acordo com o rankings da TIOBE de novembro de 2023, como a 4ª linguagem de programação
 mais utilizada no mundo. No entanto, de acordo com dados do próprio TIOBE, Java ja esteve na lidenrança do ranking, sendo a linguagem mais utilizada do mundo
-por um período de aproximadamente entre 15 e 20 anos.
+por um período de aproximadamente entre 15 e 20 anos. (TIOBE, 2023)
 
 \subsubsection{Breve Histórico}
 Java começou a surgir com o Projeto Green, em 1991, na Sun Microsystems, com James Gosling, sendo ele o nome mais relacionado a Java dentre as pesquisas 
 sobre o tema. O Projeto Green consistia no desenvolvimento de tecnologias modernas de software para dispositivos eletrônicos. Além disso, a ferramenta
-em desevolvimento precisava ser compatível com a necesssidade de quem a fosse usar, de modo que seu código fosse compacto e com arquitetura neutra.
+em desevolvimento precisava ser compatível com a necesssidade de quem a fosse usar, de modo que seu código fosse compacto e com arquitetura neutra. (JAVA; SOARES INDRUSIAK, 1996)
 
 O objetivo incial foi comprido, no entanto, Java começou com uma participação de mercado pequena. 
 
 Coincidentimente, no mesmo período o início da Wolrd Wide Web (WWW) começava a surgir. Como uma oportunidade de negócio a vista, os desevoldores da Sun
 Microsystems, optaram por adaptar a tecnologia que possíam no momento para o ambiente da web, permitindo o desenvolvimento de aplicações e programas para web.
-Logo, Java se torou um sucesso, principalmente no momento de lançamento do HotJava, o primeiro navegador web com suporte para a linguagem recém criada.
+Logo, Java se torou um sucesso, principalmente no momento de lançamento do HotJava, o primeiro navegador web com suporte para a linguagem recém criada. (JAVA; SOARES INDRUSIAK, 1996)
 
 Abaixo segue características fundamentais no entendimento da linguagem Java:
 \begin{itemize}
-	\item \textbf{Orientação a Objetos:} Java é uma linguagem de programação orientada a objetos, o que permite seu fácil uso e abstração do mundo real em diferentes necessidades;
-	\item \textbf{Multiplataforma:} Java é uma linguagem de programação multiplataforma, ou seja, pode ser executada em qualquer sistema operacional, desde que possua uma máquina virtual Java (JVM) instalada;
+	\item \textbf{Orientação a Objetos:} Java é uma linguagem de programação orientada a objetos, o que permite seu fácil uso e abstração do mundo real em diferentes necessidades; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{Multiplataforma:} Java é uma linguagem de programação multiplataforma, ou seja, pode ser executada em qualquer sistema operacional, desde que possua uma máquina virtual Java (JVM) instalada; (CLARO; BOSCO; SOBRAL, 2008)
 	\item \textbf{Gestão de Processos} Java é uma linguagem de programação segura, ou seja, possui uma série de mecanismos que garantem a segurança de suas aplicações, como por exemplo, o uso de um \textit{Garbage Collector}, 
-	que é um coletor de lixo que gerencia a memória da aplicação, evitando o uso de memória desnecessária e vazamentos de memória;
+	que é um coletor de lixo que gerencia a memória da aplicação, evitando o uso de memória desnecessária e vazamentos de memória; (CLARO; BOSCO; SOBRAL, 2008)
 	\item \textbf{Portável:} O código desenvolvido em Java, após o seu estado de interpretação de código, o chamado \textit{bytecode}\footnote{
 		Código intermediáio gerado após a intepretação da IDE. Este não é o código final executável no sistema.
-	}, com auxílio da JVM, é capaz de ser compilado em qualquer sistema operacional.
+	}, com auxílio da JVM, é capaz de ser compilado em qualquer sistema operacional. (CLARO; BOSCO; SOBRAL, 2008)
 \end{itemize}
 
 \subsubsection{Java Development Kit}
+O Java Development Kit, ou JDK (Kit de Desenvolvimento Java, em português), é um conjunto de ferramentas para desenvolvimento de aplicações em Java. Este pacote oferece ferramentas 
+de compilação de código e interpretação, além de utilitários como biblitecas nativas da linguagem para auxiliar na implementação do código-fonte em Java. Dentre as principais ferramentas do JDK, temos:
+\begin{itemize}
+	\item \textbf{javac:} Compilador Java, responsável por transformar o código-fonte em Java em \textit{bytecode}, ou seja, o código intermediário que será interpretado pela JVM; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{java:} Interpretador Java, responsável por interpretar o \textit{bytecode} gerado pelo compilador Java, transformando-o em código de máquina, ou seja, o código final executável no sistema; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{javadoc:} Gerador de documentação Java, responsável por gerar a documentação do código-fonte em Java, através de comentários especiais no código; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{appletviewer:} Visualizador de Applets Java, responsável por executar applets Java, que são pequenas aplicações desenvolvidas em Java, que são executadas em navegadores web; (CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{javafxpackager:} Ferramenta para empacotamento de aplicações JavaFX, responsável por empacotar aplicações desenvolvidas em JavaFX, que é uma biblioteca gráfica para desenvolvimento de interfaces gráficas em Java; e(CLARO; BOSCO; SOBRAL, 2008)
+	\item \textbf{jar:} Ferramenta para empacotamento de aplicações Java, responsável por empacotar aplicações desenvolvidas em Java, que são executadas em linha de comando; (CLARO; BOSCO; SOBRAL, 2008)
+\end{itemize}
+
+Atualmente o JDK está sendo implementado utilizando das versões 17 ou 21 do pacote, isto é, pois há uma transição entre versões. As informações entre versões e demais opções de donwloads 
+podem ser encontradas no site oficial da Oracle, no link https://www.oracle.com/java/technologies/downloads/ .
 
 
 
@@ -688,31 +772,81 @@ o que é a Orientação a Objetos de fato.
 Em um contexto geral da década de 1980 e 1990, onde a manipulação de dados complexos e entidades/personagens do mundo real cresceu de forma exponente,
 a dificuldade em reutilizar e implantar sistemas que possuíam uma grande quantidade de dados e informações, se tornou um problema. Logo, o paradigma do momento 
 da programação estruturada, não era mais suficiente para atender a demanda de sistemas que necessitavam de uma maior organização e reutilização de código 
-para replicar em diferentes realidades e ambientes. 
+para replicar em diferentes realidades e ambientes. (CLARO; BOSCO; SOBRAL, [s.d.])
 
 Como solução, um conceito de programação onde a abstração de dados permite a proximidade com o mundo real, de forma quase 100\% fidedignas a realidade foi desenvolvido.
 A Orientação a Objetos, ou \textit{Object Oriented Programming} OOP, em inglês, é um paradigma de programação - desenvolvido na década de 1960, no entanto aplicado somente
 porteriormente nos anos 1990 - que permite a criação de estruturas de dados de forma tais dados possam ser reaproveitados em diferentes 
 ambiente, ocasiões, fluxos de negócios e domínio de mercado. A ideia é justamente a compatibilidade e reutilização de código,
-através de técnicas como uso de classes, métodos, objetos, herança, polimorfismo, encapsulamento, entre outros.
+através de técnicas como uso de classes, métodos, objetos, herança, polimorfismo, encapsulamento, entre outros. (CLARO; BOSCO; SOBRAL, [s.d.])
 
 \subsubsection{EXPLICAR COMO APLICOU}
-% COMO USOU A FERRAMENTA JAVA PARA DESENVOLVER O BACK-END DO SISTEMA
+% COMO USOU A FERRAMENTA JAVA e POO PARA DESENVOLVER O BACK-END DO SISTEMA
+
+
+\subsection{Abstract Window Toolkit - AWT}
+O Abstract Window Toolkit, ou AWT (em português Kit de Ferrmentas de Janela Abstrata), permite o desenvolvimento de interfaces gráficas por 
+meio do uso de componentes como botões, campos de texto, rótulos, entre outros. A principal característica do AWT é o fato de sua adaptação ao 
+ambiente onde está executando a aplicação Java, isso pois, se estiver em um ambiente ao qual tem como Window seu S.O. (Sistema Operacional),
+o AWT irá utilizar dos componentes nativos do S.O. para a construção da interface gráfica, o mesmo vale para situações onde sejam amiente como Mac ou outros.
+(ARNOLD et al., 2005)
+
+
+O AWT oferece uma gama de classes que representam os componentes para serem adicionados nas GUIs (Graphical User Interface, em português, Interface Gráfica de Usuário). 
+Cada um deles é chamado da seguinte forma: \textbf{java.awt.<nome do componente>}.
+
+Abaixo, segue uma lista de alguns componentes possíveis com o AWT (CLARO; BOSCO; SOBRAL, [s.d.]):
+\begin{itemize}
+	\item \textbf{Label (Rótulo):} Representa um componente que exibe um texto não editável; 
+	\item \textbf{Button (Botão):} Representa um componente que, quando clicado, executa uma ação; 
+	\item \textbf{TextField (Campo de Texto):} Representa um componente que permite a entrada de texto; 
+	\item \textbf{TextArea (Área de Texto):} Representa um componente que permite a entrada de texto em múltiplas linhas; 
+	\item \textbf{CheckBox (Caixa de Seleção):} Representa um componente que permite a seleção de uma ou mais opções; 
+	\item \textbf{Choice (ComboBox ou CaixaCombo):} Representa uma janela na tela, onde os componentes são adicionados; 
+	\item \textbf{ScrollBar (Barra de Rolagem):} Representa um componente que permite a rolagem de uma lista de itens; 
+	\item \textbf{Panel (Painel):} Representa um contêiner que agrupa um conjunto de componentes; 
+	\item \textbf{Canvas (Área de Desenho):} Representa um componente que permite a entrada de desenhos pelo usuário; 
+	\item \textbf{MenuBar (Barra de Menu):} Representa um componente que permite a criação de menus; 
+\end{itemize}
+
+
+O AWT foi utilizado tanto para o gerenciamento de distribuição de conteúdos a partir de layouts quanto para o gerenciamento 
+da interação com o usuário por meio de eventos de teclas e de comportamento de mouse por meio de clicks e posicionamento.
+
 
 % --- Segment: Front-End ---
 \subsection{Java Swing}
+O Java Swing surgiu a pós a necessidade de um interface gráfica que pudesse ser executada, sem depender do componentes gráficos 
+nativos dos sistema para ser executado, o que era um problema até então pelo uso do AWT. Logo, o Swing adquiriu a característica 
+de tornar os componentes "plugáveis", com o design que desejasse em qualquer sistema operacional. Outras vantagens do Swing em relação ao AWT é que,
+apesar dos componentes do AWT serem herdados, outros novos componentes apareceram com um maior número de eventos e manipulações do design e das ações 
+dessem componentes estão disponíveis. Outra característica é que a manipulação dos evento e componentes é abordada e outra maneira pelo Swing.
+(ARNOLD et al., 2005; CLARO; BOSCO; SOBRAL, [s.d.])
 
-\subsubsection{EXPLICAR COMO APLICOU}
-% COMO USOU A FERRAMENTA JAVA SWING PARA DESENVOLVER O FRONT-END DO SISTEMA
+
+Aliado ao uso do AWT, o Swing foi o principal responsável pelo gerenciamento dos componentes gráficos do sistema, como botões, campos de texto, além 
+do posionamento e comportamento dos mesmos. 
+
 
 % --- Segment: Bibs ---
-\subsection{Bibliotecas}
+\subsection{Outras Bibliotecas Utilizadas}
 \subsubsection{Maven Assembly Plugin}
-\subsubsection{Hibernate ORM + Community Dialects}
+
 \subsubsection{SQlite3 JDBC Driver}
+No desenvolvimento de aplicações em Java, ou em qualquer outro sistema desenvolvido por outra linguagem, é necessário o uso de um banco de dados para armazenar os dados 
+registrados nos processos e demais manipulações e operações com esses mesmos dados. O driver\footnote{
+
+} responsável pela conexão com os banco de dados e o Java é o JDBC (Java Database Connectivity), que é uma API que permite a conexão com diferentes SGBDs (Sistema 
+Gerenciador de Banco de Dados). (CLARO; BOSCO; SOBRAL, [s.d.])
+
+\subsubsection{Hibernate ORM + Community Dialects}
+
 \subsubsection{JSoup}
+
 \subsubsection{Google Gson}
+
 \subsubsection{MigLayout}
+
 \subsubsection{Formdev FlatLaf + IntelliJ Themes}
 
 \subsection{Ferramentas}
@@ -720,12 +854,64 @@ O desenvolvimento do sistema foi feito em dois sistemas operacionais diferentes,
 de codificação foram utilizadas em ambos os sistemas, mas pela diferença de plataformas, uma gama maior de softwares foi necessário. Abaixo, segue 
 as informações de cada ferramenta utilizada no desenvolvimento do sistema, além de qual plataforma foi executado.
 
+Dentre as ferramentas de desenvolvimento do código, temos:
 \subsubsection{Visual Studio Code}
-Visual Studio Code é uma IDE de desenvolvimento e codifição de código fonte, desenvolvida pela Microsoft
+O Visual Studio Code é um editor de código-fonte, sua execução acontece a partir do acesso em seu atalho na área de trabalho do computador. 
+Ele é executado em Windows, Linux e macOS. Além de forma nativa ele dispor de opções de tipo de arquivos, como arquivos .html, .php, .css etc, 
+você pode baixar extensões que melhoram a gama de linguagens suportadas, a partir da biblioteca inserida no software. Outras extensões tratam da 
+usabilidade do sistema, a partir de conexões com outras aplicações e atalhos na interface. Em resumo, as extensões buscam melhorar seu fluxo de 
+trabalho, agilizando processos e oferecendo mais suporte a outras tecnologias. São exemplos de extensões do VS Code: C++, C\#, Python, GitLens, 
+Visual Studio IntelliCode, BookMarks etc. O Visual Studio também oferece pacotes de personalização da interface, alterando cores no código nas 
+expressões usadas e os ícones da linguagem (quando os arquivos estão abertos na raiz). (VISUAL STUDIO CODE, 2023).
 
-\subsubsection{Git}
 \subsubsection{NetBeans IDE}
+Origianlmente feito pela Sun Microsystems e atualmente com Oracle possuindo seus direitos o (após a aquisição da Sun pela Oracle), o NetBeans é uma 
+IDE (\textit{Integrated Development Environment}, em português, Ambiente de Desenvolvimento Integrado) para desenvolvimento de aplicações em 
+diversas linguagens, dentre algumas das suportadas, temos Java, C, C++, PHP, entre outras. O NetBeans é uma IDe de código aberto, executável 
+em diferentes sistemas operacionais, como Windows, Linux, Mac e Solaris. O NetBeans também oferece suporte ao desenvolvimento de aplicações Web, 
+pois é compatível com o uso de HTML5 e semelhantes na ferramenta. Outro destaque do NetBeans é o suporte a diferentes bibliotecas e APIs 
+em seu ambiente. (“About Apache NetBeans”, [s.d.])
 
+\subsubsection{NeoVim}
+O Neovim é um editor de texto, baseado no editor Vim\footnote{
+	Vim (Vi IMproved, em português Vi Melhorado) é um programa editor de textos vi para Unix de Bill Joy. Foi escrito por Bram Moolenaar baseado na fonte para um porte do editor 
+	Stevie para o Amiga[1] com a primeiro lançamento público em 1991. O Vim é destinado para uso a partir tanto de uma interface de linha de comando como uma aplicação isolada em uma interface gráfica de usuário.
+	Possui código-aberto e licensa GNU GPL. (“Vim”, 2023)
+}, que possui como objetivo ser um editor de texto mais moderno e atualizado, com suporte a diferentes linguagens de programação, além de ser mais leve e rápido que o Vim.
+Seu maior objetivo é aproveitar das ferremanetas e funcionalidades úteis do Vim, em um novo ambiente melhorado e 
+compatível com diversos Plug-ins. (“Home - Neovim”, [s.d])
+
+
+\subsection{Sistema de Versionamento de Código}
+Versionar um código nada mais é do que atribuir versões de desenvolvimento de novas ferramentas para o \textit{software}, correções de \textit{bugs}, 
+melhorias em funcionalidades já eistentes, entre outros. Todas essas alterações devem ser controladas para fins de registros e informações a respeito do que mudou 
+no sistema e quem fez determinada alteração. Logo, o versionamento de código é fundamental para este controle e 
+registro de atividades em um sistema/projeto. (MIJACOBS, [s.d.])
+
+O sistema de versionamento escolhido para este projeto foi o Git, sendo ele o mais utilizado no mundo, além de ser um dos mais completos e robustos.
+\subsubsection{Git}
+O Git é um sistema de controle de versão distribuído, o que quer dizer que quando você clona um projeto, cria um repositório completo no seu próprio computador. 
+Isso é ótimo para trabalhar offline ou remotamente, já que você tem tudo que precisa localmente. Os desenvolvedores podem fazer alterações e revisões no seu próprio 
+computador antes de sincronizar com o servidor, o que é diferente do sistema centralizado, onde você precisa sempre estar conectado ao servidor para criar 
+novas versões do código.  (“Git - Documentation”, 2019)
+
+O Git foi desenvolvido por Linus Torvalds, o criador do Linux, em 2005 após o rompimento da parceira do uso de BitKeeper, sistema que controlava
+as alterações do Kernel do Linux. Logo, Linus optou por desenvolver seu próprio sistema de controle de versão, a partir da experiência obtida com o BitKeeper, 
+no entanto que pudesse atender alguns objetivos. (“Git - A Short History of Git”, [s.d.]). Segue abaixo::
+\begin{itemize}
+	\item Eficiência e Velocidade de Execução;
+	\item Suporte a Desenvolvimento Não Linear;
+	\item Totalmente Distribuído;
+	\item Capaz de Lidar com Grandes Projetos;
+	\item Desing Simples;
+\end{itemize}
+
+
+\subsubsection{GitHub}
+A partir do Git, se faz necessário o uso de uma plataforma que possa ser um centro de informações relacionados a qualquer modificação feita no repositório remoto, 
+que recebe as modificações feitas no local. O GitHub nada mais é uma plataforma de que permite o gerenciamento e controle versões a partir de uma interface gráfica 
+e de fácil uso. Assim, o GitHub se destaca como uma plataforma de colaboração amplameent utilizada por desenvolvedores de todo mundo.
+(“Sobre o Git - Documentação do GitHub”, [s.d.])
 
 % --- Segment: References ---
 \pagebreak
@@ -733,11 +919,72 @@ Visual Studio Code é uma IDE de desenvolvimento e codifição de código fonte,
 \vspace{1cm}
 
 \raggedright
-\noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
+\noindent ABOUT APACHE NETBEANS. Disponível em: <https://netbeans.apache.org/about/index.html>. Acesso em: 24 nov. 2023. \linebreak
 
 \noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
 
-\noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
+\noindent ARNOLD, K. et al. THE JavaTM Programming Language, Fourth Edition. [s.l: s.n.]. 
+Disponível em: <https://www.acs.ase.ro/Media/Default/documents/java/ClaudiuVinte/books/ArnoldGoslingHolmes06.pdf>. 
+Acesso em: 24 nov. 2023. \linebreak
+
+\noindent CLARO, D.; BOSCO, J.; SOBRAL, M. Programação em JAVA. [s.l: s.n.]. 
+Disponível em: <http://www.lasid.ufba.br/teste/pessoal/danielaclaro/download/Programando\\%20em\\%20Java.pdf>. 
+Acesso em: 23 nov. 2023. \linebreak
+
+\noindent DATE, C. J. et al. Introdução a Sistemas de Bancos de Dados. Tradução: Daniel Vieira. Tradução da 8a Edição Americana ed. [s.l.] 
+ELSEVIER EDITORA, Rio de Janeiro: Campus 2004. Acesso em: 23 nov. 2023. \linebreak
+
+\noindent Download the Latest Java LTS Free. Disponível em: <https://www.oracle.com/br/java/technologies/downloads/>. 
+Acesso em: 23 nov. 2023. \linebreak
+
+\noindent ELMASRI, Ramez et al. Sistemas de banco de dados. 2005. Acesso em: 23 set. 2022. \linebreak
+
+\noindent Git - Documentation. Disponível em: <https://git-scm.com/doc>. ‌Acesso em: 26 nov. 2023. \linebreak
+
+\noindent GIT. Git - About Version Control. Disponível em: <https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control>.
+‌Acesso em: 26 nov. 2023. \linebreak
+
+\noindent Git: o que é, para que serve e principais comandos Git! – Insights para te ajudar na carreira em tecnologia | Blog da Trybe. 
+Disponível em: <https://blog.betrybe.com/git/\#2>. Acesso em: 26 nov. 2023.
+
+\noindent Home - Neovim. Disponível em: <https://neovim.io/>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent JAVA, L.; SOARES INDRUSIAK, L. Grupo JavaRS JUG Rio Grande do Sul. [s.l: s.n.]. 
+Disponível em: <https://www.cin.ufpe.br/~arfs/introjava.pdf>. Acesso em: 23 nov. 2023. \linebreak
+
+\noindent LISBOA FILHO, Jugurta; IOCHPE, Cirano. Modelagem de Bancos de Dados Geográficos. In: Anais do XX Congresso Brasileiro de Cartografia. 2001. Acesso em: 23 nov. 2023. \linebreak
+
+\noindent MACÁRIO, Carla Geovana do N.; BALDO, Stefano Monteiro. O modelo relacional. Instituto de Computação Unicamp. Campinas, p. 1-15, 2005. 
+Disponível em: <https://www.studocu.com/pt-br/document/instituto-federal-de-educacao-ciencia-e-tecnologia-sao-paulo/banco-de-dados/ch03-rm-resumo-anotacoes-bando-de-dados/15426577> 
+Acesso em: 23 nov. 2023. \linebreak
+
+\noindent DE, F. Mariela Inés Cortés Fortaleza 2013. [s.l: s.n.]. 
+Disponível em: <https://www.uece.br/cct/wp-content/uploads/sites/28/2021/07/Fundamentos-de-Engenharia-de-Software.pdf>. 
+Acesso em: 26 nov. 2023. \linebreak
+
+\noindent Medium. Disponível em: <https://brasil.uxdesign.cc/as-cores-na-experi>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent MIJACOBS. O que é o Git? - Azure DevOps. Disponível em: <https://learn.microsoft.com/pt-br/devops/develop/git/what-is-git>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent NetBeans IDE | Oracle Brasil. Disponível em: <https://www.oracle.com/br/tools/technologies/netbeans-ide.html>. Acesso em: 24 nov. 2023 \linebreak
+
+\noinent PRESSMAN, R. S.; MAXIM, B. R. Software engineering : a practitioner’s approach. New York, Ny: Mcgraw-Hill Education, 2020. Acesso em: 26 nov. 2023. \linebreak
+
+\noindent Psicologia das cores: veja como isso é essencial para o sucesso do designer. 
+Disponível em: <https://www.alura.com.br/artigos/psicologia-das-cores-veja-como-isso-e-essencial-para-o-sucesso-do-designer>.
+Acesso em: 24 nov. 2023. \linebreak 
+
+\noindent Sobre o Git - Documentação do GitHub. Disponível em: <https://docs.github.com/pt/get-started/using-git/about-git>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent TIOBE. TIOBE Index | TIOBE - The Software Quality Company. Disponível em: <https://www.tiobe.com/tiobe-index/>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent Vim. Disponível em: <https://pt.wikipedia.org/wiki/Vim>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent VISUAL STUDIO CODE. Documentation for Visual Studio Code. Disponível em: <https://code.visualstudio.com/docs>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent 
+
+\noindent
 
 % --- Document: End --- 
 \end{document}
