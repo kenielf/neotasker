@@ -21,37 +21,67 @@ import com.neotasker.view.landing.Landing;
 
 import net.miginfocom.swing.MigLayout;
 
+/**
+ * This class is responsible for graphically managing the configuration of
+ * the application.
+ */
 public class Configuration extends JPanel {
+    /** The identifier for the Card Layout and Label. */
     public static final String IDENTIFIER = "Configuração";
+    /** The font size for the identifier. */
     public static final float IDENTIFIER_SIZE = 22f;
+    /** The font size for the individual sections. */
     public static final float SECTION_SIZE = 16;
 
-    JLabel identifierLabel;
-    JSeparator identifierSeparator;
+    /** The pane identifier label. */
+    public JLabel identifierLabel;
+    /** The pane separator. */
+    public JSeparator identifierSeparator;
 
-    JLabel themeSectionLabel;
+    /** The label for the theme section of the configuration. */
+    public JLabel themeSectionLabel;
 
-    JLabel scalingLabel;
-    JLabel scalingValue;
-    JSlider scalingSlider;
-    Timer scalingTimer;
+    /** The text label for the scaling option. */
+    public JLabel scalingLabel;
+    /** The display text for the scaling option. */
+    public JLabel scalingValue;
+    /** The slider for the scaling percentage. */
+    public JSlider scalingSlider;
+    /** The event timer to set the scaling percentage after one second. */
+    public Timer scalingTimer;
 
-    JLabel uiThemeLabel;
-    ButtonGroup uiThemeButtons;
-    JRadioButton uiThemeLightButton;
-    JRadioButton uiThemeDarkButton;
+    /** The text label for the UI theme option. */
+    public JLabel uiThemeLabel;
+    /** The mutually exclusive button group for the theme options. **/
+    public ButtonGroup uiThemeButtons;
+    /** The light theme option button **/
+    public JRadioButton uiThemeLightButton;
+    /** The dark theme option button **/
+    public JRadioButton uiThemeDarkButton;
 
-    JLabel iconThemeLabel;
-    ButtonGroup iconThemeButtons;
-    JRadioButton iconThemeLightButton;
-    JRadioButton iconThemeDarkButton;
+    /** The text label for the icon theme option. */
+    public JLabel iconThemeLabel;
+    /** The mutually exclusive button group for the icon theme options. **/
+    public ButtonGroup iconThemeButtons;
+    /** The light icon theme option button **/
+    public JRadioButton iconThemeLightButton;
+    /** The light icon theme option button **/
+    public JRadioButton iconThemeDarkButton;
 
-    JLabel aliasingSectionLabel;
-    ButtonGroup aliasingButtons;
-    JRadioButton aliasingSystemButton;
-    JRadioButton aliasingOnButton;
-    JRadioButton aliasingOffButton;
+    /** The text label for the aliasing type option. */
+    public JLabel aliasingSectionLabel;
+    /** The mutually exclusive button group for the aliasing type options. **/
+    public ButtonGroup aliasingButtons;
+    /** Graphically set the aliasing type to "System". */
+    public JRadioButton aliasingSystemButton;
+    /** Graphically set the aliasing type to "On". */
+    public JRadioButton aliasingOnButton;
+    /** Graphically set the aliasing type to "Off". */
+    public JRadioButton aliasingOffButton;
 
+    /**
+     * Instantiates the configuration panel.
+     */
     public Configuration() {
         setLayout(new MigLayout("fillx", "10%[left][right]10%"));
 
@@ -201,6 +231,9 @@ public class Configuration extends JPanel {
         add(this.aliasingOffButton, "wrap");
     }
 
+    /**
+     * Reloads the entire Look and Feel of the application.
+     */
     public void resetUITheme() {
         if (Theme.getUiTheme().equals("light")) {
             setLightUITheme();
@@ -209,6 +242,9 @@ public class Configuration extends JPanel {
         }
     }
 
+    /**
+     * Modifies the scaling value according to user input.
+     */
     public void setScalingValue() {
         if (this.scalingSlider != null) {
             String percentage = String.format("%d%%", this.scalingSlider.getValue());
@@ -219,30 +255,45 @@ public class Configuration extends JPanel {
         }
     }
 
+    /**
+     * Graphically sets the UI theme to "light".
+     */
     public void setLightUITheme() {
         Theme.setLightUiTheme();
         ConfigurationController.updateConfiguration();
         resetWindow();
     }
 
+    /**
+     * Graphically sets the UI theme to "dark".
+     */
     public void setDarkUITheme() {
         Theme.setDarkUiTheme();
         ConfigurationController.updateConfiguration();
         resetWindow();
     }
 
+    /**
+     * Graphically sets the icon theme to "light".
+     */
     public void setIconLightTheme() {
         Theme.setIconTheme("light");
         ConfigurationController.updateConfiguration();
         resetWindow();
     }
 
+    /**
+     * Graphically sets the icon theme to "dark".
+     */
     public void setIconDarkTheme() {
         Theme.setIconTheme("dark");
         ConfigurationController.updateConfiguration();
         resetWindow();
     }
 
+    /**
+     * Graphically sets the aliasing type to "System".
+     */
     public void setAliasingSystem() {
         Theme.setAntiAliasing(Aliasing.SYSTEM);
         ConfigurationController.updateConfiguration();
@@ -250,6 +301,9 @@ public class Configuration extends JPanel {
         resetWindow();
     }
 
+    /**
+     * Graphically sets the aliasing type to "On".
+     */
     public void setAliasingOn() {
         Theme.setAntiAliasing(Aliasing.ENABLED);
         ConfigurationController.updateConfiguration();
@@ -257,6 +311,9 @@ public class Configuration extends JPanel {
         resetWindow();
     }
 
+    /**
+     * Graphically sets the aliasing type to "Off".
+     */
     public void setAliasingOff() {
         Theme.setAntiAliasing(Aliasing.DISABLED);
         ConfigurationController.updateConfiguration();
@@ -264,6 +321,9 @@ public class Configuration extends JPanel {
         resetWindow();
     }
 
+    /**
+     * Resets and updates all window components.
+     */
     private void resetWindow() {
         Landing rootWindow = (Landing) SwingUtilities.getRoot(this);
         if (rootWindow != null) {

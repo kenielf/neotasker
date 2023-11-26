@@ -5,11 +5,19 @@ import javax.swing.JPanel;
 
 import net.miginfocom.swing.MigLayout;
 
+/**
+ * This class is responsible for displaying the calendar panel.
+ */
 public class Calendar extends JPanel {
+    /** The identifier for the Card Layout and label. */
     public static final String IDENTIFIER = "Calendário";
+    /** The font size for the identifier. */
     public static final float IDENTIFIER_SIZE = 22f;
     JLabel identifierLabel;
 
+    /**
+     * Instantiates the calendar panel.
+     */
     public Calendar() {
         setLayout(new MigLayout("fillx", "20[left]"));
 
