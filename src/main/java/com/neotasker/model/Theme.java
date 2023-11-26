@@ -117,6 +117,8 @@ public class Theme {
 
     /**
      * Icon theme getter.
+     *
+     * @return the icon theme as a string.
      */
     public static String getIconTheme() {
         return System.getProperty(ICON_THEME_KEY);
