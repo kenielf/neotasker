@@ -1,4 +1,7 @@
 # Maven Build Files
+/.classpath
+/.project
+/.settings/
 /target/
 
 # LaTeX Auxiliary Files
