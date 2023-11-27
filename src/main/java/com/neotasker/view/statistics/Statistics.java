@@ -46,10 +46,16 @@ public class Statistics extends JPanel {
 
         // Create a model for the table
         DefaultTableModel model = new DefaultTableModel();
+        
+        model.addColumn("Estatística");
+        model.addColumn("Valor");
+
+        
         model.addRow(new Object[]{"Tasks Criadas", methods.getTasksCreated()});
         model.addRow(new Object[]{"Tasks Concluídas", methods.getTasksAccomplished()});
         model.addRow(new Object[]{"Tasks Programadas", methods.getTasksScheduled()});
         model.addRow(new Object[]{"Tasks Atrasadas", methods.getTasksDelayed()});
+
         this.statsTable.setModel(model);
 
          // Centralize the text in the table
