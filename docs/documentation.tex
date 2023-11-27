@@ -854,6 +854,22 @@ do posionamento e comportamento dos mesmos.
 % --- Segment: Bibs ---
 \subsection{Outras Bibliotecas Utilizadas}
 \subsubsection{Maven Assembly Plugin}
+O Maven Assembly Plugin permite que desenvolvedores combinem a saída de projetos feitos pelo maven em um único arquivo distribuível que também 
+contêm dependências, módulos, documentações em site e outros arquivos. (“Apache Maven Assembly Plugin – Introduction”, [s.d.])
+
+Os projetos podem produzir "montagens" a partir das configurações com descritores de montagem pré-fabricados. Esses descritores gerenciam 
+várias operaçẽos consideradas comuns, incluindo o empacotamento do artefato (o arquivo .jar, no caso do NeoTasker) em conjunto com a 
+documentação em um único arquivo zip. (“Apache Maven Assembly Plugin – Introduction”, [s.d.])
+
+Alternativamente, é possível utilizar um descritor de criação própria e ter um nível de controle em relação a dependências, módulos, 
+conjuntos de arquivos e arquivos individuais empacotados na montagem. Porém, o plugin ressalta que para a construção de um uber-jar 
+(um artefato com todos os arquivos incluídos diretamente) o mesmo dispõe somente funções básicas e recomenda o Maven Shade Plugin. (“Apache Maven Assembly Plugin – Introduction”, [s.d.])
+
+Para o propósito do projeto NeoTasker, o Assembly Plugin supriu todas as necessidades imediatas, a partir da seguinte configuração:
+
+Foi adicionado uma etapa de execução ao plugin, na fase de empacotamento, em que o artefato unificado com as dependências é produzido 
+sem a adição do identificador de montagem, sobreescrevendo então o artefato simples e permitindo que o desenvolvedor redistribua o 
+único jar disponibilizado para ser executado em ambientes externos.
 
 \subsubsection{SQlite3 JDBC Driver}
 No desenvolvimento de aplicações em Java, ou em qualquer outro sistema desenvolvido por outra linguagem, é necessário o uso de um banco de dados para armazenar os dados 
@@ -863,14 +879,57 @@ registrados nos processos e demais manipulações e operações com esses mesmos
 Gerenciador de Banco de Dados). (CLARO; BOSCO; SOBRAL, [s.d.])
 
 \subsubsection{Hibernate ORM + Community Dialects}
+O Hibernate é uma biblioteca e framework de ORM (em português, Mapeador Objeto-Relacional, do inglês Object Relational Mapper). 
+Tem como foco a persistência de dados em bancos de dados relacionais a partir do JDBC. (“Your relational data. Objectively. - Hibernate ORM”, [s.d.])
+
+O Hibernate tem sua própria API para persistência, porém é também uma implementação própria da API de Persistência do Java (JPA), 
+e permite um desenvolvimento com melhor foco na Orientação Objeto devido ao seu caráter idiomático, levando em consideração 
+características como herança, polimorfismo, associação, composição e a biblioteca Collections do Java, portanto não requer 
+interfaces ou classes bases e permite quaisquer classe ou estrutura de dados a ser persistida. (“Your relational data. Objectively. - Hibernate ORM”, [s.d.])
+
+Esses fatores, em conjunto com o seu alto nível de performance, escalabilidade, confiabilidade e extensibilidade - este último 
+sendo característicamente um dos pontos mais importantes, devido a presença de dialetos SQL para diferentes implementações de 
+bancos de dados relacionais - o tornaram uma escolha natural para o projeto. Específicamente sobre o dialeto, foi escolhido o 
+SQLite3 devido a simplicidade, performance e portabilidade do banco de dados, já que pela natureza do projeto foi considerado ideal. (“Your relational data. Objectively. - Hibernate ORM”, [s.d.])
 
 \subsubsection{JSoup}
+A biblioteca jsoup dispõe de uma API extensa e altamente versátil para trabalhar com arquivos HTML, facilitando a manipulação de 
+dados extraídos de páginas da Web. Dentre as suas funções, se destacam a capacidade de extrair dados, manipular elementos html, 
+limpar os dados submetidos (evitando ataques cross-site scripting), e a saída de html formatado. Portanto, é utilizado tanto para 
+a extração quanto para a validação de HTML e os dados contidos no mesmo. (“jsoup: Java HTML parser, built for HTML editing, cleaning, scraping, and XSS safety”, [s.d.])
+
+Seu uso no projeto foi pequeno porém significativo, dentre as diversas etapas de experimentação, muitos dados que foram observados 
+como interessantes estavam contidos em páginas HTML sem maneira fácil de exportá-los, e que com o uso de scripts com a biblioteca 
+permitiram uma melhor análise de dados e produção de códigos relacionados.
 
 \subsubsection{Google Gson}
+Gson é uma biblioteca com o intuito de de converter objetos em java para suas representações equivalentes em Json, 
+também sendo utilizado para converter uma string em Json para seu objeto em java equivalente. Respeitando representações 
+genéricas de objetos e representações customizadas mais complexas. (“Gson”, [s.d.])
+
+Apesar de por natureza ser uma biblioteca mais simples quando comparada com as outras presentes no projeto, esta 
+foi de uso crucial para a manipulação de arquivos de configuração, onde uma classe de dados de configurações era 
+convertida em Json e salvo no sistema, e de forma oposta, o arquivo de configuração em Json era lido e transformado 
+na classe de configuração, que era passada para seu controlador para aplicar as configurações.
 
 \subsubsection{MigLayout}
+A biblioteca MigLayout é responsável por facilitar o gerenciamento de layouts dentro do Java Swing, buscando trivializar 
+o problema de posicionamento de componentes gráficos utilizando representações de texto descritivas para inserir componentes 
+em suas posições desejadas. Escrito inteiramente em Java, ele permite também que seja usado por outras bibliotecas gráficas 
+que utilizam LayoutManagers de maneira similar ao Swing e SWT. Os autores ressaltam que devido a essa característica, os 
+desenvolvedores estão bem-vindos para modificar a biblioteca para tentar encaixá-la com outras bibliotecas gráficas.
+(“MiG Layout Java Layout Manager for Swing and SWT”, [s.d.])
+
+Esta biblioteca foi utilizada para a configuração de interfaces gráficas e a distribuição de conteúdos visuais 
+dentro das mesmas, permitindo o desenvolvimento de painéis responsíveis de tamanhos dinâmicos e maior naturalidade de organização e adição de componentes.
 
 \subsubsection{Formdev FlatLaf + IntelliJ Themes}
+As bibliotecas FlatLaf, nome curto para Flat Look and Feel, são bibliotecas de componentes, fontes e temas visuais para o Java, 
+a partir do Look and Feel para aplicações Swing, visando ser limpa, simples com poucos gradientes e elegante. Estas disponibilizam 
+também APIs para a configuração de propriedades e ambientes da aplicação, facilitando assim o manuseio de componentes gráficos do 
+Swing. (“FlatLaf - Flat Look and Feel | FormDev”, [s.d.])
+
+No projeto, foram empregados os temas Flat Arc Orange e Flat Arc Dark Orange para os temas claros e escuros respectivamente, a fonte Inter para os componentes visuais com textos, e suas APIs internas para a customização dos temas e do comportamento, permitindo a alta customizabilidade do produto final.
 
 \subsection{Ferramentas}
 O desenvolvimento do sistema foi feito em dois sistemas operacionais diferentes, sendo eles Window 11 e Arch Linux, logo, algumas ferramentas 
@@ -948,6 +1007,9 @@ e de fácil uso. Assim, o GitHub se destaca como uma plataforma de colaboração
 
 \noindent ALVES, W. P. Banco de Dados: Teoria e Desenvolvimento. 2. ed. ed. [s.l.] Saraiva Educação S.A., 2021. Acesso em: 07 set. 2022. \linebreak 
 
+\noindent Apache Maven Assembly Plugin – Introduction. Disponível em: <https://maven.apache.org/plugins/maven-assembly-plugin/index.html>. 
+Acesso em: 26 nov. 2023. \linebreak
+
 \noindent ARNOLD, K. et al. THE JavaTM Programming Language, Fourth Edition. [s.l: s.n.]. 
 Disponível em: <https://www.acs.ase.ro/Media/Default/documents/java/ClaudiuVinte/books/ArnoldGoslingHolmes06.pdf>. 
 Acesso em: 24 nov. 2023. \linebreak
@@ -964,6 +1026,8 @@ Acesso em: 23 nov. 2023. \linebreak
 
 \noindent ELMASRI, Ramez et al. Sistemas de banco de dados. 2005. Acesso em: 23 set. 2022. \linebreak
 
+\noindent FlatLaf - Flat Look and Feel | FormDev. Disponível em: <https://www.formdev.com/flatlaf/>. Acesso em: 26 nov. 2023. \linebreak
+
 \noindent Git - Documentation. Disponível em: <https://git-scm.com/doc>. ‌Acesso em: 26 nov. 2023. \linebreak
 
 \noindent GIT. Git - About Version Control. Disponível em: <https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control>.
@@ -972,10 +1036,15 @@ Acesso em: 23 nov. 2023. \linebreak
 \noindent Git: o que é, para que serve e principais comandos Git! – Insights para te ajudar na carreira em tecnologia | Blog da Trybe. 
 Disponível em: <https://blog.betrybe.com/git/\#2>. Acesso em: 26 nov. 2023.
 
+\noindent Gson. Disponível em: <https://google.github.io/gson/>. Acesso em: 26 nov. 2023. \linebreak
+
 \noindent Home - Neovim. Disponível em: <https://neovim.io/>. Acesso em: 24 nov. 2023. \linebreak
 
 \noindent JAVA, L.; SOARES INDRUSIAK, L. Grupo JavaRS JUG Rio Grande do Sul. [s.l: s.n.]. 
 Disponível em: <https://www.cin.ufpe.br/~arfs/introjava.pdf>. Acesso em: 23 nov. 2023. \linebreak
+
+\noindent Jsoup: Java HTML parser, built for HTML editing, cleaning, scraping, and XSS safety. Disponível em: <https://jsoup.org>.
+Acesso em: 26 nov. 2023. \linebreak
 
 \noindent LISBOA FILHO, Jugurta; IOCHPE, Cirano. Modelagem de Bancos de Dados Geográficos. In: Anais do XX Congresso Brasileiro de Cartografia. 2001. Acesso em: 23 nov. 2023. \linebreak
 
@@ -988,6 +1057,8 @@ Disponível em: <https://www.uece.br/cct/wp-content/uploads/sites/28/2021/07/Fun
 Acesso em: 26 nov. 2023. \linebreak
 
 \noindent Medium. Disponível em: <https://brasil.uxdesign.cc/as-cores-na-experi>. Acesso em: 24 nov. 2023. \linebreak
+
+\noindent MiG Layout Java Layout Manager for Swing and SWT. Disponível em: <https://www.miglayout.com>. Acesso em: 26 nov. 2023. \linebreak
 
 \noindent MIJACOBS. O que é o Git? - Azure DevOps. Disponível em: <https://learn.microsoft.com/pt-br/devops/develop/git/what-is-git>. Acesso em: 24 nov. 2023. \linebreak
 
@@ -1007,7 +1078,7 @@ Acesso em: 24 nov. 2023. \linebreak
 
 \noindent VISUAL STUDIO CODE. Documentation for Visual Studio Code. Disponível em: <https://code.visualstudio.com/docs>. Acesso em: 24 nov. 2023. \linebreak
 
-\noindent 
+\noindent Your relational data. Objectively. - Hibernate ORM. Disponível em: <https://hibernate.org/orm/>. Acesso em: 26 nov. 2023. \linebreak
 
 \noindent
 
