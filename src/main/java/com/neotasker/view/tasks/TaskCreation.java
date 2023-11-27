@@ -36,9 +36,7 @@ public class TaskCreation extends JPanel {
         super();
 
         // Set layout
-        setLayout(
-            new MigLayout("fillx", "10%[left][center][right]10%", "[top][bottom]")
-        );
+        setLayout(new MigLayout("fillx", "20[left]"));
 
         // Create components
         this.identifierLabel = new JLabel(IDENTIFIER);
@@ -67,7 +65,7 @@ public class TaskCreation extends JPanel {
         this.addButton = new JButton("Adicionar Tarefa");
 
         // Add components
-        add(this.identifierLabel, "align left, wrap");
+        add(this.identifierLabel, "align center, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
 
         add(this.titlePrompt, "align left, wrap");
