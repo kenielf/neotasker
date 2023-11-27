@@ -46,19 +46,11 @@ public class Statistics extends JPanel {
 
         // Create a model for the table
         DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("Categorias");
-        model.addColumn("Valores");
-        this.statsTable.setModel(model);
-
-        // Add a row for each statistic
         model.addRow(new Object[]{"Tasks Criadas", methods.getTasksCreated()});
         model.addRow(new Object[]{"Tasks Concluídas", methods.getTasksAccomplished()});
         model.addRow(new Object[]{"Tasks Programadas", methods.getTasksScheduled()});
         model.addRow(new Object[]{"Tasks Atrasadas", methods.getTasksDelayed()});
-
-        add(this.identifierLabel, "align center, wrap");
-        add(this.identifierSeparator, "align center, grow, span, wrap");
-        add(this.statsTable, "align center, wrap, grow");
+        this.statsTable.setModel(model);
 
          // Centralize the text in the table
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
