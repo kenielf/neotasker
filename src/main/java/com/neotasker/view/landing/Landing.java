@@ -50,6 +50,9 @@ public class Landing extends JFrame {
         this.navBar.statisticsButton.addActionListener(
             (ActionEvent e) -> content.switchToStatistics()
         );
+        this.navBar.addButton.addActionListener(
+            (ActionEvent e) -> content.switchToTaskCreation()
+        );
         this.navBar.configurationButton.addActionListener(
             (ActionEvent e) -> content.switchToConfiguration()
         );

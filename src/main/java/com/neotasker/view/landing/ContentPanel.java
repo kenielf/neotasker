@@ -4,6 +4,7 @@ import java.awt.CardLayout;
 
 import javax.swing.JPanel;
 
+import com.neotasker.view.tasks.TaskCreation;
 import com.neotasker.view.tasks.Tasks;
 import com.neotasker.view.calendar.Calendar;
 import com.neotasker.view.statistics.Statistics;
@@ -21,6 +22,8 @@ public class ContentPanel extends JPanel {
     private Calendar calendarView;
     /** The statistics panel */
     private Statistics statisticsView;
+    /** The task creation panel. */
+    private TaskCreation taskCreationView;
     /** The configuration panel */
     private Configuration configurationView;
 
@@ -39,6 +42,7 @@ public class ContentPanel extends JPanel {
         this.tasksView = new Tasks();
         this.calendarView = new Calendar();
         this.statisticsView = new Statistics();
+        this.taskCreationView = new TaskCreation();
         this.configurationView = new Configuration();
 
         // Set Default View
@@ -48,6 +52,7 @@ public class ContentPanel extends JPanel {
         add(this.tasksView, Tasks.IDENTIFIER);
         add(this.calendarView, Calendar.IDENTIFIER);
         add(this.statisticsView, Statistics.IDENTIFIER);
+        add(this.taskCreationView, TaskCreation.IDENTIFIER);
         add(this.configurationView, Configuration.IDENTIFIER);
     }
 
@@ -79,6 +84,13 @@ public class ContentPanel extends JPanel {
      */
     public void switchToStatistics() {
         switchView(Statistics.IDENTIFIER);
+    }
+
+    /**
+     * Switches the view to task creation panel.
+     */
+    public void switchToTaskCreation() {
+        switchView(TaskCreation.IDENTIFIER);
     }
 
     /**
