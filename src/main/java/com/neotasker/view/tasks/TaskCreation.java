@@ -193,7 +193,7 @@ public class TaskCreation extends JPanel {
         this.addErrorMessage = new JLabel();
 
         // Identifier
-        add(this.identifierLabel, "wrap");
+        add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
 
         // Title

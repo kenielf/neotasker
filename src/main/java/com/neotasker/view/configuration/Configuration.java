@@ -208,7 +208,7 @@ public class Configuration extends JPanel {
         }
 
         // Add content
-        add(this.identifierLabel, "align center, wrap");
+        add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "span, growx, wrap");
 
         add(this.themeSectionLabel, "align left, wrap");

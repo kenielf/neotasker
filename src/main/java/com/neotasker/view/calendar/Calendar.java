@@ -50,6 +50,8 @@ public class Calendar extends JPanel {
         this.calendar.setLocale(lang);
         this.calendar.setComponentInputMapEnabled(true);
         this.calendar.setFirstDayOfWeek(1);
+        this.calendar.setPreferredRowCount(2);
+        this.calendar.setPreferredColumnCount(2);
         this.calendar.setShowingLeadingDays(true);
         this.calendar.setShowingTrailingDays(true);
         this.calendar.setTraversable(true);
@@ -59,7 +61,7 @@ public class Calendar extends JPanel {
         //this.calendar.setLayout(new MigLayout("fillx"));
 
 
-        add(this.identifierLabel, "align left, wrap");
+        add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "growx, span, wrap");
         add(this.calendarPanel, "growx, span, align center");
     }
