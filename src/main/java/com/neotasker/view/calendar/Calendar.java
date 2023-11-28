@@ -39,6 +39,7 @@ public class Calendar extends JPanel {
         this.identifierLabel.setFont(
             this.identifierLabel.getFont().deriveFont(IDENTIFIER_SIZE)
         );
+
         this.identifierSeparator = new JSeparator();
 
         this.calendarPanel = new JPanel();

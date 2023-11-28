@@ -83,7 +83,7 @@ public class Configuration extends JPanel {
      * Instantiates the configuration panel.
      */
     public Configuration() {
-        setLayout(new MigLayout("fillx", "10%[left][right]10%"));
+        setLayout(new MigLayout("fillx", "10%[left][center][right]10%"));
 
         this.identifierLabel = new JLabel(IDENTIFIER);
         this.identifierLabel.setFont(
@@ -208,7 +208,7 @@ public class Configuration extends JPanel {
         }
 
         // Add content
-        add(this.identifierLabel, "align left, wrap");
+        add(this.identifierLabel, "align center, wrap");
         add(this.identifierSeparator, "span, growx, wrap");
 
         add(this.themeSectionLabel, "align left, wrap");
