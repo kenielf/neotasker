@@ -22,9 +22,11 @@ import javax.swing.JSeparator;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EtchedBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.table.AbstractTableModel;
 
 import org.jdesktop.swingx.JXDatePicker;
 
@@ -35,6 +37,7 @@ import com.neotasker.model.Task;
 import com.neotasker.model.TaskState;
 import com.neotasker.utils.Constants;
 import com.neotasker.view.basecomponents.JPromptField;
+import com.neotasker.view.landing.Landing;
 
 import net.miginfocom.swing.MigLayout;
 
@@ -295,6 +298,9 @@ public class TaskCreation extends JPanel {
             this.titleWarningField.setText("");
             this.descriptionWarningField.setText("");
             taskController.registerTask(task);
+            // Update tables
+            Landing rootWindow = (Landing) SwingUtilities.getRoot(this);
+            rootWindow.content.statisticsView.statsTable.invalidate();
         } else {
             this.addErrorMessage.setText("Existem Campos Inválidos!");
         }

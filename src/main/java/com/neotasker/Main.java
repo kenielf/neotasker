@@ -8,11 +8,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.LoggerContext;
 import org.apache.logging.log4j.core.config.LoggerConfig;
+import java.util.List;
 
 import java.util.Map;
 
 import com.neotasker.controllers.ConfigurationController;
+import com.neotasker.controllers.TaskController;
 import com.neotasker.database.HibernateUtil;
+import com.neotasker.model.Task;
 import com.neotasker.model.Theme;
 
 /**

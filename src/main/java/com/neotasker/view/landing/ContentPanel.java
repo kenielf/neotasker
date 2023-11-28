@@ -17,15 +17,15 @@ public class ContentPanel extends JPanel {
     /** The layout used to manage panels. */
     private CardLayout cardLayout;
     /** The task panel. */
-    private Tasks tasksView;
+    public Tasks tasksView;
     /** The calendar panel */
-    private Calendar calendarView;
+    public Calendar calendarView;
     /** The statistics panel */
-    private Statistics statisticsView;
+    public Statistics statisticsView;
     /** The task creation panel. */
-    private TaskCreation taskCreationView;
+    public TaskCreation taskCreationView;
     /** The configuration panel */
-    private Configuration configurationView;
+    public Configuration configurationView;
 
     /**
      * Instantiates the content panel
