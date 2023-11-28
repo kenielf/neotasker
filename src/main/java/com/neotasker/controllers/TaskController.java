@@ -1,5 +1,6 @@
 package com.neotasker.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -19,11 +20,10 @@ public class TaskController {
             session.persist(task);
             transaction.commit();
         } catch (Exception e) {
-            e.printStackTrace();
-            //if (transaction != null) {
-            //    e.printStackTrace();
-            //    transaction.rollback();
-            //}
+            if (transaction != null) {
+                e.printStackTrace();
+                transaction.rollback();
+            }
         } finally {
             if (session != null) {
                 session.close();
@@ -66,21 +66,42 @@ public class TaskController {
     }
 
     public List<Task> getAllTasks() {
+        Session session = null;
         Transaction transaction = null;
-        List<Task> tasks = null;
-
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        List<Task> tasks = new ArrayList<>();
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
-
-            tasks = session.createQuery("FROM tasks", Task.class).getResultList();
-
+            tasks = session.createQuery("FROM Task", Task.class).getResultList();
             transaction.commit();
         } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
+            e.printStackTrace();
+            //if (transaction != null) {
+            //    e.printStackTrace();
+            //    transaction.rollback();
+            //}
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
+
         return tasks;
+        //Transaction transaction = null;
+        //List<Task> tasks = null;
+
+        //try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        //    transaction = session.beginTransaction();
+
+        //    tasks = session.createQuery("FROM tasks", Task.class).getResultList();
+
+        //    transaction.commit();
+        //} catch (Exception e) {
+        //    if (transaction != null) {
+        //        transaction.rollback();
+        //    }
+        //}
+        //return tasks;
     }
 
     public void deleteTask(long id) {
