@@ -70,7 +70,7 @@ public class Tasks extends JPanel {
         add(this.identifierSeparator, "align center, grow, span, wrap");
         add(this.table.getTableHeader(), "align center, grow, span, wrap");
         add(this.table, "align center, grow, span, wrap");
-        add(this.refreshButton, "align right, wrap");
+        add(this.refreshButton, "align center, span, wrap");
     }
 
     public void updateTable() {
