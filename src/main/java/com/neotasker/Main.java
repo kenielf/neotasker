@@ -3,6 +3,14 @@ package com.neotasker;
 import com.neotasker.database.HibernateUtil;
 import com.neotasker.utils.OperatingSystem;
 import com.neotasker.view.landing.Landing;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.apache.logging.log4j.core.config.LoggerConfig;
+
+import java.util.Map;
+
 import com.neotasker.controllers.ConfigurationController;
 import com.neotasker.database.HibernateUtil;
 import com.neotasker.model.Theme;
@@ -17,18 +25,22 @@ public class Main {
      * @param args Command line arguments.
      */
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-
         // Operating System Handler
         new OperatingSystem();
 
+        // Database Handler
+        HibernateUtil.Initialize();
+
+        // Disable Logging
+        LoggerContext logContext = (LoggerContext) LogManager.getContext(false);
+        Map<String, LoggerConfig> map = logContext.getConfiguration().getLoggers();
+        for (String key: map.keySet()) {
+            LoggerConfig logger = map.get(key);
+            logger.setLevel(Level.OFF);
+        }
+
         // Handle System Configuration
         new ConfigurationController();
-        System.out.println("\u001b[33mUi Theme:\u001b[00m " + Theme.getUiTheme());
-        System.out.println("\u001b[33mIcon Theme:\u001b[00m " + Theme.getIconTheme());
-
-        // Initialize Database
-        HibernateUtil.Initialize();
 
         // Initialize Graphical Environment
         java.awt.EventQueue.invokeLater(new Runnable() {

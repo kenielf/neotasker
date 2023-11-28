@@ -3,9 +3,13 @@ package com.neotasker.model;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.hibernate.annotations.Type;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -45,7 +49,7 @@ public class Task {
     private LocalDateTime dateDue;
 
     @Column(name = "status", nullable = false)
-    private TaskState status;
+    private boolean status;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
@@ -65,71 +69,7 @@ public class Task {
         this.dateCreation = LocalDateTime.now();
         this.dateCompletion = null;
         this.dateDue = null;
-        this.status = TaskState.UNFINISHED;
-    }
-
-    /**
-     * Instantiate a task and fill it with a title.
-     *
-     * @param title the title for the task.
-     */
-    public Task(String title) {
-        super();
-        this.title = title;
-        this.description = null;
-        this.dateCreation = LocalDateTime.now();
-        this.dateCompletion = null;
-        this.dateDue = null;
-        this.status = TaskState.UNFINISHED;
-    }
-
-    /**
-     * Instantiate a task with a title and a due date.
-     *
-     * @param title the title for the task.
-     * @param dateDue the due date for the task.
-     */
-    public Task(String title, LocalDateTime dateDue) {
-        super();
-        this.title = title;
-        this.description = null;
-        this.dateCreation = LocalDateTime.now();
-        this.dateCompletion = null;
-        this.dateDue = dateDue;
-        this.status = TaskState.UNFINISHED;
-    }
-    
-    /**
-     * Instantiate a task with a title and a description
-     *
-     * @param title the title for the task.
-     * @param description the description for the task.
-     */
-    public Task(String title, String description) {
-        super();
-        this.title = title;
-        this.description = description;
-        this.dateCreation = LocalDateTime.now();
-        this.dateCompletion = null;
-        this.dateDue = null;
-        this.status = TaskState.UNFINISHED;
-    }
-
-    /**
-     * Instantiate a task with a title, description and a due date.
-     *
-     * @param title the title for the task.
-     * @param description the description for the task.
-     * @param dateDue the due date for the task.
-     */
-    public Task(String title, String description, LocalDateTime dateDue) {
-        super();
-        this.title = title;
-        this.description = description;
-        this.dateCreation = LocalDateTime.now();
-        this.dateCompletion = null;
-        this.dateDue = dateDue;
-        this.status = TaskState.UNFINISHED;
+        this.status = false;
     }
 
     /**
@@ -245,8 +185,8 @@ public class Task {
      *
      * @param status the completion status for the task.
      */
-    public void setStatus(TaskState status) {
-        this.status = status;
+    public void setStatus(boolean bool) {
+        this.status = bool;
     }
 
     /**
@@ -254,7 +194,7 @@ public class Task {
      *
      * @return the completion status for the task.
      */
-    public TaskState getStatus() {
+    public boolean getStatus() {
         return status;
     }
 

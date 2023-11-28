@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyChangeEvent;
+import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Locale;
 
 import javax.swing.Action;
@@ -27,6 +29,7 @@ import org.jdesktop.swingx.JXDatePicker;
 import com.neotasker.controllers.TaskController;
 import com.neotasker.model.Tag;
 import com.neotasker.model.Task;
+import com.neotasker.model.TaskState;
 import com.neotasker.utils.Constants;
 import com.neotasker.view.basecomponents.JPromptField;
 
@@ -218,22 +221,67 @@ public class TaskCreation extends JPanel {
         add(this.tagWarningField, "grow, span, wrap");
 
         // Add Button
-        add(this.addButton, "span, align right");
-        add(this.addErrorMessage, "grow");
+        add(this.addErrorMessage, "grow, align left");
+        add(this.addButton, "align right, wrap");
     }
 
     private void updateCharacterCount(JLabel characterCount, JTextField field, int limit, JLabel warningLabel) {
         int count = field.getText().length();
         characterCount.setText(String.format("%4d/%4d", count, limit));
-        warningLabel.setText((count > limit)? "Tamanho inválido!" : "");
+        warningLabel.setText((count > limit || count == 0)? "Tamanho inválido!" : "");
+    }
+
+    private void cleanInput() {
+        this.titleField.setText("");
+        this.descriptionField.setText("");
+        this.dueDatePicker.setDate(null);
+        this.dueTimeField.setText("");
+        this.tagField.setText("");
     }
 
     private void addTask() {
-        this.addErrorMessage.setText("Tarefa Adicionada com Sucesso");
-        Task task = new Task();
-        task.setTitle(this.titleField.getText().strip());
-        task.setDescription(this.descriptionField.getText().strip());
         TaskController taskController = new TaskController();
-        taskController.registerTask(task);
+        Task task = new Task();
+        boolean valid = false;
+        // Validate and add fields
+        String title = this.titleField.getText();
+        boolean titleIsValid = false;
+        if (title.length() > 0 && title.length() < Constants.TITLE_SIZE) {
+            titleIsValid = true;
+        }
+
+        String description = this.descriptionField.getText();
+        boolean descriptionIsValid = false;
+        if (description.length() > 0 && description.length() < Constants.DESCRIPTION_SIZE) {
+            descriptionIsValid = true;
+        }
+
+        Date dueDate = dueDatePicker.getDate();
+        boolean dueDateIsValid = true;
+        if (dueDate != null) {
+            if (dueDate.compareTo(new Date(System.currentTimeMillis())) < 0) {
+                this.dueDateWarningField.setText("Data Inválida: Não é possível criar tarefas para o passado!");
+                dueDateIsValid = false;
+            } else {
+                this.dueDateWarningField.setText("");
+            }
+        }
+
+        valid = titleIsValid && descriptionIsValid && dueDateIsValid;
+        // Commit
+        if (valid) {
+            task.setTitle(this.titleField.getText().strip());
+            task.setDescription(this.descriptionField.getText().strip());
+            task.setStatus(false);
+            this.addErrorMessage.setText("Tarefa Adicionada com Sucesso");
+            cleanInput();
+            this.titleWarningField.setText("");
+            this.descriptionWarningField.setText("");
+            taskController.registerTask(task);
+        } else {
+            this.addErrorMessage.setText("Existem Campos Inválidos!");
+        }
+        //
+        // Commit
     }
 }
