@@ -60,6 +60,12 @@ public class Task {
      */
     public Task() {
         super();
+        this.title = null;
+        this.description = null;
+        this.dateCreation = LocalDateTime.now();
+        this.dateCompletion = null;
+        this.dateDue = null;
+        this.status = TaskState.UNFINISHED;
     }
 
     /**
@@ -269,11 +275,5 @@ public class Task {
     public Set<Tag> getTags() {
         return tags;
     }
-}
-
-enum TaskState {
-    UNFINISHED,
-    FINISHED,
-    LATE,
 }
 

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com</groupId>
     <artifactId>Neotasker</artifactId>
-    <version>0.6.5</version>
+    <version>0.7.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -84,6 +84,11 @@
         </dependency>
         <!-- Graphical Components -->
         <dependency>
+            <groupId>org.swinglabs</groupId>
+            <artifactId>swingx</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.miglayout</groupId>
             <artifactId>miglayout</artifactId>
             <version>3.7.4</version>
@@ -102,6 +107,11 @@
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf-fonts-inter</artifactId>
             <version>3.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf-swingx</artifactId>
+            <version>3.2.5</version>
         </dependency>
     </dependencies>
 </project>

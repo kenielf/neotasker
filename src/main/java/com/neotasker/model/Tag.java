@@ -32,7 +32,7 @@ public class Tag {
     private Set<Task> tasks = new TreeSet<>();
 
     /** Instantiate an empty tag */
-    Tag() {
+    public Tag() {
         super();
     }
 
@@ -41,7 +41,7 @@ public class Tag {
      *
      * @param label the label for the tag.
      */
-    Tag(String label) {
+    public Tag(String label) {
         super();
         this.label = label;
     }
