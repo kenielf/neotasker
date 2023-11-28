@@ -36,17 +36,16 @@ public class HibernateUtil {
                 // Hibernate Settings
                 Properties settings = new Properties();
 
-                settings.put(Environment.SHOW_SQL, "true");
+                settings.put(Environment.SHOW_SQL, "false");
                 settings.put(Environment.FORMAT_SQL, "true");
                 settings.put(Environment.DIALECT, "org.hibernate.community.dialect.SQLiteDialect");
-                settings.put(Environment.DRIVER, "org.sqlite.JDBC");
                 settings.put(Environment.URL, String.format(
                         "jdbc:sqlite:%s",
                         OperatingSystem.getDatabaseFile().toString()
                     )
                 );
                 settings.put(Environment.HBM2DDL_AUTO, "update");
-                settings.put(Environment.GENERATE_STATISTICS, "true");
+                settings.put(Environment.GENERATE_STATISTICS, "false");
 
                 configuration.setProperties(settings);
 
