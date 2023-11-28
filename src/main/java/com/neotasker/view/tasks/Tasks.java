@@ -1,10 +1,15 @@
 package com.neotasker.view.tasks;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JSeparator;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.neotasker.controllers.TaskController;
@@ -25,6 +30,9 @@ public class Tasks extends JPanel {
     /** The separator for the identifier. */
     public JSeparator identifierSeparator;
     public JScrollBar scrollBar;
+    public DefaultTableModel model;
+    public JTable table;
+    public JButton refreshButton;
 
     /**
      * Instantiates the tasks panel.
@@ -39,16 +47,49 @@ public class Tasks extends JPanel {
         this.identifierSeparator = new JSeparator(JSeparator.HORIZONTAL);
 
         // Get all Tasks
+        this.model = new DefaultTableModel();
+        model.addColumn("Nome");
+        model.addColumn("Descrição");
+        model.addColumn("Data Limite");
         TaskController tc = new TaskController();
         List<Task> tasks = tc.getAllTasks();
-
         for (int i=0; i<tasks.size(); i++) {
             Task task = tasks.get(i);
-            System.out.println(task.getTitle());
+            model.addRow(
+                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
+            );
         }
+        this.table = new JTable(model);
+        this.refreshButton = new JButton("Atualizar Tarefas");
+        this.refreshButton.addActionListener(
+            (ActionEvent e) -> updateTable()
+        );
+
 
         add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
+        add(this.table.getTableHeader(), "align center, grow, span, wrap");
+        add(this.table, "align center, grow, span, wrap");
+        add(this.refreshButton, "align right, wrap");
+    }
 
+    public void updateTable() {
+        // Remove all rows
+        if (model.getRowCount() > 0) {
+            for (int i = model.getRowCount() - 1; i > -1; i--) {
+                model.removeRow(i);
+            }
+        }
+
+        TaskController tc = new TaskController();
+        List<Task> tasks = tc.getAllTasks();
+        for (int i=0; i<tasks.size(); i++) {
+            Task task = tasks.get(i);
+            model.addRow(
+                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
+            );
+        }
+        this.table.invalidate();
+        this.table.repaint();
     }
 }

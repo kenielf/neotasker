@@ -63,7 +63,7 @@ public class Statistics extends JPanel {
 
         this.statsTable.setModel(model);
 
-        this.refreshButton = new JButton("Atualizar");
+        this.refreshButton = new JButton("Atualizar Estatísticas");
         this.refreshButton.addActionListener(
             (ActionEvent e) -> update()
         );
