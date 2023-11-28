@@ -5,7 +5,9 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyChangeEvent;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
@@ -26,6 +28,7 @@ import javax.swing.event.DocumentListener;
 
 import org.jdesktop.swingx.JXDatePicker;
 
+import com.neotasker.controllers.TagController;
 import com.neotasker.controllers.TaskController;
 import com.neotasker.model.Tag;
 import com.neotasker.model.Task;
@@ -267,6 +270,20 @@ public class TaskCreation extends JPanel {
             }
         }
 
+        TagController tagController = new TagController();
+        String[] tags = tagField.getText().split(",");
+        List<Tag> taskTags = new ArrayList<>();
+        for (int i=0; i<tags.length; i++){
+            String tagString = tags[i].strip();
+            if (tagString.length() > 0 && tagString.length() < Constants.LABEL_SIZE) {
+                Tag tag = new Tag();
+                tag.setLabel(tagString);
+                tagController.registerTag(tag);
+                taskTags.add(tag);
+            }
+        }
+        task.setTags(taskTags);
+
         valid = titleIsValid && descriptionIsValid && dueDateIsValid;
         // Commit
         if (valid) {
@@ -281,7 +298,5 @@ public class TaskCreation extends JPanel {
         } else {
             this.addErrorMessage.setText("Existem Campos Inválidos!");
         }
-        //
-        // Commit
     }
 }

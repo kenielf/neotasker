@@ -1,7 +1,8 @@
 package com.neotasker.model;
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.List;
+//import java.util.TreeSet;
 
 import org.hibernate.annotations.Type;
 
@@ -51,13 +52,13 @@ public class Task {
     @Column(name = "status", nullable = false)
     private boolean status;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(
         name = "tasks_tags",
         joinColumns = {@JoinColumn(name = "task_id")},
         inverseJoinColumns = {@JoinColumn(name = "tag_id")}
     )
-    private Set<Tag> tags = new TreeSet<>();
+    private List<Tag> tags = new ArrayList<>();
 
     /**
      * Instantiate an empty task.
@@ -203,7 +204,7 @@ public class Task {
      *
      * @param tags the tags to be set for the task.
      */
-    public void setTags(Set<Tag> tags) {
+    public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
 
@@ -212,7 +213,7 @@ public class Task {
      *
      * @return the tags set for the task.
      */
-    public Set<Tag> getTags() {
+    public List<Tag> getTags() {
         return tags;
     }
 }

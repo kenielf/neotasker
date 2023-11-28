@@ -28,7 +28,7 @@ public class Tag {
     @Column(name = "label", nullable = false, length = Constants.LABEL_SIZE)
     private String label;
 
-    @ManyToMany(mappedBy = "tags", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "tags", cascade = CascadeType.MERGE)
     private Set<Task> tasks = new TreeSet<>();
 
     /** Instantiate an empty tag */

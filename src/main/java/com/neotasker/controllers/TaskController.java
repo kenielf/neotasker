@@ -1,15 +1,12 @@
 package com.neotasker.controllers;
 
 import java.util.List;
-import java.util.Objects;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.neotasker.database.HibernateUtil;
 import com.neotasker.model.Task;
-
-import jakarta.transaction.Transactional;
 
 public class TaskController {
 
