@@ -306,15 +306,13 @@ Descrição de cada Requisito de Domínio:
 \noindent Fonte: Os Autores.
 
 % --- Segment: Data Flow Diagrams ---
-\subsection{Diagrama de Fluxo de Dados}
+\subsection{Diagrama de Fluxo de Dados do Sistema}
 Os \textbf{Diagramas de Fluxo de Dados} são os diagramas que representam como os dados percorrem por entre os processos e por quais processos. 
-Cada requisito funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo.
+Cada requisito funcional deve apresentar um DFD (Diagrama de Fluxo de Dados) correspondente ao processo. Abaixo, estão anexos os DFDs do sistema \textbf{NeoTasker}, 
+além de seus respectivos Casos de Testes:
 
 \pagebreak
-\subsubsection{Diagramas de Fluxo de Dados do Sistema}
-\begin{itemize}
-\item\textbf{RF01 - Criar Tasks:}
-\end{itemize}
+\subsubsection{RF01 - Criar Tasks:}
 
 O sistema deve permitir que o usuário crie uma nova task, onde o usuário deve informar o título da task, a data 
 de término da task, sendo estes dois primeiros os dados obrigatórios para sua criação. Como dados opcionais, temos a 
@@ -326,11 +324,12 @@ data de início da task, descrição da task, repetição entre períodos e as t
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF02 - Exibir Tasks:}
+	\item\textbf{Caso de Teste: Criar Tasks}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF02 - Exibir Tasks:}
 O sistema deve permitir que o usuário visualize todas as tasks já existentes, onde o usuário pode vizualizar 
 título, data de início, data de término, descrição, repetição entre períodos e as tags da task. Além disso, o 
 sistema deve fornecer essa exibição assim que o usuário abrir o sistema. Ou seja, dois \textit{stakesholders} 
@@ -342,11 +341,12 @@ podem ser identificados: usuário e sistema.
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF03 - Editar Tasks:}
+	\item\textbf{Caso de Teste: Exibir Tasks}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF03 - Editar Tasks:}
 O sistema deve permitir que o usuário edite uma task já existente.
 \begin{figure}[H]
 	\centering
@@ -355,11 +355,12 @@ O sistema deve permitir que o usuário edite uma task já existente.
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF04 - Excluir Tasks:}
+	\item\textbf{Caso de Teste: Editar Tasks}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF04 - Excluir Tasks:}
 O sistema deve permitir que o usuário exclua uma task já existente.
 \begin{figure}[H]
 	\centering
@@ -368,11 +369,12 @@ O sistema deve permitir que o usuário exclua uma task já existente.
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF05 - Listar Tasks:}
+	\item\textbf{Caso de Teste: Obter Informações do Sistema Operacional}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF05 - Listar Tasks:}
 O sistema deve listar todas as tasks já existentes, em ordem de mais recentes para mais antigas.
 \begin{figure}[H]
 	\centering
@@ -381,11 +383,13 @@ O sistema deve listar todas as tasks já existentes, em ordem de mais recentes p
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
+
 \begin{itemize}
-\item\textbf{RF06 - Obter Informações do Sistema Operacional:}
+	\item\textbf{Caso de Teste: Obter Informações do Sistema Operacional}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF06 - Obter Informações do Sistema Operacional:}
 O sistema deve obter informações do sistema operacional.
 \begin{figure}[H]
 	\centering
@@ -394,11 +398,12 @@ O sistema deve obter informações do sistema operacional.
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF07 - Mostrar Dados de Estatísticas:}
+	\item\textbf{Caso de Teste: Obter Informações do Sistema Operacional}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF07 - Mostrar Dados de Estatísticas:}
 O sistema deve mostrar dados de estatísticas, sendo o número de task criadas, concluídas, programadas e atrasadas.
 \begin{figure}[H]
 	\centering
@@ -407,11 +412,12 @@ O sistema deve mostrar dados de estatísticas, sendo o número de task criadas, 
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF08 - Importar Dados:}
+	\item\textbf{Caso de Teste: Importar Dados}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF08 - Importar Dados:}
 O sistema deve ser capaz de importar dados externos, sendo eles por arquivos nos formatos \textbf{.xml} e \textbf{.json}.
 \begin{figure}[H]
 	\centering
@@ -420,11 +426,13 @@ O sistema deve ser capaz de importar dados externos, sendo eles por arquivos nos
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF09 - Exportar Dados:}
+	\item\textbf{Caso de Teste: Importar Dados}
 \end{itemize}
 
+\pagebreak
+
+\subsubsection{RF09 - Exportar Dados:}
 O sistema decve ser capaz de exportar os dados internos, ou seja, as tasks cadastradas no banco. A exportação deve possibilitar 
 em arquivo de formato \textbf{.json} e \textbf{.xml}.
 \begin{figure}[H]
@@ -434,11 +442,12 @@ em arquivo de formato \textbf{.json} e \textbf{.xml}.
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF10 - Trocar Tema:}
+	\item\textbf{Caso de Teste: Exportar Dados}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF10 - Trocar Tema:}
 O sistema deve ser capaz de trocar o tema, sendo eles o tema claro e o tema escuro.
 \begin{figure}[H]
 	\centering
@@ -447,11 +456,12 @@ O sistema deve ser capaz de trocar o tema, sendo eles o tema claro e o tema escu
 \end{figure}
 \noindent Fonte: Os Autores.
 
-\pagebreak
 \begin{itemize}
-\item\textbf{RF11 - Sincronizar Localidade:}
+	\item\textbf{Caso de Teste: Importar Dados}
 \end{itemize}
 
+\pagebreak
+\subsubsection{RF11 - Sincronizar Localidade:}
 O sistema deve ser capaz de sincronizar a localidade física do usuário com o sistema, ou seja, sincronizar cidade e estado.
 \begin{figure}[H]
 	\centering
@@ -459,6 +469,10 @@ O sistema deve ser capaz de sincronizar a localidade física do usuário com o s
 	\caption{Diagrama de Fluxo de Dados do Requisito Funcional 11}
 \end{figure}
 \noindent Fonte: Os Autores.
+
+\begin{itemize}
+	\item\textbf{Caso de Teste: Sincronizar Localidade}
+\end{itemize}
 
 \subsection{Dicionário de Dados do Sistema}
 O \textbf{Dicionário de Dados} é o documento ao qual é representado os tipos de dados, quais são eles e como serão 
