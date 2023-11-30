@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.neotasker.controllers.TaskController;
+import com.neotasker.model.Tag;
 import com.neotasker.model.Task;
 
 import net.miginfocom.swing.MigLayout;
@@ -50,13 +51,15 @@ public class Tasks extends JPanel {
         this.model = new DefaultTableModel();
         model.addColumn("Nome");
         model.addColumn("Descrição");
+        model.addColumn("Data Criação");
         model.addColumn("Data Limite");
+        model.addColumn("Tags");
         TaskController tc = new TaskController();
         List<Task> tasks = tc.getAllTasks();
         for (int i=0; i<tasks.size(); i++) {
             Task task = tasks.get(i);
             model.addRow(
-                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
+                new Object[]{task.getTitle(), task.getDescription(), task.getDateCreation(), task.getDateDue(), tagsToString(task.getTags())}
             );
         }
         Tasks.table = new JTable(model);
@@ -73,6 +76,18 @@ public class Tasks extends JPanel {
         add(this.refreshButton, "align center, span, wrap");
     }
 
+    public String tagsToString(List<Tag> tags) {
+        String result = new String();
+        for (int i=0; i<tags.size(); i++) {
+            if (i == 0) {
+                result = tags.get(i).getLabel();
+            } else {
+                result = result + ", " + tags.get(i).getLabel();
+            }
+        }
+        return result;
+    }
+
     public void updateTable() {
         // Remove all rows
         if (model.getRowCount() > 0) {
@@ -86,7 +101,8 @@ public class Tasks extends JPanel {
         for (int i=0; i<tasks.size(); i++) {
             Task task = tasks.get(i);
             model.addRow(
-                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
+                new Object[]{task.getTitle(), task.getDescription(), task.getDateCreation(), task.getDateDue(), tagsToString(task.getTags())}
+                //new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
             );
         }
         Tasks.table.invalidate();
