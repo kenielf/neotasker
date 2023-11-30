@@ -74,7 +74,7 @@ public class Statistics extends JPanel {
         this.statsTable.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
         this.statsTable.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
 
-        add(this.identifierLabel, "align center, wrap");
+        add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
         add(this.statsTable, "align center, wrap, grow, span");
         add(this.refreshButton, "align right, wrap");
