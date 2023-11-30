@@ -160,15 +160,15 @@ Esta estrutura é o que permite que o desenvolvimento ocorra de maneira crescent
  modificação ou remoção de componentes resulte na adaptação da documentação e código, voltando ao ponto de desenvolvimento 
  no qual a mudança ocorreu, garantindo assim uma maior estabilidade e qualidade de produto.
 
-\subsubsection{Método de Trabalho}
+\subsubsection{Método de Trabalho Ágil}
 O Método Ágil com SCRUM\footnote{
     Criado por \textbf{Jeff Sutherland} em 1990.
-} foi empregado para orientar os desenvolvimentos dos diferentes processos presentes na estrutura do projeto. Utilizado também no mercado 
-de trabalho, o método incorpora as atividades de levantamento de requisitos, análise, projetos \textit{(prototipação)}, 
-implementação/evolução, e entrega.
+} foi empregado para orientar os desenvolvimentos dos diferentes processos presentes na estrutura do projeto. Utilizado também no mercado de trabalho, o método incorpora as atividades de levantamento de requisitos, análise, projetos \textit{(prototipação)}, implementação/evolução, e entrega.
 
 As atividades individuais são organizadas em \textbf{Sprints}, que delimitam um certo período de 
-tempo -- \textit{geralmente de uma a duas semanas} -- desde o início até o fim do processo.
+tempo -- \textit{geralmente de uma a duas semanas} -- desde o início até o fim do processo. O progresso entre as sprints são mensurados por meio de reuniões diárias, apelidadas de \textit{Dailies}, visando demonstrar o trabalho produzido e buscar feedback.
+
+A abordagem SCRUM para o desenvolvimento de projetos se caracteriza por ser iterativa e incremental, permitindo desenvolvimento com feedback de forma contínua, além de apresentar uma maior flexibilidade com a autoridade de equipes se organizarem de forma individual, sem conflitar com outras e leva como base a volatilidade do levantamento de requisitos.
 
 \subsubsection{Divisão de Responsabilidades}
 O projeto consta com dois membros, portanto, as atividades estão substituídas da seguinte maneira:
@@ -196,6 +196,27 @@ O projeto consta com dois membros, portanto, as atividades estão substituídas 
     	\item Construção de Diagramas e Protótipos Gráficos.
 
 \end{itemize}
+
+% --- Segment: Cronogram ---
+\section{Cronograma}
+\subsection{Organização de Sprints}
+\subsubsection{1\textsuperscript{a} \textit{Sprint} - Brainstorming \& Levantamento de Requisitos}
+A primeira \textit{sprint} de desenvolvimento se caracterizou por longas sessões de \textit{brainstorming}, visando idealizar o projeto no seu aspecto funcional e as dependências necessárias para realizá-lo. Nessa etapa os objetivos e requisitos iniciais do projeto foram finalizados e os diagramas necessários foram produzidos.
+
+\subsubsection{2\textsuperscript{a} \textit{Sprint} - Design \& Prototipagem}
+Nessa \textit{sprint}, o foco foi no design gráfico da aplicação, fazendo o uso da ferramenta \textit{Figma}. Foram montados os temas claros e escuros do projeto, em conjunto com o objetivo de conteúdo de painéis principais e auxiliares. Simultaneamente, foram modificados os requisitos para se adaptarem melhor com a nova ambientação do projeto.
+
+\subsubsection{3\textsuperscript{a} \textit{Sprint} - Desenvolvimento do Back-End e Interações com Banco de Dados}
+Nessa \textit{sprint}, o desenvolvimento do software foi inicializado, com várias experimentações de interação de modelos de dados e as ferramentas de bancos de dados disponíveis. Por fim, foi decidido utilizar o \textit{SQLite3} em conjunto com a biblioteca e framework \textit{Hibernate} para as interações com o banco de dados.
+
+Além disso, devido ao comportamento desejado do software, foi desenvolvido um sistema de criação, leitura e atualização da configuração do software, para garantir seu funcionamento básico, envolvendo escolha de temas, escala de interface, e configurações de serrilhamento de renderização de elementos e de textos.
+
+\subsubsection{4\textsuperscript{a} \textit{Sprint} - Início da Codificação do Front-End}
+Nessa \textit{sprint}, o foco mudou para o ambiente gráfico, com a codificação do painel principal, barra de navegação e menu de configuração, devido a sua conectividade com o Back-End, mudanças houveram de ser espelhadas em ambas as partes.
+
+\subsubsection{5\textsuperscript{a} \textit{Sprint} - Finalização do Front-End e Polidez de Código}
+Nessa \textit{sprint}, o desenvolvimento teve como objetivo a finalização de todos os componentes gráficos, o comportamento principal do software e utilitários desejados. Destaca-se principalmente, a melhor configuração do projeto a partir do \textit{Maven}, com artefatos \textit{Jar} unificados, e uso de versionamento numérico para explicitar o estado do software.
+
 
 % --- Segment: Requirements ---
 \pagebreak
