@@ -9,8 +9,11 @@ import java.awt.event.ActionEvent;
 
 import net.miginfocom.swing.MigLayout;
 
+import java.util.List;
+
 import com.neotasker.controllers.StatisticsController;
 import com.neotasker.controllers.TaskController;
+import com.neotasker.model.Task;
 
 /**
  * This class is responsible for displaying the statistics for the application.
@@ -25,9 +28,9 @@ public class Statistics extends JPanel {
     /** The separator for the identifier. */
     public JSeparator identifierSeparator;
 
-    public JTable statsTable;
-    public int taskCount;
     public DefaultTableModel model;
+    public static JTable statsTable;
+    public int taskCount;
 
     public JButton refreshButton;
 
@@ -45,9 +48,9 @@ public class Statistics extends JPanel {
         );
         this.identifierSeparator = new JSeparator(JSeparator.HORIZONTAL);
 
-        this.statsTable = new JTable();
-        this.statsTable.setFillsViewportHeight(true);
-        this.statsTable.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        Statistics.statsTable = new JTable();
+        //this.statsTable.setFillsViewportHeight(true);
+        //this.statsTable.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         // Create a model for the table
         this.model = new DefaultTableModel();
@@ -55,37 +58,47 @@ public class Statistics extends JPanel {
         model.addColumn("Estatística");
         model.addColumn("Valor");
 
-        TaskController tc = new TaskController();
-        this.taskCount = tc.getAllTasks().size();
-        model.addRow(new Object[]{"Tasks Criadas", this.taskCount});
-        model.addRow(new Object[]{"Tasks Concluídas", methods.getTasksAccomplished()});
-        model.addRow(new Object[]{"Tasks Atrasadas", methods.getTasksDelayed()});
 
-        this.statsTable.setModel(model);
+        Statistics.statsTable.setModel(model);
 
         this.refreshButton = new JButton("Atualizar Estatísticas");
         this.refreshButton.addActionListener(
-            (ActionEvent e) -> update()
+            (ActionEvent e) -> updateTable()
         );
+        updateTable();
 
          // Centralize the text in the table
-        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
-        this.statsTable.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
-        this.statsTable.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
 
         add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
-        add(this.statsTable, "align center, wrap, grow, span");
+        add(Statistics.statsTable.getTableHeader(), "align center, grow, span, wrap");
+        add(Statistics.statsTable, "align center, wrap, grow, span");
         add(this.refreshButton, "align right, wrap");
     }
 
-    public void update() {
+    public void updateTable() {
+        // Remove all rows
+        if (model.getRowCount() > 0) {
+            for (int i = model.getRowCount() - 1; i > -1; i--) {
+                model.removeRow(i);
+            }
+        }
+
         TaskController tc = new TaskController();
-        this.taskCount = tc.getAllTasks().size();
-        this.model.setValueAt(tc.getAllTasks().size(), 0, 1);
-        this.statsTable.invalidate();
-        this.statsTable.repaint();
+        List<Task> tasks = tc.getAllTasks();
+
+        model.addRow(
+            new Object[]{"Tasks Criadas", tasks.size()}
+        );
+        model.addRow(
+            new Object[]{"Tasks Concluídas", null}
+        );
+        model.addRow(
+            new Object[]{"Tasks Atrasadas", null}
+        );
+
+        Statistics.statsTable.invalidate();
+        Statistics.statsTable.repaint();
     }
 }
 

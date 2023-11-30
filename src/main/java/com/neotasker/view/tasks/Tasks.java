@@ -31,7 +31,7 @@ public class Tasks extends JPanel {
     public JSeparator identifierSeparator;
     public JScrollBar scrollBar;
     public DefaultTableModel model;
-    public JTable table;
+    public static JTable table;
     public JButton refreshButton;
 
     /**
@@ -59,7 +59,7 @@ public class Tasks extends JPanel {
                 new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
             );
         }
-        this.table = new JTable(model);
+        Tasks.table = new JTable(model);
         this.refreshButton = new JButton("Atualizar Tarefas");
         this.refreshButton.addActionListener(
             (ActionEvent e) -> updateTable()
@@ -68,8 +68,8 @@ public class Tasks extends JPanel {
 
         add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
-        add(this.table.getTableHeader(), "align center, grow, span, wrap");
-        add(this.table, "align center, grow, span, wrap");
+        add(Tasks.table.getTableHeader(), "align center, grow, span, wrap");
+        add(Tasks.table, "align center, grow, span, wrap");
         add(this.refreshButton, "align center, span, wrap");
     }
 
@@ -89,7 +89,7 @@ public class Tasks extends JPanel {
                 new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
             );
         }
-        this.table.invalidate();
-        this.table.repaint();
+        Tasks.table.invalidate();
+        Tasks.table.repaint();
     }
 }

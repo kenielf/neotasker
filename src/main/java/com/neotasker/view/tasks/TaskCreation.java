@@ -300,7 +300,8 @@ public class TaskCreation extends JPanel {
             taskController.registerTask(task);
             // Update tables
             Landing rootWindow = (Landing) SwingUtilities.getRoot(this);
-            rootWindow.content.statisticsView.statsTable.invalidate();
+            rootWindow.content.statisticsView.updateTable();
+            rootWindow.content.tasksView.updateTable();
         } else {
             this.addErrorMessage.setText("Existem Campos Inválidos!");
         }
