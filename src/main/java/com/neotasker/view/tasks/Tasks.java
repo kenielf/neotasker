@@ -7,18 +7,13 @@ import javax.swing.JScrollBar;
 import javax.swing.JSeparator;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
-import org.jdesktop.swingx.plaf.TableAddon;
-
 import java.awt.event.ActionEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.neotasker.controllers.TagController;
 import com.neotasker.controllers.TaskController;
 import com.neotasker.model.Task;
-import com.neotasker.model.Tag;
 
 import net.miginfocom.swing.MigLayout;
 
@@ -56,7 +51,6 @@ public class Tasks extends JPanel {
         model.addColumn("Nome");
         model.addColumn("Descrição");
         model.addColumn("Data Limite");
-        model.addColumn("Tags");
         TaskController tc = new TaskController();
         List<Task> tasks = tc.getAllTasks();
         for (int i=0; i<tasks.size(); i++) {
@@ -97,22 +91,5 @@ public class Tasks extends JPanel {
         }
         Tasks.table.invalidate();
         Tasks.table.repaint();
-    }
-
-    public void listToString(){
-        // Change the List to String 
-        String tag = new String();
-
-        new Task();
-
-        TaskController tc = new TaskController();
-        List<Task> tasks = tc.getAllTasks();
-        List<Tag> objList = new ArrayList<>();
-        
-        for(int i=0; i <= tasks.size(); i++){
-            Task unitTask = tasks.get(i);
-            unit
-        }
-        
     }
 }
