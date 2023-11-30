@@ -62,7 +62,7 @@ public class Tasks extends JPanel {
         for (int i=0; i<tasks.size(); i++) {
             Task task = tasks.get(i);
             model.addRow(
-                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
+                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue(), listToString(task)}
             );
         }
         Tasks.table = new JTable(model);
@@ -92,27 +92,24 @@ public class Tasks extends JPanel {
         for (int i=0; i<tasks.size(); i++) {
             Task task = tasks.get(i);
             model.addRow(
-                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
+                new Object[]{task.getTitle(), task.getDescription(), task.getDateDue(), listToString(task)}
             );
         }
         Tasks.table.invalidate();
         Tasks.table.repaint();
     }
 
-    public void listToString(){
+    public String listToString(Task task){
         // Change the List to String 
-        String tag = new String();
+        String tagLabel = new String();
 
-        new Task();
+        List<Tag> tagList = new ArrayList<>();
 
-        TaskController tc = new TaskController();
-        List<Task> tasks = tc.getAllTasks();
-        List<Tag> objList = new ArrayList<>();
-        
-        for(int i=0; i <= tasks.size(); i++){
-            Task unitTask = tasks.get(i);
-            unit
+        tagList = task.getTags();
+        for(int i = 0; i < tagList.size(); i++){
+            tagLabel = tagLabel + ", " + tagList.get(i).getLabel();
         }
-        
+
+        return tagLabel;
     }
 }
