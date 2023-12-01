@@ -49,7 +49,7 @@ public class Statistics extends JPanel {
         this.identifierSeparator = new JSeparator(JSeparator.HORIZONTAL);
 
         Statistics.statsTable = new JTable();
-        //this.statsTable.setFillsViewportHeight(true);
+        Statistics.statsTable.setFillsViewportHeight(true);
         //this.statsTable.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         // Create a model for the table
@@ -68,6 +68,13 @@ public class Statistics extends JPanel {
         updateTable();
 
          // Centralize the text in the table
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        for (int i=0; i< Statistics.statsTable.getColumnCount(); i++) {
+            Statistics.statsTable.getColumnModel()
+                .getColumn(i)
+                .setCellRenderer(centerRenderer);
+        }
 
         add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
