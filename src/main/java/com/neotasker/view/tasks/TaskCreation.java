@@ -316,13 +316,23 @@ public class TaskCreation extends JPanel {
             task.setTitle(this.titleField.getText().strip());
             task.setDescription(this.descriptionField.getText().strip());
             task.setStatus(false);
-            task.setDateDue(
-                dueDate.toInstant()
-                    .atZone(ZoneId.systemDefault())
-                    .toLocalDateTime()
-                    .plusHours(Integer.parseInt(dueTime.split(":")[0]))
-                    .plusMinutes(Integer.parseInt(dueTime.split(":")[1]))
-            );
+            if (dueDate != null && dueTime != null) {
+                task.setDateDue(
+                    dueDate.toInstant()
+                        .atZone(ZoneId.systemDefault())
+                        .toLocalDateTime()
+                        .plusHours(Integer.parseInt(dueTime.split(":")[0]))
+                        .plusMinutes(Integer.parseInt(dueTime.split(":")[1]))
+                );
+            } else if (dueDate != null) {
+                task.setDateDue(
+                    dueDate.toInstant()
+                        .atZone(ZoneId.systemDefault())
+                        .toLocalDateTime()
+                        .plusHours(Integer.parseInt(dueTime.split(":")[0]))
+                        .plusMinutes(Integer.parseInt(dueTime.split(":")[1]))
+                );
+            }
             this.addErrorMessage.setText("Tarefa Adicionada com Sucesso");
             cleanInput();
             this.titleWarningField.setText("");
