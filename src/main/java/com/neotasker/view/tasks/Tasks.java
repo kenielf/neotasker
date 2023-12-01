@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -30,16 +31,17 @@ public class Tasks extends JPanel {
     JLabel identifierLabel;
     /** The separator for the identifier. */
     public JSeparator identifierSeparator;
-    public JScrollBar scrollBar;
+    public JScrollPane tablePane;
     public DefaultTableModel model;
     public static JTable table;
     public JButton refreshButton;
+    public JButton deleteButton;
 
     /**
      * Instantiates the tasks panel.
      */
     public Tasks() {
-        setLayout(new MigLayout("fillx", "10%[left][]10%"));
+        setLayout(new MigLayout("fillx", "10%[center]10%"));
 
         this.identifierLabel = new JLabel(IDENTIFIER);
         this.identifierLabel.setFont(
@@ -49,6 +51,7 @@ public class Tasks extends JPanel {
 
         // Get all Tasks
         this.model = new DefaultTableModel();
+        model.addColumn("id");
         model.addColumn("Nome");
         model.addColumn("Descrição");
         model.addColumn("Data Criação");
@@ -63,17 +66,28 @@ public class Tasks extends JPanel {
                 return false;
             }
         };
+        Tasks.table.getColumnModel().getColumn(0).setMinWidth(0);
+        Tasks.table.getColumnModel().getColumn(0).setMaxWidth(0);
+        Tasks.table.getColumnModel().getColumn(0).setWidth(0);
+        this.tablePane = new JScrollPane(Tasks.table);
+
         this.refreshButton = new JButton("Atualizar Tarefas");
         this.refreshButton.addActionListener(
             (ActionEvent e) -> updateTable()
+        );
+
+        this.deleteButton = new JButton("Deletar Tarefa");
+        this.deleteButton.addActionListener(
+            (ActionEvent e) -> deleteSelectedTask()
         );
 
 
         add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
         add(Tasks.table.getTableHeader(), "align center, grow, span, wrap");
-        add(Tasks.table, "align center, grow, span, wrap");
-        add(this.refreshButton, "align center, span, wrap");
+        add(this.tablePane, "align center, grow, span, wrap");
+        add(this.refreshButton, "align center, split 2");
+        add(this.deleteButton, "align center, wrap");
     }
 
     public String tagsToString(List<Tag> tags) {
@@ -102,6 +116,7 @@ public class Tasks extends JPanel {
             Task task = tasks.get(i);
             model.addRow(
                 new Object[]{
+                    task.getId(),
                     task.getTitle(),
                     task.getDescription(),
                     task.getDateCreation().toString().split("T")[0],
@@ -114,9 +129,21 @@ public class Tasks extends JPanel {
         }
 
     }
+
     public void updateTable() {
         updateModel(this.model);
         Tasks.table.invalidate();
         Tasks.table.repaint();
+    }
+
+    public void deleteSelectedTask() {
+        int row = Tasks.table.getSelectedRow();
+        if (!(row < 0 || row > Tasks.table.getRowCount())) {
+            int taskId = Integer.parseInt(Tasks.table.getValueAt(row, 0).toString());
+            TaskController taskController = new TaskController();
+            taskController.deleteTask(taskId);
+            updateModel(this.model);
+            updateTable();
+        }
     }
 }

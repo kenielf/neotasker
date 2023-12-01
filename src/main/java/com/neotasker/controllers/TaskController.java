@@ -104,20 +104,23 @@ public class TaskController {
         //return tasks;
     }
 
-    public void deleteTask(long id) {
+    public void deleteTask(int id) {
+        Session session = null;
         Transaction transaction = null;
-        Task task = null;
-
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
-
-            task = session.get(Task.class, id);
-            session.delete(task);
-
+            Task task = getTaskById(id);
+            session.remove(task);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
+                e.printStackTrace();
                 transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
     }
