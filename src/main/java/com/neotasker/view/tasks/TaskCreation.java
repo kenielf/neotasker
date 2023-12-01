@@ -8,6 +8,7 @@ import java.beans.PropertyChangeEvent;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Locale;
@@ -279,9 +280,16 @@ public class TaskCreation extends JPanel {
         }
 
         Date dueDate = dueDatePicker.getDate();
+        LocalDate localDueDate = dueDate
+            .toInstant()
+            .atZone(ZoneId.systemDefault())
+            .toLocalDate();
+        LocalDate today = new Date(System.currentTimeMillis()).toInstant()
+            .atZone(ZoneId.systemDefault())
+            .toLocalDate();
         boolean dueDateIsValid = true;
         if (dueDate != null) {
-            if (dueDate.compareTo(new Date(System.currentTimeMillis())) < 0) {
+            if (localDueDate.compareTo(today) < 0) {
                 this.dueDateWarningField.setText("Data Inválida: Não é possível criar tarefas para o passado!");
                 dueDateIsValid = false;
             } else {
@@ -329,8 +337,6 @@ public class TaskCreation extends JPanel {
                     dueDate.toInstant()
                         .atZone(ZoneId.systemDefault())
                         .toLocalDateTime()
-                        .plusHours(Integer.parseInt(dueTime.split(":")[0]))
-                        .plusMinutes(Integer.parseInt(dueTime.split(":")[1]))
                 );
             }
             this.addErrorMessage.setText("Tarefa Adicionada com Sucesso");
