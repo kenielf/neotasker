@@ -54,14 +54,7 @@ public class Tasks extends JPanel {
         model.addColumn("Data Criação");
         model.addColumn("Data Limite");
         model.addColumn("Tags");
-        TaskController tc = new TaskController();
-        List<Task> tasks = tc.getAllTasks();
-        for (int i=0; i<tasks.size(); i++) {
-            Task task = tasks.get(i);
-            model.addRow(
-                new Object[]{task.getTitle(), task.getDescription(), task.getDateCreation(), task.getDateDue(), tagsToString(task.getTags())}
-            );
-        }
+        updateModel(model);
         Tasks.table = new JTable(model);
         this.refreshButton = new JButton("Atualizar Tarefas");
         this.refreshButton.addActionListener(
@@ -88,7 +81,7 @@ public class Tasks extends JPanel {
         return result;
     }
 
-    public void updateTable() {
+    private void updateModel(DefaultTableModel model) {
         // Remove all rows
         if (model.getRowCount() > 0) {
             for (int i = model.getRowCount() - 1; i > -1; i--) {
@@ -101,10 +94,19 @@ public class Tasks extends JPanel {
         for (int i=0; i<tasks.size(); i++) {
             Task task = tasks.get(i);
             model.addRow(
-                new Object[]{task.getTitle(), task.getDescription(), task.getDateCreation(), task.getDateDue(), tagsToString(task.getTags())}
-                //new Object[]{task.getTitle(), task.getDescription(), task.getDateDue()}
+                new Object[]{
+                    task.getTitle(),
+                    task.getDescription(),
+                    task.getDateCreation().toString().split("T")[0],
+                    (task.getDateDue()!=null)? task.getDateDue().toString().split("T")[0]: null,
+                    tagsToString(task.getTags())
+                }
             );
         }
+
+    }
+    public void updateTable() {
+        updateModel(this.model);
         Tasks.table.invalidate();
         Tasks.table.repaint();
     }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Locale;
 
 import javax.swing.Action;
@@ -293,6 +294,11 @@ public class TaskCreation extends JPanel {
             task.setTitle(this.titleField.getText().strip());
             task.setDescription(this.descriptionField.getText().strip());
             task.setStatus(false);
+            task.setDateDue(
+                dueDate.toInstant()
+                    .atZone(ZoneId.systemDefault())
+                    .toLocalDateTime()
+            );
             this.addErrorMessage.setText("Tarefa Adicionada com Sucesso");
             cleanInput();
             this.titleWarningField.setText("");
