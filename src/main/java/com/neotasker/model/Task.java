@@ -22,7 +22,7 @@ import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 
-import com.neotasker.utils.Constants;
+import com.neotasker.platform.Constants;
 
 /**
  * The task class is responsible for holding the data regarding tasks.

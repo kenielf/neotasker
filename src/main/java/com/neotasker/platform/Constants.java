@@ -1,4 +1,4 @@
-package com.neotasker.utils;
+package com.neotasker.platform;
 
 /**
  * This class contains constants that may be used anywhere on the system,

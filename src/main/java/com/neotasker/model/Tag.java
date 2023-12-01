@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
-import com.neotasker.utils.Constants;
+import com.neotasker.platform.Constants;
 
 /**
  * The tag class is responsible for holding the data regarding task tags.

@@ -1,7 +1,7 @@
 package com.neotasker;
 
 import com.neotasker.database.HibernateUtil;
-import com.neotasker.utils.OperatingSystem;
+import com.neotasker.platform.OperatingSystem;
 import com.neotasker.view.landing.Landing;
 
 import org.apache.logging.log4j.LogManager;

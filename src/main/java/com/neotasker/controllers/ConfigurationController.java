@@ -13,7 +13,7 @@ import com.google.gson.stream.JsonReader;
 import com.neotasker.model.Aliasing;
 import com.neotasker.model.Configuration;
 import com.neotasker.model.Theme;
-import com.neotasker.utils.OperatingSystem;
+import com.neotasker.platform.OperatingSystem;
 
 /**
  * Environment based configuration.

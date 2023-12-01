@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import com.neotasker.utils.Constants;
+import com.neotasker.platform.Constants;
 
 import net.miginfocom.swing.MigLayout;
 

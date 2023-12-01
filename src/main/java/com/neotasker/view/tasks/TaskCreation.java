@@ -35,7 +35,7 @@ import com.neotasker.controllers.TaskController;
 import com.neotasker.model.Tag;
 import com.neotasker.model.Task;
 import com.neotasker.model.TaskState;
-import com.neotasker.utils.Constants;
+import com.neotasker.platform.Constants;
 import com.neotasker.view.basecomponents.JPromptField;
 import com.neotasker.view.landing.Landing;
 

@@ -11,7 +11,7 @@ import org.hibernate.cfg.Environment;
 
 import com.neotasker.model.Task;
 import com.neotasker.model.Tag;
-import com.neotasker.utils.OperatingSystem;
+import com.neotasker.platform.OperatingSystem;
 
 /**
  * This class is responsible for managing {@link org.hibernate.Hibernate}
