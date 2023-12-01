@@ -1,5 +1,10 @@
+# IDEs
+/.vscode/
+/.idea/
+
 # Maven Build Files
 /.classpath
+/.factorypath
 /.project
 /.settings/
 /target/
