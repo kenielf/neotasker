@@ -31,11 +31,14 @@
                         <configuration>
                             <appendAssemblyId>false</appendAssemblyId>
                             <archive>
-                            <manifest>
-                                <mainClass>
-                                    com.neotasker.Main
-                                </mainClass>
-                            </manifest>
+                                <manifestEntries>
+                                    <Multi-Release>true</Multi-Release>
+                                </manifestEntries>
+                                <manifest>
+                                    <mainClass>
+                                        com.neotasker.Main
+                                    </mainClass>
+                                </manifest>
                             </archive>
                             <descriptorRefs>
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
