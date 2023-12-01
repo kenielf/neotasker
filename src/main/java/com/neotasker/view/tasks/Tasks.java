@@ -52,10 +52,17 @@ public class Tasks extends JPanel {
         model.addColumn("Nome");
         model.addColumn("Descrição");
         model.addColumn("Data Criação");
+        model.addColumn("Hora Criação");
         model.addColumn("Data Limite");
+        model.addColumn("Hora Limite");
         model.addColumn("Tags");
         updateModel(model);
-        Tasks.table = new JTable(model);
+        Tasks.table = new JTable(model) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
         this.refreshButton = new JButton("Atualizar Tarefas");
         this.refreshButton.addActionListener(
             (ActionEvent e) -> updateTable()
@@ -98,7 +105,9 @@ public class Tasks extends JPanel {
                     task.getTitle(),
                     task.getDescription(),
                     task.getDateCreation().toString().split("T")[0],
+                    task.getDateCreation().toString().split("T")[1],
                     (task.getDateDue()!=null)? task.getDateDue().toString().split("T")[0]: null,
+                    (task.getDateDue()!=null)? task.getDateDue().toString().split("T")[1]: null,
                     tagsToString(task.getTags())
                 }
             );

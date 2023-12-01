@@ -11,6 +11,8 @@ import java.util.List;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.swing.Action;
 import javax.swing.ActionMap;
@@ -245,6 +247,19 @@ public class TaskCreation extends JPanel {
         this.dueTimeField.setText("");
         this.tagField.setText("");
     }
+    
+    private boolean isValidTime(String time) {
+        String regex = "([01]?[0-9]|2[0-3]):[0-5][0-9]";
+        Pattern pattern = Pattern.compile(regex);
+
+        if (time == null) {
+            return false;
+        }
+
+        Matcher matcher = pattern.matcher(time);
+
+        return matcher.matches();
+    }
 
     private void addTask() {
         TaskController taskController = new TaskController();
@@ -274,6 +289,13 @@ public class TaskCreation extends JPanel {
             }
         }
 
+        String dueTime = dueTimeField.getText();
+        boolean dueTimeIsValid = isValidTime(dueTime);
+        if (!dueTimeIsValid) {
+            this.dueTimeWarningField.setText("Horário Inválido!");
+        }
+
+
         TagController tagController = new TagController();
         String[] tags = tagField.getText().split(",");
         List<Tag> taskTags = new ArrayList<>();
@@ -288,7 +310,7 @@ public class TaskCreation extends JPanel {
         }
         task.setTags(taskTags);
 
-        valid = titleIsValid && descriptionIsValid && dueDateIsValid;
+        valid = titleIsValid && descriptionIsValid && dueDateIsValid && dueTimeIsValid;
         // Commit
         if (valid) {
             task.setTitle(this.titleField.getText().strip());
@@ -298,11 +320,14 @@ public class TaskCreation extends JPanel {
                 dueDate.toInstant()
                     .atZone(ZoneId.systemDefault())
                     .toLocalDateTime()
+                    .plusHours(Integer.parseInt(dueTime.split(":")[0]))
+                    .plusMinutes(Integer.parseInt(dueTime.split(":")[1]))
             );
             this.addErrorMessage.setText("Tarefa Adicionada com Sucesso");
             cleanInput();
             this.titleWarningField.setText("");
             this.descriptionWarningField.setText("");
+            this.dueTimeWarningField.setText("");
             taskController.registerTask(task);
             // Update tables
             Landing rootWindow = (Landing) SwingUtilities.getRoot(this);
