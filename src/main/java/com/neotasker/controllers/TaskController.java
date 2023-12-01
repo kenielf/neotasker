@@ -29,6 +29,26 @@ public class TaskController {
                 session.close();
             }
         }
+    }
+
+    public void updateTask(Task task) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            transaction = session.beginTransaction();
+            session.update(task);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                e.printStackTrace();
+                transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
         //try (Session session = HibernateUtil.getSessionFactory().openSession()) {
         //    transaction = session.beginTransaction();
 

@@ -38,6 +38,7 @@ public class Tasks extends JPanel {
     public static JTable table;
     public JButton refreshButton;
     public JButton deleteButton;
+    public JButton toggleCompletionButton;
 
     /**
      * Instantiates the tasks panel.
@@ -61,6 +62,7 @@ public class Tasks extends JPanel {
         model.addColumn("Data Limite");
         model.addColumn("Hora Limite");
         model.addColumn("Tags");
+        model.addColumn("Estado Conclusão");
         updateModel(model);
         Tasks.table = new JTable(model) {
             @Override
@@ -83,13 +85,18 @@ public class Tasks extends JPanel {
             (ActionEvent e) -> deleteSelectedTask()
         );
 
+        this.toggleCompletionButton = new JButton("Concluir / Reverter Conclusão");
+        this.toggleCompletionButton.addActionListener(
+            (ActionEvent e) -> taskToggleCompletion()
+        );
 
         add(this.identifierLabel, "align center, span, wrap");
         add(this.identifierSeparator, "align center, grow, span, wrap");
         add(Tasks.table.getTableHeader(), "align center, grow, span, wrap");
         add(this.tablePane, "align center, grow, span, wrap");
-        add(this.refreshButton, "align center, split 2");
-        add(this.deleteButton, "align center, wrap");
+        add(this.refreshButton, "align center, split 3");
+        add(this.deleteButton, "align center");
+        add(this.toggleCompletionButton, "align center, wrap");
     }
 
     public String tagsToString(List<Tag> tags) {
@@ -125,7 +132,8 @@ public class Tasks extends JPanel {
                     task.getDateCreation().toString().split("T")[1],
                     (task.getDateDue()!=null)? task.getDateDue().toString().split("T")[0]: null,
                     (task.getDateDue()!=null)? task.getDateDue().toString().split("T")[1]: null,
-                    tagsToString(task.getTags())
+                    tagsToString(task.getTags()),
+                    task.getStatus()? "Completo" : "Incompleto"
                 }
             );
         }
@@ -146,6 +154,25 @@ public class Tasks extends JPanel {
             taskController.deleteTask(taskId);
             updateModel(this.model);
             // Update tables
+            Landing rootWindow = (Landing) SwingUtilities.getRoot(this);
+            rootWindow.content.statisticsView.updateTable();
+            updateTable();
+        }
+    }
+
+    public void taskToggleCompletion() {
+        int row = Tasks.table.getSelectedRow();
+        if (!(row < 0 || row > Tasks.table.getRowCount())) {
+            int taskId = Integer.parseInt(Tasks.table.getValueAt(row, 0).toString());
+            TaskController taskController = new TaskController();
+            Task task = taskController.getTaskById(taskId);
+            if (task.getStatus()) {
+                task.setStatus(false);
+            } else {
+                task.setStatus(true);
+            }
+            taskController.updateTask(task);
+            // Update Tables
             Landing rootWindow = (Landing) SwingUtilities.getRoot(this);
             rootWindow.content.statisticsView.updateTable();
             updateTable();
