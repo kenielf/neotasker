@@ -7,6 +7,7 @@ import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.JTable;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 
@@ -16,6 +17,7 @@ import java.util.List;
 import com.neotasker.controllers.TaskController;
 import com.neotasker.model.Tag;
 import com.neotasker.model.Task;
+import com.neotasker.view.landing.Landing;
 
 import net.miginfocom.swing.MigLayout;
 
@@ -143,6 +145,9 @@ public class Tasks extends JPanel {
             TaskController taskController = new TaskController();
             taskController.deleteTask(taskId);
             updateModel(this.model);
+            // Update tables
+            Landing rootWindow = (Landing) SwingUtilities.getRoot(this);
+            rootWindow.content.statisticsView.updateTable();
             updateTable();
         }
     }
