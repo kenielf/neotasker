@@ -15,6 +15,7 @@
 /docs/*.lof
 /docs/*.log
 /docs/*.toc
+/docs/*.out
 
 # TeXworks Sync Files
 /docs/*.synctex.gz
