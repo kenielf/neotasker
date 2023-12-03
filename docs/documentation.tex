@@ -40,6 +40,18 @@
 \tikzstyle{line}=[draw]
 \tikzstyle{arrow}=[draw, -latex]
 
+% URL Support
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={NeoTasker - Documentação},
+    pdfpagemode=FullScreen,
+}
+\urlstyle{same}
+
 % --- Preamble: Commands ---
 \pagestyle{fancy}
 \fancyhf{}
@@ -1111,6 +1123,9 @@ A partir do Git, se faz necessário o uso de uma plataforma que possa ser um cen
 que recebe as modificações feitas no local. O GitHub nada mais é uma plataforma de que permite o gerenciamento e controle versões a partir de uma interface gráfica 
 e de fácil uso. Assim, o GitHub se destaca como uma plataforma de colaboração amplamente utilizada por desenvolvedores de todo mundo.
 (“Sobre o Git - Documentação do GitHub”, [s.d.])
+
+O código fonte do software construído e da documentação podem ser encontrados no repositório remoto:
+\url{https://www.github.com/kenielf/neotasker}
 
 \subsection{TexLive}
 O TexLive é um conjunto de programas e bibliotecas que permite a criação de documentos em LaTeX, que é um sistema de preparação de documentos para a criação de documentos
